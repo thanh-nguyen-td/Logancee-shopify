@@ -1,6 +1,10 @@
 <div class="list-card-container">
     <div class="flex_container">
-        <div class="flex_column" style="background: red;">thanh</div>
+        <div class="flex_column" style="background: red;">
+            {% for block in section.blocks %}
+                <div>thanh</div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% schema %}
@@ -10,18 +14,72 @@
     "settings": [
         {
             "type": "range",
-            "id": "heading",
-            "label": "Chon mau",
-            "default":3,
-            "min":2,
-            "max":5
+            "id": "padding_card",
+            "label": "Padding card",
+            "default":0,
+            "min":0,
+            "max":50
+        }
+    ],
+    "blocks":[
+        {
+            "type":"card",
+            "name":"Card",
+            "limit":3,
+            "settings":[
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label":"Image"
+                },
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default":"Mens shop"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default":"Title"
+                },
+                {
+                    "type": "text",
+                    "id": "content",
+                    "label": "Content",
+                    "default":"Content"
+                },
+                {
+                    "type": "text",
+                    "id": "text_button",
+                    "label": "Button content",
+                    "default":"Button content"
+                },
+                {
+                    "type": "url",
+                    "id": "button_url",
+                    "label": "Button url"
+                }
+            ]
         }
     ],
     "presets":[
-				{
-					"category":"Card line 1",
-					"name":"Card line" 
-				}
-			]
+        {
+            "category":"Card line 1",
+            "name":"Card line",
+            "blocks": [
+                {
+                "type": "card"
+                },
+                {
+                "type": "card"
+                },
+                {
+                "type": "card"
+                }
+            ]
+        }
+    ]
 }
 {% endschema %}
