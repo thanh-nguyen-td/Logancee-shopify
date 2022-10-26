@@ -1,10 +1,11 @@
 <div class="list-card-container">
     <div class="flex_container">
-        <div class="flex_column" style="background: red;">
-            {% for block in section.blocks %}
-                <div>thanh</div>
-            {% endfor %}
-        </div>
+       
+        {% for block in section.blocks %}
+            <div class="flex_column" style="background: red;border:1px solid gold; padding:0 {{ section.settings.padding_card }}px">
+            <img src="{{block.settings.image}}" loading="lazy" width="auto" height="auto"/>
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% schema %}
