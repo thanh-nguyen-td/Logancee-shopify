@@ -211,10 +211,47 @@
         "padding_bottom": 36
       }
     },
-    "a8572e2f-4a55-4276-bbd0-77b23989587e": {
+    "4cad5647-ef85-493a-9605-efd993c8ea5a": {
       "type": "custom-card-line",
+      "blocks": {
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-0": {
+          "type": "card",
+          "settings": {
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-1": {
+          "type": "card",
+          "settings": {
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-2": {
+          "type": "card",
+          "settings": {
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-0",
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-1",
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-2"
+      ],
       "settings": {
-        "heading": 3
+        "padding_card": 0
       }
     }
   },
@@ -225,6 +262,6 @@
     "collage",
     "video",
     "multicolumn",
-    "a8572e2f-4a55-4276-bbd0-77b23989587e"
+    "4cad5647-ef85-493a-9605-efd993c8ea5a"
   ]
 }
