@@ -1,0 +1,27 @@
+<div class="list-card-container">
+    <div class="flex_container">
+        <div class="flex_column" style="background: red;">thanh</div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Card line",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "range",
+            "id": "heading",
+            "label": "Chon mau",
+            "default":3,
+            "min":2,
+            "max":5
+        }
+    ],
+    "presets":[
+				{
+					"category":"Card line",
+					"name":"Feature Collection" 
+				}
+			]
+}
+{% endschema %}
