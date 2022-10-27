@@ -167,3 +167,12 @@
        
     }
 }
+
+.list-card-line-container {
+    background: gold;
+}
+
+.container-content-card {
+    width: 100%;
+    height: 100%;
+}

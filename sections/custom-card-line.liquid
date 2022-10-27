@@ -3,6 +3,7 @@
         {% for block in section.blocks %}
             {% assign items = block.settings %}
             <div class="flex_column" style="padding:0 {{ section.settings.padding_card }}px;">
+                {%- comment -%} content {%- endcomment -%}
                     <div class="wrap-card-image-container">
                         <div class="overlay">T</div>
                         <img src="{{block.settings.image | img_url:'large'}}" loading="lazy" width="auto" height="auto"/>
@@ -13,6 +14,7 @@
                             <a href="#" class="text_link custom-button uppercase">{{ items.text_button }}</a>
                         </div>
                     </div>
+                {%- comment -%} endcontent {%- endcomment -%}
             </div>
         {% endfor %}
     </div>

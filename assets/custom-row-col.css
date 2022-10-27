@@ -1,6 +1,7 @@
 .flex-container-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
 }
 .flex-container-3 {
     display: grid;

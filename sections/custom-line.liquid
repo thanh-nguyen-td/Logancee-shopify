@@ -1,23 +1,37 @@
+{% assign number_column = section.settings.number_column %}
+{% case number_column %}
+    {% when 2 %}
+        {% assign row = "flex-container-2" %}
+    {% when 3 %}
+        {% assign row = "flex-container-3" %}
+    {% when 4 %}
+        {% assign row = "flex-container-4" %}
+    {% else %}
+        {% assign row = "flex-container-5" %}
+{% endcase %}
+
 <div class="list-card-line-container">
-    <div class="flex_container">
+    <div class="{{row}}">
         {% for block in section.blocks %}
             {% assign items = block.settings %}
-            <div class="flex_column" style="padding:0 {{ section.settings.padding_card }}px;">
+            <div style="padding:0 {{ section.settings.padding_card }}px; ">
                 {%- comment -%} content {%- endcomment -%}
-                    <div class="wrap-card-container">
-                        <div class="overlay">T</div>
-                        <img src="{{block.settings.image | img_url:'large'}}" loading="lazy" width="auto" height="auto"/>
-                        <div class="wrap-text-card" >
+                    <div class="container-content-card" style="background: pink;border:2px solid red; ">
+                        <img src="{{block.settings.image | img_url:'large'}}" loading="lazy" width="auto" height="auto" style="width:100%; height:100%"/>
+                        {%- comment -%} <div class="wrap-text-card" >
                             <h4 class="text_white uppercase">{{ items.heading }}</h4>
                             <h1 class="text_white uppercase">{{ items.title }}</h1>
                             <p class="text_white">{{ items.content }}</p>
                             <a href="#" class="text_link custom-button uppercase">{{ items.text_button }}</a>
-                        </div>
+                        </div> {%- endcomment -%}
                     </div>
                 {%- comment -%} endcontent {%- endcomment -%}
             </div>
         {% endfor %}
     </div>
+</div>
+<div>
+    <img src="https://cdn.shopify.com/s/files/1/0583/4309/6343/files/shirt-21_large.jpg?v=1666780707" style="height: 300px; width:200px"/>
 </div>
 {% schema %}
 {

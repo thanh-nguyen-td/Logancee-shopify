@@ -1,0 +1,65 @@
+<div class="container-text-button-img">
+    <h1>text button img</h1>
+</div>
+
+{% schema %}
+{
+    "name":"Text Button Image",
+    "tag":"section",
+    "blocks": [
+        {
+            "type":"text",
+            "name":"Text",
+            "settings":[
+                {
+                    "type":"liquid",
+                    "id":"text_liquid",
+                    "label":"Text",
+                    "default":"This is text"
+                }
+            ]
+        },
+        {
+            "type":"image",
+            "name":"Image",
+            "settings":[
+                {
+                    "type":"range",
+                    "id":"width_img",
+                    "label":"Width image",
+                    "default":2,
+                    "min":1,
+                    "max":100
+                },
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label":"Image"
+                }
+            ]
+        },
+        {
+            "type":"button",
+            "name":"Button",
+            "settings":[
+                {
+                    "type":"text",
+                    "id":"button_text",
+                    "label":"Button content",
+                    "default":"Click me"
+                },
+                {
+                    "type":"url",
+                    "id":"button_url",
+                    "label":"Button url"
+                }
+            ]
+        }
+    ],
+    "presets":[
+        {
+            "name":"Text Button Image"
+        }
+    ]
+}
+{% endschema %}
