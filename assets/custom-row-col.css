@@ -1,0 +1,16 @@
+.flex-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.flex-container-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.flex-container-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.flex-container-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}

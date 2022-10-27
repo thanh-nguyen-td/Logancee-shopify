@@ -93,7 +93,8 @@
 /* row column */
 .flex_container {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .flex_column {
@@ -159,4 +160,10 @@
 .custom-button:hover {
     border: 1px solid var(--color-black-border);
     color:var(--color-black-button)
+}
+
+@media screen and (max-width:1670px) {
+    .wrap-card-image-container img {
+       
+    }
 }

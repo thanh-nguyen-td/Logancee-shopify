@@ -1,9 +1,10 @@
-<div class="list-card-container">
+<div class="list-card-line-container">
     <div class="flex_container">
         {% for block in section.blocks %}
             {% assign items = block.settings %}
             <div class="flex_column" style="padding:0 {{ section.settings.padding_card }}px;">
-                    <div class="wrap-card-image-container">
+                {%- comment -%} content {%- endcomment -%}
+                    <div class="wrap-card-container">
                         <div class="overlay">T</div>
                         <img src="{{block.settings.image | img_url:'large'}}" loading="lazy" width="auto" height="auto"/>
                         <div class="wrap-text-card" >
@@ -13,13 +14,14 @@
                             <a href="#" class="text_link custom-button uppercase">{{ items.text_button }}</a>
                         </div>
                     </div>
+                {%- comment -%} endcontent {%- endcomment -%}
             </div>
         {% endfor %}
     </div>
 </div>
 {% schema %}
 {
-    "name": "Card line",
+    "name": "Card line custom",
     "tag": "section",
     "settings": [
         {
@@ -29,6 +31,14 @@
             "default":0,
             "min":0,
             "max":50
+        },
+        {
+            "type": "range",
+            "id": "number_column",
+            "label": "Number of columns on desktop",
+            "default":3,
+            "min":2,
+            "max":5
         }
     ],
     "blocks":[
@@ -77,7 +87,7 @@
     "presets":[
         {
             "category":"Card line 1",
-            "name":"Card line",
+            "name":"Card line custom",
             "blocks": [
                 {
                 "type": "card"
