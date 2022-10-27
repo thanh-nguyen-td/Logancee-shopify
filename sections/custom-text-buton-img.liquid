@@ -4,7 +4,7 @@
                 {% when "text" %}
                     <div>{{ block.settings.text_liquid }}</div>
                 {% when "button" %}
-                    <a style="padding:13px 20px; background:red" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                    <a style="padding:13px 20px; background:#fff" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
                 {% when "custom_liquid" %}
                     <div style="margin:{{block.settings.custom_liquid}}px ;opacity:0">T</div>
                 {% else %}
@@ -17,6 +17,12 @@
             {% endcase %}
         {% endfor %}
 </div>
+
+{% style %}
+    .container-text-button-img {
+        text-align:center
+    }
+{% endstyle %}
 
 {% schema %}
 {
