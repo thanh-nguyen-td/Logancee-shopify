@@ -280,6 +280,77 @@
       "settings": {
         "padding_card": 0
       }
+    },
+    "0f53930c-bab3-4c57-9eb7-6cadd9bb7123": {
+      "type": "custom-line",
+      "blocks": {
+        "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-0": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-12.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-21.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-01.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "ca17bee2-3e67-4a1f-8f61-0f228e612fb1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-12.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "4c487486-1339-4d8f-97cc-ae9e70d39d2b": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-21.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-0",
+        "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-1",
+        "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-2",
+        "ca17bee2-3e67-4a1f-8f61-0f228e612fb1",
+        "4c487486-1339-4d8f-97cc-ae9e70d39d2b"
+      ],
+      "settings": {
+        "padding_card": 0,
+        "number_column": 3
+      }
     }
   },
   "order": [
@@ -289,6 +360,7 @@
     "collage",
     "video",
     "multicolumn",
-    "4cad5647-ef85-493a-9605-efd993c8ea5a"
+    "4cad5647-ef85-493a-9605-efd993c8ea5a",
+    "0f53930c-bab3-4c57-9eb7-6cadd9bb7123"
   ]
 }
