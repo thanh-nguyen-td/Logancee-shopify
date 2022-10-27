@@ -1,5 +1,21 @@
 <div class="container-text-button-img">
-    <h1>text button img</h1>
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when "text" %}
+                    <div>{{ block.settings.text_liquid }}</div>
+                {% when "button" %}
+                    <a style="padding:13px 20px; background:red" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                {% when "custom_liquid" %}
+                    <div style="margin:{{block.settings.custom_liquid}}px ;opacity:0">T</div>
+                {% else %}
+                {% if block.settings.image != blank %}
+                        <img src="{{ block.settings.image | img_url: 'large' }}" height="auto" width="auto" loading="lazy"/>
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag }}
+                {% endif %}
+                   
+            {% endcase %}
+        {% endfor %}
 </div>
 
 {% schema %}
@@ -15,7 +31,7 @@
                     "type":"liquid",
                     "id":"text_liquid",
                     "label":"Text",
-                    "default":"This is text"
+                    "default":"<p>This is text</p>"
                 }
             ]
         },
@@ -52,6 +68,20 @@
                     "type":"url",
                     "id":"button_url",
                     "label":"Button url"
+                }
+            ]
+        },
+        {
+            "type":"custom_liquid",
+            "name":"Custom liquid",
+            "settings":[
+                {
+                    "type":"range",
+                    "id":"custom_liquid",
+                    "label":"Custom liquid",
+                    "default":20,
+                    "min":2,
+                    "max":50
                 }
             ]
         }
