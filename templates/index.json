@@ -246,12 +246,36 @@
             "text_button": "Button content",
             "button_url": ""
           }
+        },
+        "1a2911b7-764c-4311-98f5-018db133d460": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-12.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
+        },
+        "7b22e74d-5523-463b-9d74-fac750efc0e5": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt-21.jpg",
+            "heading": "Mens shop",
+            "title": "Title",
+            "content": "Content",
+            "text_button": "Button content",
+            "button_url": ""
+          }
         }
       },
       "block_order": [
         "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-0",
         "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-1",
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-2"
+        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-2",
+        "1a2911b7-764c-4311-98f5-018db133d460",
+        "7b22e74d-5523-463b-9d74-fac750efc0e5"
       ],
       "settings": {
         "padding_card": 0
