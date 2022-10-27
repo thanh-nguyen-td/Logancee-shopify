@@ -9,7 +9,7 @@
                     <div style="margin:{{block.settings.custom_liquid}}px ;opacity:0">T</div>
                 {% else %}
                 {% if block.settings.image != blank %}
-                        <img src="{{ block.settings.image | img_url: 'large' }}" height="auto" width="auto" loading="lazy"/>
+                        <img src="{{ block.settings.image | img_url: 'large' }}" height="auto" width="auto" loading="lazy" style="width:{{ block.settings.width_img }} ;"/>
                     {% else %}
                         {{ 'image' | placeholder_svg_tag }}
                 {% endif %}
