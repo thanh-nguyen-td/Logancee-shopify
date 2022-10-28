@@ -90,6 +90,10 @@
     align-items: center;
 }
 
+.width-full {
+    width:100% ;
+}
+
 /* row column */
 .flex_container {
     display: flex;
