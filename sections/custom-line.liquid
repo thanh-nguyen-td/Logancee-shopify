@@ -11,28 +11,45 @@
 {% endcase %}
 
 <div class="list-card-line-container">
-    <div class="{{row}}">
+    <div class="{{row}} page-width">
         {% for block in section.blocks %}
             {% assign items = block.settings %}
             <div style="padding:0 {{ section.settings.padding_card }}px; ">
                 {%- comment -%} content {%- endcomment -%}
-                    <div class="container-content-card" style="background: pink;border:2px solid red; ">
-                        <img src="{{block.settings.image | img_url:'large'}}" loading="lazy" width="auto" height="auto" style="width:100%; height:100%"/>
-                        {%- comment -%} <div class="wrap-text-card" >
-                            <h4 class="text_white uppercase">{{ items.heading }}</h4>
-                            <h1 class="text_white uppercase">{{ items.title }}</h1>
+                    <div class="container-content-card">
+                      <div class="wrap-text-card" >
+                        {% if forloop.index == 1 %}
+                            <div class="custom-icon">
+                                {% render 'icon-accordion', icon: 'map_pin' %}
+                            </div>
+                            {% elsif forloop.index == 2 %}
+                            <div class="custom-icon">
+                                <svg viewBox="0 0 20 20" class="Icon_Icon__Dm3QW" style="width: 30px; height: 30px;"><path d="M10 20c-5.514 0-10-4.486-10-10s4.486-10 10-10 10 4.486 10 10-4.486 10-10 10zm1-15a1 1 0 1 0-2 0v.17a3 3 0 0 0-2 2.83c0 1.013.36 1.77 1.025 2.269.54.405 1.215.572 1.666.685l.066.016c.55.138.835.224 1.018.361.085.064.225.182.225.669a1 1 0 0 1-.984 1 1.611 1.611 0 0 1-.325-.074 2.533 2.533 0 0 1-.984-.633 1 1 0 0 0-1.414 1.414 4.548 4.548 0 0 0 1.707 1.097v.196a1 1 0 1 0 2 0v-.17a3 3 0 0 0 2-2.83c0-1.013-.36-1.77-1.025-2.269-.54-.405-1.215-.572-1.666-.685l-.066-.016c-.55-.138-.835-.224-1.018-.361-.085-.064-.225-.182-.225-.669a1 1 0 0 1 .984-1 1.618 1.618 0 0 1 .325.074c.245.081.606.255.984.633a1 1 0 1 0 1.414-1.414 4.547 4.547 0 0 0-1.707-1.097v-.196z"></path></svg>
+                            </div>
+                            {% else %}
+                            <div class="custom-icon">
+                                {% render 'icon-accordion', icon: 'chat_bubble' %} 
+                            </div>
+                        {% endif %}
+                      
+                            <h2 class="text_white uppercase">{{ items.title }}</h2>
                             <p class="text_white">{{ items.content }}</p>
-                            <a href="#" class="text_link custom-button uppercase">{{ items.text_button }}</a>
-                        </div> {%- endcomment -%}
+                        </div>
                     </div>
                 {%- comment -%} endcontent {%- endcomment -%}
             </div>
         {% endfor %}
     </div>
 </div>
-<div>
-    <img src="https://cdn.shopify.com/s/files/1/0583/4309/6343/files/shirt-21_large.jpg?v=1666780707" style="height: 300px; width:200px"/>
-</div>
+{%- comment -%} <script>
+    var imageElement = document.querySelector('.container-content-card');
+    var imageElement1 = document.querySelectorAll('.container-content-card');
+    var imageWidth = imageElement.clientWidth;
+    var imageHieght =  55 * imageWidth / 100;
+    for(let i = 0 ; i < imageElement1.length; i++){
+        imageElement1[i].style.height = `${Math.round(imageHieght)}px`;
+    }
+</script> {%- endcomment -%}
 {% schema %}
 {
     "name": "Card line custom",
