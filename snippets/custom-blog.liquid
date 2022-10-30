@@ -1,0 +1,76 @@
+<a class="card-blog-post-cantainer link_text" href="{{ article.url }}">
+    <div class="img-container">
+        <img class="card-blog-post__img " 
+            srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+            {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+            {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+            {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+            
+            src="{{ article.image.src | image_url: width: 533}}" width="auto"  height="auto" loading="lazy"/>
+    </div>
+    <div class="card-blog-post__content">
+            <h2>{{ article.title | truncate: 50 | escape }}</h2>
+          <div class="card-blog-post__content-conment">
+            <p>
+               {{ article.published_at | time_tag: format: 'date' }}
+            </p>
+            <p>
+               {{ 'blogs.article.comments' | t: count: article.comments_count }}
+            </p>
+          </div>
+    </div>
+</a>
+
+{% style %}
+    .card-blog-post-cantainer {
+        background:red;
+        width:100%;
+        align-items: start;
+        position: relative;
+    }
+
+    .card-blog-post-cantainer .img-container {
+        width: 100%;
+        position: relative;
+        padding-top: 75%;
+    }
+
+    .card-blog-post-cantainer .card-blog-post__img{
+        width:100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+    }
+    .card-blog-post-cantainer .card-blog-post__content{
+        position: absolute;
+        top:70%;
+        width:100%;
+        padding:15px;
+        color:var(--color-white-text)
+    }
+    .card-blog-post-cantainer .card-blog-post__content h2 {
+        margin:0;
+        color:var(--color-white-text)
+    }
+    .card-blog-post-cantainer .card-blog-post__content-conment {
+        display:flex;
+        flex-direction: row;
+    }
+    .card-blog-post-cantainer .card-blog-post__content-conment p {
+        margin:0
+    }
+    .card-blog-post-cantainer .card-blog-post__content-conment p:first-child{
+        width:50%
+    }
+    .card-blog-post-cantainer .card-blog-post__content-conment p:nth-child(2){
+        text-align:right;
+        width:50%
+    }
+{% endstyle %}
