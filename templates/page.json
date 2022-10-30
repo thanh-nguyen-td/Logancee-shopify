@@ -83,7 +83,8 @@
         "76aaf0ff-941d-4666-84e1-e44405854ab0"
       ],
       "settings": {
-        "marrgin-card": 0
+        "full_width": true,
+        "padding_card": 20
       }
     }
   },
