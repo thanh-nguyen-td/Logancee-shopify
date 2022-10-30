@@ -7,6 +7,54 @@
         "padding_bottom": 28
       }
     },
+    "69b05b17-3d91-4205-be57-0267c10dd41d": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14997315256343__69b05b17-3d91-4205-be57-0267c10dd41d-1667112567bffa734f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--14997315256343__69b05b17-3d91-4205-be57-0267c10dd41d-1667112567bffa734f-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--14997315256343__69b05b17-3d91-4205-be57-0267c10dd41d-1667112567bffa734f-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14997315256343__69b05b17-3d91-4205-be57-0267c10dd41d-1667112567bffa734f-0",
+        "template--14997315256343__69b05b17-3d91-4205-be57-0267c10dd41d-1667112567bffa734f-1",
+        "template--14997315256343__69b05b17-3d91-4205-be57-0267c10dd41d-1667112567bffa734f-2"
+      ],
+      "settings": {
+        "image_2": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "0b241678-8a49-4342-919b-3a185f7ac7b7": {
       "type": "image-list",
       "blocks": {
@@ -41,6 +89,7 @@
   },
   "order": [
     "main",
+    "69b05b17-3d91-4205-be57-0267c10dd41d",
     "0b241678-8a49-4342-919b-3a185f7ac7b7"
   ]
 }
