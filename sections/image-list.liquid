@@ -1,13 +1,53 @@
-<div></div>
+{% assign padding-number = section.settings.padding-card %}
+<div class="container {% if section.settings.full_width %}page-width{% endif %} list-img-container">
+    <div class="row list-img-child">
+        {% for block in section.blocks %}
+            <div class="col" style="padding:0 {{ section.settings.padding_card }}px;">
+                {%- comment -%} content {%- endcomment -%}
+                    <div class="list-img__content">
+                        <div class="overlay">T</div>
+                        <img src="{{block.settings.image | img_url:'large'}}" loading="lazy" width="auto" height="auto"/>
+                    </div>
+                {%- comment -%} endcontent {%- endcomment -%}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% style %}
+.list-img-container .list-img__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.list-img-container .list-img__content img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.list-img-container .col{
+    padding:0;
+}
+.list-img-container .list-img__content:hover .overlay {
+    display:block
+}
+{% endstyle %}
+
 {% schema %}
 {
     "name":"Image list",
     "tag":"section",
     "settings":[
         {
+            "type":"checkbox",
+            "label":"Full width",
+            "id":"full_width",
+            "default":true
+        },
+        {
             "type":"range",
-            "label":"Marrgin card",
-            "id":"marrgin-card",
+            "label":"Padding card",
+            "id":"padding-card",
             "default":0,
             "min":0,
             "max":100
