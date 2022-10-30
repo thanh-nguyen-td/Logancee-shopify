@@ -1,0 +1,189 @@
+<div class="custom-support-container">
+    <div class="wrap-support">
+       <div class="child-container">
+           <div class="top-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons01_300x300.png?v=1641454595"/>
+           </div>
+           <div class="bot-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons01_300x300.png?v=1641454595"/>
+           </div>
+      </div>
+      <div style="color:#fff; text-align: center;">
+           <div style="font-size: 24px; font-weight:600">{{section.settings.title_1}}</div>
+           <div style="font-style: italic">{{section.settings.content_1}}</div>
+      </div>
+    </div>
+    <div class="wrap-support">
+       <div class="child-container">
+           <div class="top-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons02_300x300.png?v=1641454595"/>
+           </div>
+           <div class="bot-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons02_300x300.png?v=1641454595"/>
+           </div>
+      </div>
+      <div style="color:#fff; text-align: center;">
+           <div style="font-size: 24px; font-weight:600">{{section.settings.title_2}}</div>
+           <div style="font-style: italic">{{section.settings.content_1}}</div>
+      </div>
+    </div>
+    <div class="wrap-support">
+       <div class="child-container">
+           <div class="top-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons03_300x300.png?v=1641454595"/>
+           </div>
+           <div class="bot-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons03_300x300.png?v=1641454595"/>
+           </div>
+      </div>
+      <div style="color:#fff; text-align: center;">
+           <div style="font-size: 24px; font-weight:600">{{section.settings.title_3}}</div>
+           <div style="font-style: italic">{{section.settings.content_1}}</div>
+      </div>
+    </div>
+    <div class="wrap-support">
+       <div class="child-container">
+           <div class="top-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons04_300x300.png?v=1641454595"/>
+           </div>
+           <div class="bot-demo">
+               <img style="height: 50px;" src="https://cdn.shopify.com/s/files/1/0564/7967/8604/files/icons04_300x300.png?v=1641454595"/>
+           </div>
+      </div>
+      <div style="color:#fff; text-align: center;">
+           <div style="font-size: 24px; font-weight:600">{{section.settings.title_4}}</div>
+           <div style="font-style: italic">{{section.settings.content_1}}</div>
+      </div>
+    </div>
+   </div>
+
+   {% style %}
+    .custom-support-container{
+    background: #fb5f1f;
+    height: 400px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    padding: 0 130px;
+    margin-top: 100px;
+    
+}
+
+.child-container{
+    height: 100px;
+    overflow: hidden;
+}
+.wrap-support{
+    display: flex;
+    justify-content:center; 
+    align-items:center; 
+    flex-direction: column;
+}
+.top-demo {
+    height: 100px;
+    width:100px;
+    background: #fb5f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s 0.2s;
+    -moz-transition: all 0.7s 0.2s;
+    -webkit-transition: all 0.7s 0.2s;
+}
+.bot-demo {
+    height: 100px;
+    width:100px;
+    background: #fb5f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child-container:hover .top-demo{
+    margin-top: -100px;
+}
+@media screen and (max-width:1200px) {
+    .custom-support-container{
+        padding: 0 60px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .custom-support-container{
+        height: 450px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:778px) {
+    .custom-support-container{
+        padding: 0 50px;
+    }
+}
+@media screen and (max-width:578px) {
+    .custom-support-container{
+        min-height: 900px;
+        grid-template-columns: 1fr;
+    }
+}
+   {% endstyle %}
+   
+   {% schema %}
+   {
+       "name":"support",
+       "tag":"section",
+      "settings": [
+       {
+           "type":"text",
+           "id":"title_1",
+           "default":"Shop Worldwide",
+           "label":"title 1"
+       },
+       {
+           "type":"text",
+           "id":"content_1",
+           "default":"Shop Worldwide",
+           "label":"content 1"
+       },
+       {
+           "type":"text",
+           "id":"title_2",
+           "default":"Shop Worldwide",
+           "label":"title 2"
+       },
+       {
+           "type":"text",
+           "id":"content_2",
+           "default":"Shop Worldwide",
+           "label":"content 2"
+       },
+       {
+           "type":"text",
+           "id":"title_3",
+           "default":"Shop Worldwide",
+           "label":"title 3"
+       },
+       {
+           "type":"text",
+           "id":"content_3",
+           "default":"Shop Worldwide",
+           "label":"content 3"
+       },
+       {
+           "type":"text",
+           "id":"title_4",
+           "default":"Shop Worldwide",
+           "label":"title 4"
+       },
+       {
+           "type":"text",
+           "id":"content_4",
+           "default":"Shop Worldwide",
+           "label":"content 4"
+       }
+      ],
+     "presets": [
+       {
+           "category": "support",
+           "name":"support"
+       }
+     ]
+   }
+   {% endschema %}
