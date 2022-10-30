@@ -1,5 +1,18 @@
 {
   "sections": {
+    "649fe241-ed97-4047-975e-69fac116633b": {
+      "type": "custom-support",
+      "settings": {
+        "title_1": "Shop Worldwide",
+        "content_1": "Shop Worldwide",
+        "title_2": "Shop Worldwide",
+        "content_2": "Shop Worldwide",
+        "title_3": "Shop Worldwide",
+        "content_3": "Shop Worldwide",
+        "title_4": "Shop Worldwide",
+        "content_4": "Shop Worldwide"
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -19,6 +32,7 @@
     }
   },
   "order": [
+    "649fe241-ed97-4047-975e-69fac116633b",
     "form",
     "main"
   ]
