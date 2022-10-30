@@ -1,0 +1,26 @@
+<div>
+   <ul>
+    {% for link in section.settings.menu.links %}
+        <li></li>
+    {% endfor %}
+   </ul>
+</div>
+{% schema %}
+{
+    "name":"Menu",
+    "settings":[
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "main-menu",
+            "label": "t:sections.header.settings.menu.label"
+        },
+        {
+            "type":"checkbox",
+            "id":"show_mega",
+            "default":true,
+            "label":"show mega"
+        }
+    ]
+}
+{% endschema %}
