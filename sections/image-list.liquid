@@ -1,5 +1,5 @@
 {% assign padding-number = section.settings.padding-card %}
-<div class="container {% if section.settings.full_width %}page-width{% endif %} list-img-container">
+<div class="container {% unless section.settings.full_width %}page-width{% endunless %} list-img-container">
     <div class="row list-img-child">
         {% for block in section.blocks %}
             <div class="col" style="padding:0 {{ section.settings.padding_card }}px;">
@@ -47,7 +47,7 @@
         {
             "type":"range",
             "label":"Padding card",
-            "id":"padding-card",
+            "id":"padding_card",
             "default":0,
             "min":0,
             "max":100
