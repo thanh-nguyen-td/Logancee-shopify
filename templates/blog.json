@@ -23,11 +23,12 @@
         "template--14997315387415__6533cb5a-be0e-48a0-8711-aae91ea8fbaa-16671453017e48d47a-1"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
