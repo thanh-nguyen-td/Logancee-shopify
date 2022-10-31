@@ -1,0 +1,49 @@
+:root {
+    --color-menu-text :#000;
+    --color-menu-bg: #fff;
+    --font-size-menu:14;
+    --color-menu-text-hover: #000;
+    --color-menu-bg-hover:#fff 
+}
+#custom-menu-container ul {
+    list-style-type: none;
+    background: pink;
+    text-align: center;
+}
+#custom-menu-container ul li {
+    display: inline-table;
+    height: 40px;
+    margin: 10px;
+    line-height: 40px;
+    position: relative;
+}
+#custom-menu-container ul li a {
+    color: var(--color-menu-text);
+    text-decoration: none;
+    display: block;
+}
+#custom-menu-container ul li a:hover {
+    text-decoration:underline;
+}
+#custom-menu-container .sub-menu {
+   padding: 0;
+   position: absolute;
+   width: 100%;
+   display: none;
+   left: 0;
+}
+
+#custom-menu-container ul li:hover .sub-menu {
+    display: block;
+}
+#custom-menu-container .sub-menu .grandchild-menu{
+    padding: 0;
+}
+
+#custom-menu-container .mega-menu ul li{
+    position:static;
+}
+
+#custom-menu-container .mega-menum {
+
+}
