@@ -6,7 +6,7 @@
                 <div class="col" style="padding:0 {{ section.settings.padding_card }}px; ">
                     {%- comment -%} content {%- endcomment -%}
                         <div class="list-text-icon__content">
-                            <div class="wrap-img" style="height:{{items.size_img}}px">
+                            <div class="wrap-img" style="height:{{section.settings.size_img}}px">
                                 {% if items.image != blank%}
                                     <img src="{{items.image | img_url: 'large'}}" loading="lazy" height="100%" width="100%"/>
                                 {% else %}
@@ -46,6 +46,14 @@
             "default":3,
             "min":2,
             "max":5
+        },
+        {
+            "type": "range",
+            "id": "size_img",
+            "label": "Size img",
+            "default":10,
+            "min":5,
+            "max":100
         }
     ],
     "blocks":[
@@ -58,14 +66,6 @@
                     "type":"image_picker",
                     "id":"image",
                     "label":"Image"
-                },
-                {
-                    "type": "range",
-                    "id": "size_img",
-                    "label": "Size img",
-                    "default":10,
-                    "min":5,
-                    "max":100
                 },
                 {
                     "type": "text",
