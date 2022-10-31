@@ -6,21 +6,19 @@
                 <div class="col" style="padding:0 {{ section.settings.padding_card }}px; ">
                     {%- comment -%} content {%- endcomment -%}
                         <div class="list-text-icon__content">
-                         
-                            {% if items.image != blank%}
-                                <div class="wrap-img" style="height:{{items.size_img}}px">
+                            <div class="wrap-img" style="height:{{items.size_img}}px">
+                                {% if items.image != blank%}
                                     <img src="{{items.image | img_url: 'large'}}" loading="lazy" height="100%" width="100%"/>
-                                </div>
-                            {% elsif items %}
-                                <div>
-                                    {{items.icon_svg}}
-                                </div>
-                            {% else %}
-                                {% render 'icon-accordion', icon: 'map_pin' %}
-                            {% endif %}
-                                <h2 class="text_black uppercase">{{ items.title }}</h2>
-                                <h4 class="text_black">{{ items.description }}</h4>
-                          
+                                {% else %}
+                                <svg class="icon icon-accordion color-foreground-{{ settings.accent_icons }}" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 20 20">
+                                    <path d="M9.91038 18.5904L14.9458 9.80988C17.1744 5.9237 14.4213 1.03316 10.004 1.03316C5.61856 1.03316 2.85676 5.85475 5.01217 9.74644L9.91038 18.5904ZM10.004 0C4.84496 0 1.59264 5.67261 4.13039 10.2547L9.34236 19.6651C9.58751 20.1078 10.2108 20.1126 10.4625 19.6737L15.82 10.3316C18.4445 5.75498 15.2016 0 10.004 0Z" fill-rule="evenodd"/>
+                                        <path d="M12.9997 6.79602C12.9997 8.5559 11.6011 9.98256 9.87597 9.98256C8.1508 9.98256 6.75228 8.5559 6.75228 6.79602C6.75228 5.03615 8.1508 3.60949 9.87597 3.60949C11.6011 3.60949 12.9997 5.03615 12.9997 6.79602ZM9.87597 8.9494C11.0418 8.9494 11.9869 7.9853 11.9869 6.79602C11.9869 5.60675 11.0418 4.64265 9.87597 4.64265C8.71015 4.64265 7.76506 5.60675 7.76506 6.79602C7.76506 7.9853 8.71015 8.9494 9.87597 8.9494Z"/>
+                                  
+                                </svg>
+                                {% endif %}
+                            </div>
+                            <h2 class="text_black uppercase">{{ items.title }}</h2>
+                            <h4 class="text_black">{{ items.description }}</h4>
                         </div>
                     {%- comment -%} endcontent {%- endcomment -%}
                 </div>
@@ -68,11 +66,6 @@
                     "default":10,
                     "min":5,
                     "max":100
-                },
-                {
-                    "type":"liquid",
-                    "id":"icon_svg",
-                    "label":"Icon_svg"
                 },
                 {
                     "type": "text",
