@@ -6,20 +6,20 @@
                 <div class="col" style="padding:0 {{ section.settings.padding_card }}px; ">
                     {%- comment -%} content {%- endcomment -%}
                         <div class="list-text-icon__content">
-                            <div class="wrap-img" style="height:{{section.settings.size_img}}px">
-                                {% if items.image != blank%}
-                                    <img src="{{items.image | img_url: 'large'}}" loading="lazy" height="100%" width="100%"/>
-                                {% else %}
-                                <svg class="icon icon-accordion color-foreground-{{ settings.accent_icons }}" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="auto" height="100%" viewBox="0 0 20 20">
-                                    <path d="M9.91038 18.5904L14.9458 9.80988C17.1744 5.9237 14.4213 1.03316 10.004 1.03316C5.61856 1.03316 2.85676 5.85475 5.01217 9.74644L9.91038 18.5904ZM10.004 0C4.84496 0 1.59264 5.67261 4.13039 10.2547L9.34236 19.6651C9.58751 20.1078 10.2108 20.1126 10.4625 19.6737L15.82 10.3316C18.4445 5.75498 15.2016 0 10.004 0Z" fill-rule="evenodd"/>
-                                        <path d="M12.9997 6.79602C12.9997 8.5559 11.6011 9.98256 9.87597 9.98256C8.1508 9.98256 6.75228 8.5559 6.75228 6.79602C6.75228 5.03615 8.1508 3.60949 9.87597 3.60949C11.6011 3.60949 12.9997 5.03615 12.9997 6.79602ZM9.87597 8.9494C11.0418 8.9494 11.9869 7.9853 11.9869 6.79602C11.9869 5.60675 11.0418 4.64265 9.87597 4.64265C8.71015 4.64265 7.76506 5.60675 7.76506 6.79602C7.76506 7.9853 8.71015 8.9494 9.87597 8.9494Z"/>
-                                  
-                                </svg>
-                                {% endif %}
+                            <div class="wrap-img" style="height:{{section.settings.size_icon}}px; width:{{section.settings.size_icon}}px">
+                                {% case items.select_icon %}
+                                    {% when 'map_pin' %}
+                                        {% render 'icon-accordion', icon: 'map_pin' %}
+                                    {% when 'message' %}
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-sample-full" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--bx"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8z"></path><path fill="currentColor" d="M12 11c-2 0-2-.63-2-1s.7-1 2-1s1.39.64 1.4 1h2A3 3 0 0 0 13 7.12V6h-2v1.09C9 7.42 8 8.71 8 10c0 1.12.52 3 4 3c2 0 2 .68 2 1s-.62 1-2 1c-1.84 0-2-.86-2-1H8c0 .92.66 2.55 3 2.92V18h2v-1.08c2-.34 3-1.63 3-2.92c0-1.12-.52-3-4-3z"></path></svg>
+                                    {% else %}
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-sample-full" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--bx"><path fill="currentColor" d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6z"></path></svg>
+                                {% endcase %}
                             </div>
                             <h2 class="text_black uppercase">{{ items.title }}</h2>
                             <h4 class="text_black">{{ items.description }}</h4>
                         </div>
+
                     {%- comment -%} endcontent {%- endcomment -%}
                 </div>
             {% endfor %}
@@ -49,8 +49,8 @@
         },
         {
             "type": "range",
-            "id": "size_img",
-            "label": "Size img",
+            "id": "size_icon",
+            "label": "Size icon",
             "default":10,
             "min":5,
             "max":100
@@ -63,10 +63,25 @@
             "limit":3,
             "settings":[
                 {
-                    "type":"image_picker",
-                    "id":"image",
-                    "label":"Image"
-                },
+                    "type": "select",
+                    "id": "select_icon",
+                    "label": "Icon",
+                    "default": "map_pin",
+                    "options":[
+                            {
+                                "value":"map_pin",
+                                "label":"Map pin"
+                            },
+                            {
+                                "value":"message",
+                                "label":"Message"
+                            },
+                            {
+                                "value":"circle_dollar",
+                                "label":"Circle dollar"
+                            }
+                        ]
+		        },
                 {
                     "type": "text",
                     "id": "title",
