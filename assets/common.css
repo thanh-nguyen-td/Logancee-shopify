@@ -199,3 +199,15 @@
     color: #999;
 }
 
+.list-text-icon-container .list-text-icon__content{
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+}
+.list-text-icon__content .wrap-img {
+    margin-bottom: 15px;
+}
