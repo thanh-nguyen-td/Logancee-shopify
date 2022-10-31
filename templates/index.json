@@ -70,34 +70,43 @@
         "padding_card": 0
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "7dbb9d76-f7bf-40c8-a685-c0c1f72ad697": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "c9bc59b5-7011-467f-9a58-3bdace613bdf": {
+      "type": "custom-text-buton-img",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Welcome to the Zoo<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
+        "25de3679-6079-4277-be2d-9da755544536": {
           "type": "text",
           "settings": {
-            "text": "<p>We have any animal, know how to bite, know how to eat rice and many other things<\/p>"
+            "text_liquid": "<h1>WELCOME TO LOGANCEE  STORE<\/h1>"
+          }
+        },
+        "17607b41-cb42-4333-9b9c-4f12cf5cbb60": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": 2
+          }
+        },
+        "f0c3589c-832a-4473-a103-98dd9c561877": {
+          "type": "text",
+          "settings": {
+            "text_liquid": "<h4>Share contact information, store details, and brand content with your customers.<\/h4>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "25de3679-6079-4277-be2d-9da755544536",
+        "17607b41-cb42-4333-9b9c-4f12cf5cbb60",
+        "f0c3589c-832a-4473-a103-98dd9c561877"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
       }
     },
     "5f309aa5-1218-4a1b-8e7c-4d0cfdab5fbe": {
@@ -199,45 +208,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "c9bc59b5-7011-467f-9a58-3bdace613bdf": {
-      "type": "custom-text-buton-img",
-      "blocks": {
-        "25de3679-6079-4277-be2d-9da755544536": {
-          "type": "text",
-          "settings": {
-            "text_liquid": "<h1>WELCOME TO LOGANCEE  STORE<\/h1>"
-          }
-        },
-        "17607b41-cb42-4333-9b9c-4f12cf5cbb60": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": 2
-          }
-        },
-        "f0c3589c-832a-4473-a103-98dd9c561877": {
-          "type": "text",
-          "settings": {
-            "text_liquid": "<h4>Share contact information, store details, and brand content with your customers.<\/h4>"
-          }
-        }
-      },
-      "block_order": [
-        "25de3679-6079-4277-be2d-9da755544536",
-        "17607b41-cb42-4333-9b9c-4f12cf5cbb60",
-        "f0c3589c-832a-4473-a103-98dd9c561877"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
     "4cad5647-ef85-493a-9605-efd993c8ea5a",
-    "rich_text",
+    "7dbb9d76-f7bf-40c8-a685-c0c1f72ad697",
+    "c9bc59b5-7011-467f-9a58-3bdace613bdf",
     "5f309aa5-1218-4a1b-8e7c-4d0cfdab5fbe",
     "0f53930c-bab3-4c57-9eb7-6cadd9bb7123",
     "featured_collection",
-    "20188831-632a-4de8-ae7c-55bb7305bf4d",
-    "c9bc59b5-7011-467f-9a58-3bdace613bdf"
+    "20188831-632a-4de8-ae7c-55bb7305bf4d"
   ]
 }
