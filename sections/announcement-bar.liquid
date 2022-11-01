@@ -16,7 +16,7 @@
             </a>
           {%- endif -%} {%- endcomment -%}
           <div class="row">
-            <div class="col">
+            <div class="col-sm-6 col-md-6 col-12">
               <div class="announcement__left">
                   <div class="items">
                     <span class="wrap-icon">
@@ -34,7 +34,7 @@
                   </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-sm-6 col-md-6 col-12">
               <div class="announcement__right">
                 <div class="right__items">
                   {% if shop.customer_accounts_enabled %}
@@ -120,6 +120,12 @@
     border-right:1px solid #999;
     height:80%;
     padding-right:10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-announcement .announcement__right{
+      justify-content:start;
+    }
   }
 {% endstyle %}
 

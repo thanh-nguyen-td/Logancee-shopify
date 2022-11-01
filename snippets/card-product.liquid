@@ -147,7 +147,7 @@
               <product-form>
                 {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}" disabled>
-                  <div style="display: flex">
+                  <div class="wrap-button">
                     <button
                       id="{{ product_form_id }}-submit"
                       type="submit"
@@ -176,23 +176,24 @@
                         </svg>
                       </div>
                     </button>
-                    <div class="wrap-icon">
-                      {% render 'icon-accordion', icon: 'heart' %}
-                    </div>
-                    <div class="wrap-icon">
-                      {% render 'icon-accordion', icon: 'stopwatch' %}
+                    <div class="wrap-icon-group">
+                      <div class="wrap-icon">
+                        {% render 'icon-accordion', icon: 'heart' %}
+                      </div>
+                      <div class="wrap-icon">
+                        {% render 'icon-accordion', icon: 'stopwatch' %}
+                      </div>
                     </div>
                   </div>
                 {%- endform -%}
               </product-form>
             {%- else -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
-                <div style="display: flex;">
+                <div class="wrap-button">
                   <button
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
-                    
                     class="custom-button button--full-width button--secondary"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
@@ -205,12 +206,14 @@
                       </svg>
                     </div>
                   </button>
+                 <div class="wrap-icon-group">
                   <div class="wrap-icon">
                     {% render 'icon-accordion', icon: 'heart' %}
                   </div>
                   <div class="wrap-icon">
                     {% render 'icon-accordion', icon: 'stopwatch' %}
                   </div>
+                 </div>
                 </div>
               </modal-opener>
               <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
@@ -275,6 +278,13 @@
 {%- endif -%}
 
 {% style %}
+ .custom-card-container .wrap-button{
+        display:flex
+    }
+    .custom-card-container .wrap-icon-group {
+      display:flex;
+    
+    }
   .custom-card-container .wrap-icon{
     padding: 10px;
     display:flex;
@@ -297,5 +307,15 @@
     align-items:center;
     font-size:1.5rem
   }
-
+  @media screen and (max-width: 768px) {
+    .custom-card-container .wrap-button{
+        display:block
+    }
+    .wrap-icon-group{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-top:5px
+    }
+  }
 {% endstyle %}
