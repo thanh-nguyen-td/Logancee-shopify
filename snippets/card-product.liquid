@@ -152,6 +152,7 @@
                       id="{{ product_form_id }}-submit"
                       type="submit"
                       name="add"
+                      style="border-color:#999"
                       class=" button width-full button--secondary"
                       aria-haspopup="dialog"
                       aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
@@ -178,7 +179,7 @@
                     <div class="wrap-icon">
                       {% render 'icon-accordion', icon: 'heart' %}
                     </div>
-                    <div style="padding:10px; display:flex;justify-content:center:align-items:center; border:1px solid #000; margin-left:5px">
+                    <div class="wrap-icon">
                       {% render 'icon-accordion', icon: 'stopwatch' %}
                     </div>
                   </div>
@@ -186,12 +187,13 @@
               </product-form>
             {%- else -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
-                <div style="display: flex;margin-left:5px; margin-right:5px">
+                <div style="display: flex;">
                   <button
                     id="{{ product_form_id }}-submit"
                     type="submit"
                     name="add"
-                    class=" button button--full-width button--secondary"
+                    
+                    class="custom-button button--full-width button--secondary"
                     aria-haspopup="dialog"
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                     data-product-url="{{ card_product.url }}"
@@ -206,7 +208,7 @@
                   <div class="wrap-icon">
                     {% render 'icon-accordion', icon: 'heart' %}
                   </div>
-                  <div style="padding:10px; display:flex;justify-content:center:align-items:center; border:1px solid #000; margin-left:5px">
+                  <div class="wrap-icon">
                     {% render 'icon-accordion', icon: 'stopwatch' %}
                   </div>
                 </div>
@@ -274,12 +276,26 @@
 
 {% style %}
   .custom-card-container .wrap-icon{
-  
     padding: 10px;
     display:flex;
     justify-content:center;
     align-items:center; 
-    border:1px solid #000; 
+    border:1px solid #999; 
     margin-left:5px
   }
+  .custom-card-container .wrap-icon svg {
+    color:#999
+  }
+  .custom-card-container .card {
+    border:0
+  }
+  .custom-card-container .custom-button {
+    border:1px solid #999;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5rem
+  }
+
 {% endstyle %}
