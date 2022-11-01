@@ -90,6 +90,10 @@
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
                   </div>
+                {%- when 'text_contact' -%}
+                  <div>day la text contact</div>
+                {%- when 'img_with_text' -%}
+                  <div>day la img with text</div>
                 {%- endcase -%}
             </div>
           {%- endfor -%}
@@ -469,6 +473,55 @@
             }
           ],
           "default": "center"
+        }
+      ]
+    },
+    {
+      "type":"text_contact",
+      "name":"Text contact",
+      "settings":[
+        {
+          "type":"text",
+          "id":"address",
+          "label":"Address",
+          "default":"123 New Design, ABC"
+        },
+        {
+          "type":"text",
+          "id":"phone_number",
+          "label":"Phone number",
+          "default":"0988888888"
+        },
+        {
+          "type":"text",
+          "id":"email_address",
+          "label":"Email address",
+          "default":"example@gmail.com"
+        }
+      ]
+    },
+    {
+      "type":"img_with_text",
+      "name":"Image with text",
+      "settings":[
+        {
+          "type":"richtext",
+          "id":"description",
+          "label":"Description",
+          "default":"<p>This is text</p>"
+        },
+        {
+          "type":"image_picker",
+          "id":"img_or_logo",
+          "label":"Image or logo"
+        },
+        {
+          "type":"range",
+          "id":"size_img",
+          "label":"Size image",
+          "default":20,
+          "min":5,
+          "max":100
         }
       ]
     }
