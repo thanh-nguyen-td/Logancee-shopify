@@ -137,18 +137,18 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-1": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Info",
-              "menu": "footer"
-            }
-          },
           "17234d81-eda9-4c46-8b65-76bbab430edd": {
             "type": "text",
             "settings": {
               "heading": "demo first",
               "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
             }
           },
           "9184348b-5338-4105-92de-e6d6f402c813": {
@@ -160,8 +160,8 @@
           }
         },
         "block_order": [
-          "footer-1",
           "17234d81-eda9-4c46-8b65-76bbab430edd",
+          "footer-1",
           "9184348b-5338-4105-92de-e6d6f402c813"
         ],
         "settings": {
