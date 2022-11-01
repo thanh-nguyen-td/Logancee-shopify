@@ -1,0 +1,14 @@
+<div class="img-with-text-container">
+    <div style="width:{{block.settings.size_img}}px ;">
+      <img src="{{block.settings.img_or_logo | img_url: 'large'}}" loading="lazy" width="100%" height="100%"/>
+    </div>
+    <div class="wrap-description">
+      {{block.settings.description}}
+    </div>
+  </div>
+  {% style %}
+    .img-with-text-container .wrap-description{
+        font-size: 14px;
+        color:#999
+    }
+  {% endstyle %}
