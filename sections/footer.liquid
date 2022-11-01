@@ -91,7 +91,7 @@
                     {%- endif -%}
                   </div>
                 {%- when 'text_contact' -%}
-                  <div>day la text contact</div>
+                  {% render 'footer-text-contact' , block:block%}
                 {%- when 'img_with_text' -%}
                   <div>day la img with text</div>
                 {%- endcase -%}
@@ -481,6 +481,12 @@
       "name":"Text contact",
       "settings":[
         {
+          "type": "text",
+          "id": "heading",
+          "default": "Contact",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+        },
+        {
           "type":"text",
           "id":"address",
           "label":"Address",
@@ -505,15 +511,21 @@
       "name":"Image with text",
       "settings":[
         {
-          "type":"richtext",
-          "id":"description",
-          "label":"Description",
-          "default":"<p>This is text</p>"
+          "type": "text",
+          "id": "heading",
+          "default": "Quick text",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label"
         },
         {
           "type":"image_picker",
           "id":"img_or_logo",
           "label":"Image or logo"
+        },
+        {
+          "type":"richtext",
+          "id":"description",
+          "label":"Description",
+          "default":"<p>This is text</p>"
         },
         {
           "type":"range",
