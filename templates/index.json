@@ -184,6 +184,15 @@
         "padding_bottom": 36
       }
     },
+    "0538d815-1674-41b9-bc8b-82c45d972293": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": true,
+        "margin_top": 5,
+        "margin_bottom": 5
+      }
+    },
     "20188831-632a-4de8-ae7c-55bb7305bf4d": {
       "type": "featured-blog",
       "settings": {
@@ -209,6 +218,7 @@
     "5f309aa5-1218-4a1b-8e7c-4d0cfdab5fbe",
     "0f53930c-bab3-4c57-9eb7-6cadd9bb7123",
     "featured_collection",
+    "0538d815-1674-41b9-bc8b-82c45d972293",
     "20188831-632a-4de8-ae7c-55bb7305bf4d"
   ]
 }
