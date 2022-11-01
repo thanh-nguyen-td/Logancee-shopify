@@ -85,7 +85,7 @@
         "25de3679-6079-4277-be2d-9da755544536": {
           "type": "text",
           "settings": {
-            "text_liquid": "<h1>WELCOME TO LOGANCEE  STORE<\/h1>"
+            "text_liquid": "<h1 style=\"font-weight:600;font-size:2.5rem\">WELCOME TO LOGANCEE  STORE<\/h1>"
           }
         },
         "e5c57642-c11d-4fa9-bf21-29e73fc37e2d": {
