@@ -137,11 +137,12 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "17234d81-eda9-4c46-8b65-76bbab430edd": {
-            "type": "text",
+          "04cca9cf-f349-478e-88b7-7124832da77b": {
+            "type": "img_with_text",
             "settings": {
-              "heading": "demo first",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "description": "<p>Share contact information, store details, and brand content with your customers.<\/p>",
+              "img_or_logo": "shopify:\/\/shop_images\/chantilly-logo-new_310x_6a2a2560-cbf9-4e8d-89cd-60249cbb74a8.png",
+              "size_img": 20
             }
           },
           "footer-1": {
@@ -157,12 +158,21 @@
               "heading": "CUSTOMER CARE",
               "menu": "shop-our-store"
             }
+          },
+          "366466e2-24e2-4854-8a95-c93dea860dc5": {
+            "type": "text_contact",
+            "settings": {
+              "address": "123 New Design, ABC",
+              "phone_number": "0988888888",
+              "email_address": "example@gmail.com"
+            }
           }
         },
         "block_order": [
-          "17234d81-eda9-4c46-8b65-76bbab430edd",
+          "04cca9cf-f349-478e-88b7-7124832da77b",
           "footer-1",
-          "9184348b-5338-4105-92de-e6d6f402c813"
+          "9184348b-5338-4105-92de-e6d6f402c813",
+          "366466e2-24e2-4854-8a95-c93dea860dc5"
         ],
         "settings": {
           "color_scheme": "background-1",
