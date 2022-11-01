@@ -47,10 +47,9 @@
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
   <div class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
-      <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
-       
+      <div style="margin-bottom:1rem" class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
-         <div style="display:flex; justify-content:center">
+         <div class="center_justify">
             <h2 class="title {{ section.settings.heading_size }} text_600" style="font-weight:600">{{ section.settings.title | escape }}</h2>
          </div>
         {%- endif -%}

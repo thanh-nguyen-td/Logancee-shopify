@@ -1,0 +1,50 @@
+<div class="custom-space-container {% unless section.settings.full_width %} page-width {% endunless %}">
+    <div class="space__content {% if section.settings.show_line %} line {% endif %}" style="margin-top:{{section.settings.margin_top}}px;margin-bottom:{{section.settings.margin_bottom}}px;">
+        T
+    </div>
+</div>
+{% style %}
+    .custom-space-container .space__content {
+        color:transparent
+    }
+    .custom-space-container .line{
+        height:1px;
+        background:#ededed
+    }
+{% endstyle %}
+{% schema %}
+{
+    "name":"Space",
+    "tag":"section",
+    "settings":[
+        {
+            "type":"checkbox",
+            "id":"full_width",
+            "label":"Full width",
+            "default":false
+        },
+        {
+            "type":"checkbox",
+            "id":"show_line",
+            "label":"Show line",
+            "default":false
+        },
+        {
+            "type":"range",
+            "id":"margin_top",
+            "label":"Margin top",
+            "default":5,
+            "min":1,
+            "max":100
+        },
+        {
+            "type":"range",
+            "id":"margin_bottom",
+            "label":"Margin bottom",
+            "default":5,
+            "min":1,
+            "max":100
+        }
+    ]
+}
+{% endschema %}
