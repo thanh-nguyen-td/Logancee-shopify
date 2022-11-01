@@ -147,14 +147,14 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
+              "heading": "INFOMATIONS",
               "menu": "footer"
             }
           },
           "9184348b-5338-4105-92de-e6d6f402c813": {
             "type": "link_list",
             "settings": {
-              "heading": "menu vui",
+              "heading": "CUSTOMER CARE",
               "menu": "shop-our-store"
             }
           }
