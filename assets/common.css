@@ -221,13 +221,16 @@ p{
 .custom-icon-space {
     display:flex; 
     align-items:center;
-    color:#999
+    justify-content: center;
+    color:#999;
+    width: 100%;
 }
-.custom-icon-space .circle {
+.custom-icon-space .circle,
+.custom-icon-circle {
     background: #999;
     height:8px;
     width:8x;
     border-radius:4px; 
     color:transparent;
-    margin:5px
+    margin:5px;
 }
