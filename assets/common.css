@@ -217,3 +217,17 @@ p{
 .list-text-icon__content .wrap-img {
     margin-bottom: 15px;
 }
+
+.custom-icon-space {
+    display:flex; 
+    align-items:center;
+    color:#999
+}
+.custom-icon-space .circle {
+    background: #999;
+    height:8px;
+    width:8x;
+    border-radius:4px; 
+    color:transparent;
+    margin:5px
+}

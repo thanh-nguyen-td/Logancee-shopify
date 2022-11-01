@@ -8,6 +8,14 @@
                 {% when "custom_liquid" %}
                     <div style="margin:{{block.settings.custom_liquid}}px ;opacity:0">T</div>
                 {% else %}
+                {% when "icon_space" %}
+                    <div class="custom-icon-space" style="margin:{{block.settings.custom_liquid}}px">
+                        - - -
+                        <div class="circle">T</div>
+                        -
+                        <div class="circle">T</div>
+                        - - -
+                    </div>
                 {% if block.settings.image != blank %}
                         <img src="{{ block.settings.image | img_url: 'large' }}" height="auto" width="auto" loading="lazy" style="width:{{ block.settings.width_img }}% ;"/>
                     {% else %}
@@ -91,6 +99,20 @@
         {
             "type":"custom_liquid",
             "name":"Custom liquid",
+            "settings":[
+                {
+                    "type":"range",
+                    "id":"custom_liquid",
+                    "label":"Custom liquid",
+                    "default":20,
+                    "min":2,
+                    "max":50
+                }
+            ]
+        },
+        {
+            "type":"icon_space",
+            "name":"Icon space",
             "settings":[
                 {
                     "type":"range",
