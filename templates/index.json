@@ -88,10 +88,10 @@
             "text_liquid": "<h1>WELCOME TO LOGANCEE  STORE<\/h1>"
           }
         },
-        "17607b41-cb42-4333-9b9c-4f12cf5cbb60": {
-          "type": "custom_liquid",
+        "e5c57642-c11d-4fa9-bf21-29e73fc37e2d": {
+          "type": "icon_space",
           "settings": {
-            "custom_liquid": 2
+            "custom_liquid": 20
           }
         },
         "f0c3589c-832a-4473-a103-98dd9c561877": {
@@ -103,7 +103,7 @@
       },
       "block_order": [
         "25de3679-6079-4277-be2d-9da755544536",
-        "17607b41-cb42-4333-9b9c-4f12cf5cbb60",
+        "e5c57642-c11d-4fa9-bf21-29e73fc37e2d",
         "f0c3589c-832a-4473-a103-98dd9c561877"
       ],
       "settings": {
