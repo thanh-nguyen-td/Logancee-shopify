@@ -5,20 +5,36 @@
       "settings": {
       }
     },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 4
+      }
+    },
+    "8ede7e64-fcd8-46d2-be76-a87ecab921c2": {
+      "type": "custom-text-buton-img",
+      "blocks": {
+        "65de2553-4790-47e1-aaad-017b19426521": {
+          "type": "text",
+          "settings": {
+            "text_liquid": "<h2>I YOU COT ANY QUESTIONS\nPLEASE DO NOT HESITATE TO SEND US A MESSAGE.<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "65de2553-4790-47e1-aaad-017b19426521"
+      ],
+      "settings": {
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
         "heading": "",
         "heading_size": "h1",
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -52,8 +68,9 @@
   },
   "order": [
     "649fe241-ed97-4047-975e-69fac116633b",
-    "form",
     "main",
+    "8ede7e64-fcd8-46d2-be76-a87ecab921c2",
+    "form",
     "abcc7d71-9e3f-462f-a227-18f8d8419423",
     "3708b768-fc6e-49bf-9d29-76d0e81b75ec",
     "c6e35fc1-1140-4dcb-be79-7ee685379f9f"
