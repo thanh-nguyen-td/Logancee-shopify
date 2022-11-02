@@ -55,6 +55,15 @@
         "show_text_below": true
       }
     },
+    "73f72261-1864-4b24-946b-f3085da98055": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": false,
+        "margin_top": 15,
+        "margin_bottom": 5
+      }
+    },
     "3d1dfe9c-9838-448c-9a34-4698686070ea": {
       "type": "custom-text-buton-img",
       "blocks": {
@@ -62,6 +71,12 @@
           "type": "text",
           "settings": {
             "text_liquid": "<h1>WELCOME TO LOGANCEE STORE<\/h1>"
+          }
+        },
+        "debb6196-1e29-4bb0-8980-07463bf510c8": {
+          "type": "icon_space",
+          "settings": {
+            "custom_liquid": 11
           }
         },
         "9d91e25b-4e3d-4794-aa34-67795f365894": {
@@ -91,6 +106,7 @@
       },
       "block_order": [
         "2243413c-68d2-41fd-8f30-0efcad825463",
+        "debb6196-1e29-4bb0-8980-07463bf510c8",
         "9d91e25b-4e3d-4794-aa34-67795f365894",
         "f617d028-0af7-46de-87e3-c58da240a4b6",
         "2346eded-08c2-4ab2-a839-ed889b0c49b5",
@@ -165,6 +181,7 @@
   "order": [
     "main",
     "69b05b17-3d91-4205-be57-0267c10dd41d",
+    "73f72261-1864-4b24-946b-f3085da98055",
     "3d1dfe9c-9838-448c-9a34-4698686070ea",
     "bbd73a20-c883-4bc7-8e25-4a4faca83b6d",
     "0b241678-8a49-4342-919b-3a185f7ac7b7"
