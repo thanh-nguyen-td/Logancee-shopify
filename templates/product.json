@@ -39,13 +39,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -61,6 +54,12 @@
         "price": {
           "type": "price",
           "settings": {
+          }
+        },
+        "bb81aae1-3843-47af-8af3-b6b0967e6ba5": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"color:#999; border-top:1px solid #999; border-bottom:1px solid #999; padding:20px 0\">\n<h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit minus, adipisci ex quis eum odit recusandae fugiat deserunt praesentium illum suscipit doloremque? Nisi quisquam dignissimos delectus culpa praesentium, molestias animi?<\/h4>\n<\/div>"
           }
         },
         "quantity_selector": {
@@ -84,24 +83,17 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "bb81aae1-3843-47af-8af3-b6b0967e6ba5": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div style=\"color:#999; border-top:1px solid #999; border-bottom:1px solid #999; padding:20px 0\">\n<h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit minus, adipisci ex quis eum odit recusandae fugiat deserunt praesentium illum suscipit doloremque? Nisi quisquam dignissimos delectus culpa praesentium, molestias animi?<\/h4>\n<\/div>"
-          }
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "caption",
         "price",
+        "bb81aae1-3843-47af-8af3-b6b0967e6ba5",
         "quantity_selector",
         "description",
         "8a8bcf9c-7844-4a15-901f-7a43105d7e93",
-        "share",
-        "bb81aae1-3843-47af-8af3-b6b0967e6ba5"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
