@@ -217,36 +217,40 @@
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-        <div class="assess-product">
-          <div class="wrap-icon-rate">
-            <span class="icon-rate">
-              {% render 'icon-icon', type:'rate' %}
-            </span>
-            <span class="icon-rate">
-              {% render 'icon-icon', type:'rate' %}
-            </span>
-            <span class="icon-rate">
-              {% render 'icon-icon', type:'rate' %}
-            </span>
-            <span class="icon-rate">
-              {% render 'icon-icon', type:'rate' %}
-            </span>
-            <span class="icon-rate">
-              {% render 'icon-icon', type:'rate' %}
-            </span>
-          </div>
-          <div>
-            <h4>4 Review(s)</h4>
-          </div>
-          <div>
-            <h4>Add your review</h4>
-          </div>
-        </div>
-        {% render 'detail-product-quantity', product:product %}
+       
+     
         {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
+            {%- when 'quantity' -%}
+              {% render 'detail-product-quantity', product:product %}
+            {%- when 'rate' -%}
+              <div class="assess-product">
+                <div class="wrap-icon-rate">
+                  <span class="icon-rate">
+                    {% render 'icon-icon', type:'rate' %}
+                  </span>
+                  <span class="icon-rate">
+                    {% render 'icon-icon', type:'rate' %}
+                  </span>
+                  <span class="icon-rate">
+                    {% render 'icon-icon', type:'rate' %}
+                  </span>
+                  <span class="icon-rate">
+                    {% render 'icon-icon', type:'rate' %}
+                  </span>
+                  <span class="icon-rate">
+                    {% render 'icon-icon', type:'rate' %}
+                  </span>
+                </div>
+                <div>
+                  <h4>4 Review(s)</h4>
+                </div>
+                <div>
+                  <h4>Add your review</h4>
+                </div>
+              </div>
           {%- when 'text' -%}
             <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
