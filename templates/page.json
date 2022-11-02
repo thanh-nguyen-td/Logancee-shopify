@@ -122,7 +122,7 @@
         "03765cbb-0356-4834-a7d2-8775a7bd9cc4": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": 20
+            "custom_liquid": 12
           }
         },
         "83584bd1-f3fa-48d4-8adf-be5f380e9e0a": {
@@ -134,7 +134,7 @@
         "88f75eae-95b6-41ae-bb67-b3eabbc8a835": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": 10
+            "custom_liquid": 2
           }
         }
       },
@@ -153,7 +153,7 @@
         "show_line": true,
         "type_show": "icon-custom",
         "margin_top": 5,
-        "margin_bottom": 5
+        "margin_bottom": 25
       }
     },
     "0b241678-8a49-4342-919b-3a185f7ac7b7": {
