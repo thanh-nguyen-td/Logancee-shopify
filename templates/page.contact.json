@@ -23,10 +23,30 @@
         "padding_bottom": 36
       }
     },
+    "abcc7d71-9e3f-462f-a227-18f8d8419423": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": false,
+        "type_show": "line",
+        "margin_top": 10,
+        "margin_bottom": 10
+      }
+    },
     "3708b768-fc6e-49bf-9d29-76d0e81b75ec": {
       "type": "google-map",
       "settings": {
         "full_width": false
+      }
+    },
+    "c6e35fc1-1140-4dcb-be79-7ee685379f9f": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": false,
+        "type_show": "line",
+        "margin_top": 22,
+        "margin_bottom": 22
       }
     }
   },
@@ -34,6 +54,8 @@
     "649fe241-ed97-4047-975e-69fac116633b",
     "form",
     "main",
-    "3708b768-fc6e-49bf-9d29-76d0e81b75ec"
+    "abcc7d71-9e3f-462f-a227-18f8d8419423",
+    "3708b768-fc6e-49bf-9d29-76d0e81b75ec",
+    "c6e35fc1-1140-4dcb-be79-7ee685379f9f"
   ]
 }
