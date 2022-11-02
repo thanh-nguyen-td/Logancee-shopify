@@ -120,6 +120,12 @@
         "padding_bottom": 12
       }
     },
+    "6788ffa8-42db-4563-b28a-1a3534abe6c6": {
+      "type": "custom-tabs",
+      "settings": {
+        "texxt": "text etx"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -136,18 +142,12 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "6788ffa8-42db-4563-b28a-1a3534abe6c6": {
-      "type": "custom-tabs",
-      "settings": {
-        "texxt": "text etx"
-      }
     }
   },
   "order": [
     "01fb6607-1d98-46ac-bfe7-167cbe3dcbd0",
     "main",
-    "product-recommendations",
-    "6788ffa8-42db-4563-b28a-1a3534abe6c6"
+    "6788ffa8-42db-4563-b28a-1a3534abe6c6",
+    "product-recommendations"
   ]
 }
