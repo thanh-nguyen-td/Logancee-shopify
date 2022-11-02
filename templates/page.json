@@ -60,6 +60,7 @@
       "settings": {
         "full_width": false,
         "show_line": false,
+        "type_show": "line",
         "margin_top": 15,
         "margin_bottom": 5
       }
@@ -82,7 +83,7 @@
         "9d91e25b-4e3d-4794-aa34-67795f365894": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": 5
+            "custom_liquid": 2
           }
         },
         "f617d028-0af7-46de-87e3-c58da240a4b6": {
@@ -145,6 +146,16 @@
       "settings": {
       }
     },
+    "08a3e5b5-0417-41ce-aa7d-4ffd24e27834": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": true,
+        "type_show": "icon-custom",
+        "margin_top": 5,
+        "margin_bottom": 5
+      }
+    },
     "0b241678-8a49-4342-919b-3a185f7ac7b7": {
       "type": "image-list",
       "blocks": {
@@ -184,6 +195,7 @@
     "73f72261-1864-4b24-946b-f3085da98055",
     "3d1dfe9c-9838-448c-9a34-4698686070ea",
     "bbd73a20-c883-4bc7-8e25-4a4faca83b6d",
+    "08a3e5b5-0417-41ce-aa7d-4ffd24e27834",
     "0b241678-8a49-4342-919b-3a185f7ac7b7"
   ]
 }
