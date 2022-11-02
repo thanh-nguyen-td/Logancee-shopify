@@ -1,10 +1,11 @@
-<div>
+<div class="page-width tabs-container">
    <div class="head">
     <h3>PRODUCT DESCRIPTION</h3>
     <h3>PREVIEW</h3>
     <h3>TAGS</h3>
     <h3>ADITIONAL INFORMATION</h3>
    </div>
+   <div class="line">line</div>
    <div class="content">
     <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque incidunt suscipit magnam nostrum aperiam tempore ullam quidem? Dolor natus ducimus delectus magnam et culpa modi, excepturi ea illo esse.</h4>
     <ul>
@@ -18,7 +19,43 @@
    </div>
 </div>
 {% style %}
-    
+    .tabs-container .head {
+        display:flex;
+        align-items:center;
+        justify-content:center
+    }
+    .tabs-container .head h3{
+        font-weight:600;
+        padding:20px;
+        margin:0;
+        border-bottom:2px solid transparent
+    }
+    .tabs-container .head h3:first-child{
+        border-bottom:2px solid #000
+    }
+    .tabs-container .head h3:hover{
+        border-bottom:2px solid #000
+    }
+    .tabs-container .line {
+        height:1px;
+        background:#999;
+        color:transparent
+    }
+    .tabs-container .content {
+        margin-top:20px
+    }
+    .tabs-container .content ul {
+        color:#999;
+        list-style-type: square
+    }
+    .tabs-container .content h4{
+        color:#999
+    }
+    @media screen and (max-width:800px){
+        .tabs-container .head{
+            display:block;
+        }
+    }
 {% endstyle %}
 {% schema %}
 {

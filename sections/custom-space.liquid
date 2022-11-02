@@ -1,7 +1,19 @@
 <div class="custom-space-container {% unless section.settings.full_width %} page-width {% endunless %}">
-    <div class="space__content {% if section.settings.show_line %} line {% endif %}" style="margin-top:{{section.settings.margin_top}}px;margin-bottom:{{section.settings.margin_bottom}}px;">
-        T
-    </div>
+    <div style="margin-top:{{section.settings.margin_top}}px;margin-bottom:{{section.settings.margin_bottom}}px;">
+        {% if section.setting.type_show == "line" %}
+            <div class="space__content {% if section.settings.show_line %} line {% endif %}" >
+                T
+            </div>
+        {% else %}
+            <div class="custom-icon-space">
+                - - -
+                <div class="circle">T</div>
+                -
+                <div class="circle">T</div>
+                - - -
+            </div>
+        {% endif %}
+    </div >
 </div>
 {% style %}
     .custom-space-container .space__content {
@@ -28,6 +40,22 @@
             "id":"show_line",
             "label":"Show line",
             "default":false
+        },
+        {
+            "type":"select",
+            "id":"type_show",
+            "label":"Show",
+            "options":[
+							{
+								"value":"line",
+								"label":"line"
+							},
+                            {
+								"value":"icon-custom",
+								"label":"icon-custom"
+							}
+						],
+            "default":"line"
         },
         {
             "type":"range",
