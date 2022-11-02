@@ -1,0 +1,27 @@
+{% comment %}
+
+  Renders:
+  - Show số lượng sản phẩm còn trong kho, số lượng chi tiết của từng màu, size
+  Request:
+  Accepts:
+    - product: {Object} Product Liquid object (optional)
+    
+  Usage:
+     {% render 'detail-product-quantity', product:product %}
+
+{% endcomment %}
+
+
+<div style="display:flex">
+    <div id="inventory-{{ section.id }}" class="" style=" display:flex; align-items:center"> 
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><path fill="currentColor" d="m12 21.05l-9-7l1.65-1.25L12 18.5l7.35-5.7L21 14.05ZM12 16L3 9l9-7l9 7Z"></path></svg>
+        <h4 style="margin: 0 5px;">Only <strong>{{ product.selected_or_first_available_variant.inventory_quantity }}</strong> left</h4>
+    </div>
+    <div style="display:flex; align-items:center; margin-left:15px; padding-left:15px;border-left:1px solid #999">
+        <h4 style="margin: 0 ;">
+            <span>Availalble:</span>
+            <span style="color:#96c900">In Stock</span>
+        </h4>
+    </div>
+</div>
+
