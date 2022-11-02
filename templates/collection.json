@@ -45,6 +45,15 @@
         "show_text_below": true
       }
     },
+    "caaf7b1f-7225-4079-80a9-64bc265bc28f": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": false,
+        "margin_top": 15,
+        "margin_bottom": 5
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -94,6 +103,7 @@
   "order": [
     "banner",
     "0cae59f7-1aef-456c-976a-07ef3b06fb11",
+    "caaf7b1f-7225-4079-80a9-64bc265bc28f",
     "product-grid",
     "a64cd32e-e113-4994-9bbc-f55951169ad3"
   ]
