@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient custom-contact-container">
   <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
@@ -36,8 +36,47 @@
           </li>
         </ul>
       {%- endif -%}
-      <input placeholder="Name" class="custom-input"/>
-        <div class="field">
+      <input placeholder="Your Name" 
+        class="custom-input" 
+        autocomplete="name" 
+        type="text" 
+        id="ContactForm-name"  
+        name="contact[{{ 'templates.contact.form.name' | t }}]" 
+        value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+      />
+      <input 
+        placeholder="Your Mail *" 
+        class="custom-input"
+        name="contact[email]"
+        spellcheck="false"
+        autocapitalize="off"
+        required
+        value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+       />
+       <input 
+        placeholder="Your Name" 
+        class="custom-input"
+        type="tel" 
+        id="ContactForm-phone" 
+        autocomplete="tel" 
+        name="contact[{{ 'templates.contact.form.phone' | t }}]" 
+        pattern="[0-9\-]*" 
+        value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+      />
+      <textarea  
+        rows="5"
+        class="custom-textarea"
+        id="ContactForm-body"
+        placeholder="Message"
+        name="contact[{{ 'templates.contact.form.comment' | t }}]">
+        {{- form.body -}}
+      </textarea>
+        {%- comment -%} <div class="field">
           <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
           <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
         </div>
@@ -82,16 +121,46 @@
           {{- form.body -}}
         </textarea>
         <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
-      </div>
-      <div class="contact__button">
+      </div> {%- endcomment -%}
+      <div class="wrap-button">
         <button type="submit" class="button">
-          {{ 'templates.contact.form.send' | t }}
+          Seen message
         </button>
       </div>
     {%- endform -%}
   </div>
 </div>
-
+{% style %}
+  .custom-contact-container .custom-input {
+    border:0;
+    background: #f6f6f6;
+    height:55px;
+    width:100%;
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom:20px
+}
+.custom-contact-container .custom-textarea{
+    border:0;
+    background: #f6f6f6;
+    width:100%;
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom:20px
+}
+.custom-contact-container .custom-input:focus-visible,
+.custom-contact-container .custom-textarea:focus-visible{
+    outline:0;
+    outline-offset:0;
+    box-shadow:0 0 0 0;
+    border:0
+}
+.custom-contact-container .wrap-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+{% endstyle %}
 {% schema %}
 {
   "name": "t:sections.contact-form.name",

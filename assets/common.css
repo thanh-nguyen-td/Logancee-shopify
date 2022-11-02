@@ -233,17 +233,3 @@ p{
     margin:5px;
 }
 
-.custom-input {
-    border:0;
-    background: #f6f6f6;
-    height:55px;
-    width:100%;
-    font-size: 14px;
-    padding-left: 20px;
-}
-.custom-input:focus-visible{
-    outline:0;
-    outline-offset:0;
-    box-shadow:0;
-    border:0
-}
