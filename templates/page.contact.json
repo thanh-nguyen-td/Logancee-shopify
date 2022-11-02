@@ -36,40 +36,44 @@
         "show_text_below": true
       }
     },
-    "649fe241-ed97-4047-975e-69fac116633b": {
-      "type": "custom-support",
+    "c60a934c-13d3-4275-9dc0-6a31bf82bb40": {
+      "type": "custom-line",
       "blocks": {
-        "0c4c969d-3c77-401c-b11a-bd7c211b5054": {
+        "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-0": {
           "type": "card",
           "settings": {
-            "title": "Shop Worldwide",
-            "description": "Shop Worldwide",
-            "icon_svg": ""
+            "select_icon": "map_pin",
+            "title": "Title",
+            "description": "<p>Description<\/p>"
           }
         },
-        "fd32ea72-2509-47bf-802f-6cfe13d65090": {
+        "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-1": {
           "type": "card",
           "settings": {
-            "title": "Shop Worldwide",
-            "description": "Shop Worldwide",
-            "icon_svg": ""
+            "select_icon": "map_pin",
+            "title": "Title",
+            "description": "<p>Description<\/p>"
           }
         },
-        "3970e3b8-4e59-4656-a0b1-fb93ed6cf502": {
+        "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-2": {
           "type": "card",
           "settings": {
-            "title": "Shop Worldwide",
-            "description": "Shop Worldwide",
-            "icon_svg": ""
+            "select_icon": "map_pin",
+            "title": "Title",
+            "description": "<p>Description<\/p>"
           }
         }
       },
       "block_order": [
-        "0c4c969d-3c77-401c-b11a-bd7c211b5054",
-        "fd32ea72-2509-47bf-802f-6cfe13d65090",
-        "3970e3b8-4e59-4656-a0b1-fb93ed6cf502"
+        "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-0",
+        "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-1",
+        "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-2"
       ],
       "settings": {
+        "padding_card": 9,
+        "border_right": true,
+        "number_column": 3,
+        "size_icon": 35
       }
     },
     "main": {
@@ -135,7 +139,7 @@
   },
   "order": [
     "67e0db29-a2b4-4290-a881-a23f43128f33",
-    "649fe241-ed97-4047-975e-69fac116633b",
+    "c60a934c-13d3-4275-9dc0-6a31bf82bb40",
     "main",
     "8ede7e64-fcd8-46d2-be76-a87ecab921c2",
     "form",
