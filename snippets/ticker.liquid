@@ -1,0 +1,37 @@
+<div class="ticker-container">
+    <div class="ticker__body">
+        <p>
+            {% if content %}
+                {{content}}
+            {% else %}
+                ticker
+            {% endif %}
+        </p>
+    </div>
+    <div class="ticker__footer">t</div>
+  </div>
+  {% style %}
+    .ticker-container{
+        position:absolute;
+        top:-15px;
+        right:10px;
+    }
+    .ticker-container .ticker__body {
+        background:{{color}}; 
+        padding:0px 8px;
+        border-radius:4px;
+        color:#fff
+    }
+    .ticker-container .ticker__body p {
+        margin:0
+    }
+    .ticker-container .ticker__footer {
+        width: 0;
+      height: 0;
+      border-left: 0px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 5px solid {{color}};
+      margin-left: 13px;
+      color:transparent
+    }
+  {% endstyle %}

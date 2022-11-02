@@ -63,6 +63,7 @@
 
   .list-menu__item {
     display: flex;
+    font-weight: 600;
     align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
   }
@@ -401,9 +402,15 @@
                   <header-menu>
                     <details id="Details-HeaderMenu-{{ forloop.index }}">
                       <summary class="header__menu-item list-menu__item link focus-inset">
+                        {% if forloop.index == 3 %}
+                          {% render 'ticker',content:'hot',color:'#CD0004' %}
+                        {% endif %}
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
                       </summary>
+                      <div>
+                        
+                      </div>
                       <ul id="HeaderMenu-MenuList-{{ forloop.index }}" class="header__submenu list-menu list-menu--disclosure gradient caption-large motion-reduce global-settings-popup" role="list" tabindex="-1">
                         {%- for childlink in link.links -%}
                           <li>
@@ -573,7 +580,7 @@
         -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
-          <div class="cart-count-bubble">
+          <div class="cart-count-bubble" style="background: #cd0004;">
             {%- if cart.item_count < 100 -%}
               <span aria-hidden="true">{{ cart.item_count }}</span>
             {%- endif -%}

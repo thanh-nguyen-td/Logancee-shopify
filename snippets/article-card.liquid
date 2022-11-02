@@ -23,7 +23,7 @@
       assign ratio = media_aspect_ratio
     endif
   -%}
-  <div class="card-wrapper underline-links-hover">
+  <div class="card-wrapper underline-links-hover custom-card-blog">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div class="card article-card
       card--{{ settings.card_style }}
@@ -84,9 +84,9 @@
                 </p>
               {%- endif -%}
               <div class="article-card__footer">
-                {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                {%- comment -%} {%- if article.comments_count > 0 and blog.comments_enabled? -%}
                   <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
-                {%- endif -%}
+                {%- endif -%} {%- endcomment -%}
               </div>
             {%- endif -%}
           </div>
@@ -100,21 +100,22 @@
       <div class="card__content">
         <div class="card__information">
           <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
-            <a href="{{ article.url }}" class="full-unstyled-link">
+            <a href="{{ article.url }}" class="full-unstyled-link text_600">
               {{ article.title | truncate: 50 | escape }}
             </a>
           </h3>
-          <div class="article-card__info caption-with-letter-spacing h5">
+          <div class="article-card__info  h5" >
             {%- if show_date -%}
-              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+              <span style="border-right:1px solid #999; margin-right:15px;padding-right:15px; color:#999">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
             {%- if show_author -%}
-              <span>{{ article.author }}</span>
+              <span style="color:#999">by: </span>
+              <span class="text_600">{{ article.author }}</span>
             {%- endif -%}
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width">
+              <p class="article-card__excerpt rte-width" style="font-size:13px">
                 {%- if article.excerpt.size > 0 -%}
                   {{ article.excerpt | strip_html | truncatewords: 30 }}
                 {%- else -%}
@@ -123,11 +124,14 @@
               </p>
             {%- endif -%}
             <div class="article-card__footer">
-              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+              {%- comment -%} {%- if article.comments_count > 0 and blog.comments_enabled? -%}
                 <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
-              {%- endif -%}
+              {%- endif -%} {%- endcomment -%}
             </div>
           {%- endif -%}
+          <div  class="center_align">
+            <h3 style="margin: 0;margin-right:10px">READ MORE</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify iconify--bi"><path fill="currentColor" fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>          </div>
         </div>
         {%- if show_badge -%}
           <div class="card__badge {{ settings.badge_position }}">
@@ -138,3 +142,9 @@
     </div>
   </div>
 {%- endif -%}
+
+{% style %}
+  .custom-card-blog .card {
+    border:0
+  }
+{% endstyle %}
