@@ -1,0 +1,97 @@
+<div  class="page-width custom-filter-container">
+    <div class="row">
+      <div class="col-12 col-sm-6 filter__left">
+        <div>
+          <h4>Showing 1 to 16 of 17 total</h4>
+        </div>
+        <div class="facet-filters__field" style="margin-right:30px">
+          <h2 class="facet-filters__label caption-large text-body">
+            <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+          </h2>
+          <div class="select">
+            {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+            <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
+              {%- for option in collection.sort_options -%}
+                <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+              {%- endfor -%}
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 filter__right">
+        <div class="facet-filters__field" style="justify-content:start">
+          <h2 class="facet-filters__label caption-large text-body">
+            <label for="Show">Show:</label>
+          </h2>
+          <div class="select">
+            <select name="sort" class="facet-filters__sort select__select caption-large" id="Show" aria-describedby="a11y-refresh-page-message">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            {% render 'icon-caret' %}
+          </div>
+        </div>
+        <div class="custom_center wrap-icon">
+            <span style="font-size: 13px;color:#999">VIEW</span>
+          <span class="square-icont  custom-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><path fill="currentColor" d="M7 17h4v-4H7Zm0-6h4V7H7Zm6 6h4v-4h-4Zm0-6h4V7h-4Zm-9 9q-.825 0-1.412-.587Q2 18.825 2 18V6q0-.825.588-1.412Q3.175 4 4 4h16q.825 0 1.413.588Q22 5.175 22 6v12q0 .825-.587 1.413Q20.825 20 20 20Z"></path></svg>
+          </span>
+          <span class="list-icont custom-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--bx"><path fill="currentColor" d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"></path></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+{% style %}
+    .custom-filter-container{
+        margin-bottom:20px
+    }
+    .custom-filter-container h4,
+    .custom-filter-container label,
+    .custom-filter-container .list-icont{
+        color:#999
+    }
+    .custom-filter-container h2 {
+        margin-right:5px
+    }
+    .custom-filter-container .custom-icon:hover{
+        cursor: pointer
+    }
+    .custom-filter-container .wrap-icon span{
+        margin:0 5px
+    }
+    .filter__left,
+    .filter__right  {
+       display: flex
+    }
+    @media screen and (max-width:992px){
+        .filter__left,
+    .filter__right  {
+       display: block
+    } 
+    .facet-filters__field {
+        justify-content:start
+    }
+    }
+{% endstyle %}
+
+<script>
+    var count = 1;
+    var list = document.querySelector('.list-icont')
+    var square = document.querySelector('.square-icont')
+    list.onclick = function(){
+        list.style.color = '#000';
+        square.style.color = '#999'
+    };
+    square.onclick = function(){
+        list.style.color = '#999';
+        square.style.color = '#000'
+    };
+   console.log('thanh',variable)
+   
+</script>

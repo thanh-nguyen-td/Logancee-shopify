@@ -18,6 +18,22 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .list-coleection-container{
+    display:flex;
+    justify-content:center
+  }
+  .list-coleection-container h2{
+   margin: 0 10px;
+   color:#999;
+   
+  }
+  .list-coleection-container h2:hover {
+    cursor:pointer
+  }
+  .list-coleection-container h2:first-child{
+    color:#000
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -25,7 +41,13 @@
     }
   }
 {%- endstyle -%}
-
+<div class="list-coleection-container">
+  <h2>MEN</h2>
+  <h2>WOMEN</h2>
+  <h2>ACCESSORIE</h2>
+  <h2>SHOES</h2>
+  <h2>BAGS</h2>
+</div>
 <div class="section-{{ section.id }}-padding">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
@@ -78,10 +100,11 @@
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
-        {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
+        {%- comment -%} {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %} {%- endcomment -%}
       </aside>
+      {% render 'filter-product', collection:collection %}
     {%- endif -%}
-
+   
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}

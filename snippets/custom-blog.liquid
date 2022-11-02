@@ -1,4 +1,4 @@
-<a class="card-blog-post-cantainer link_text" href="{{ article.url }}">
+<a class="card-blog-post-container link_text" href="{{ article.url }}">
     <div class="img-container">
         <img class="card-blog-post__img " 
             srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
@@ -26,20 +26,19 @@
 </a>
 
 {% style %}
-    .card-blog-post-cantainer {
-        background:red;
+    .card-blog-post-container {
         width:100%;
         align-items: start;
         position: relative;
     }
 
-    .card-blog-post-cantainer .img-container {
+    .card-blog-post-container .img-container {
         width: 100%;
         position: relative;
         padding-top: 75%;
     }
 
-    .card-blog-post-cantainer .card-blog-post__img{
+    .card-blog-post-container .card-blog-post__img{
         width:100%;
         height: 100%;
         position: absolute;
@@ -48,29 +47,29 @@
         object-fit: cover;
         object-position: center;
     }
-    .card-blog-post-cantainer .card-blog-post__content{
+    .card-blog-post-container .card-blog-post__content{
         position: absolute;
         top:70%;
         width:100%;
         padding:15px;
         color:var(--color-white-text)
     }
-    .card-blog-post-cantainer .card-blog-post__content h2 {
+    .card-blog-post-container .card-blog-post__content h2 {
         margin:0;
         color:var(--color-white-text)
     }
-    .card-blog-post-cantainer .card-blog-post__content-conment {
+    .card-blog-post-container .card-blog-post__content-conment {
         display:flex;
         flex-direction: row;
     }
-    .card-blog-post-cantainer .card-blog-post__content-conment p {
-        margin:0
+    .card-blog-post-container .card-blog-post__content-conment p {
+        margin:0;
+        font-size:13px
     }
-    .card-blog-post-cantainer .card-blog-post__content-conment p:first-child{
-        width:50%
+    .card-blog-post-container .card-blog-post__content-conment p:first-child{
+       margin-right:20px
     }
-    .card-blog-post-cantainer .card-blog-post__content-conment p:nth-child(2){
-        text-align:right;
-        width:50%
+    .card-blog-post-container .card-blog-post__content-conment p:nth-child(2){
+       
     }
 {% endstyle %}
