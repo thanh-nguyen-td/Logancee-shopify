@@ -126,7 +126,7 @@
           "settings": {
             "select_icon": "map_pin",
             "title": "Title",
-            "description": "Description"
+            "description": "<p>Description<\/p>"
           }
         },
         "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-1": {
@@ -134,7 +134,7 @@
           "settings": {
             "select_icon": "message",
             "title": "Title",
-            "description": "Description"
+            "description": "<p>Description<\/p>"
           }
         },
         "template--14997314994199__0f53930c-bab3-4c57-9eb7-6cadd9bb7123-1666843875a9c37c9e-2": {
@@ -142,7 +142,7 @@
           "settings": {
             "select_icon": "circle_dollar",
             "title": "Title",
-            "description": "Description"
+            "description": "<p>Description<\/p>"
           }
         }
       },
@@ -153,8 +153,19 @@
       ],
       "settings": {
         "padding_card": 9,
+        "border_right": false,
         "number_column": 3,
         "size_icon": 34
+      }
+    },
+    "0e2f925a-6930-4551-8215-bd7939dfb519": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": true,
+        "type_show": "line",
+        "margin_top": 40,
+        "margin_bottom": 10
       }
     },
     "featured_collection": {
@@ -189,6 +200,7 @@
       "settings": {
         "full_width": false,
         "show_line": true,
+        "type_show": "line",
         "margin_top": 5,
         "margin_bottom": 5
       }
@@ -217,6 +229,7 @@
     "c9bc59b5-7011-467f-9a58-3bdace613bdf",
     "5f309aa5-1218-4a1b-8e7c-4d0cfdab5fbe",
     "0f53930c-bab3-4c57-9eb7-6cadd9bb7123",
+    "0e2f925a-6930-4551-8215-bd7939dfb519",
     "featured_collection",
     "0538d815-1674-41b9-bc8b-82c45d972293",
     "20188831-632a-4de8-ae7c-55bb7305bf4d"
