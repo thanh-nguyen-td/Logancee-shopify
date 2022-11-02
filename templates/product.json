@@ -83,6 +83,18 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "3087206b-c250-47bc-a553-774cc26552d6": {
+          "type": "rate",
+          "settings": {
+            "show_rate": true
+          }
+        },
+        "acf870b0-26d3-4946-a0f9-9aa2b0f1df02": {
+          "type": "quantity",
+          "settings": {
+            "show_quantity": true
+          }
         }
       },
       "block_order": [
@@ -93,7 +105,9 @@
         "quantity_selector",
         "description",
         "8a8bcf9c-7844-4a15-901f-7a43105d7e93",
-        "share"
+        "share",
+        "3087206b-c250-47bc-a553-774cc26552d6",
+        "acf870b0-26d3-4946-a0f9-9aa2b0f1df02"
       ],
       "settings": {
         "enable_sticky_info": true,
