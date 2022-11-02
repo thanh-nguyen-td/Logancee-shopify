@@ -36,6 +36,16 @@
         "show_text_below": true
       }
     },
+    "c7c8925f-6d81-42f8-b930-0750a386d1ac": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": false,
+        "type_show": "line",
+        "margin_top": 30,
+        "margin_bottom": 10
+      }
+    },
     "c60a934c-13d3-4275-9dc0-6a31bf82bb40": {
       "type": "custom-line",
       "blocks": {
@@ -82,6 +92,16 @@
       "settings": {
         "padding_top": 24,
         "padding_bottom": 4
+      }
+    },
+    "4d3317ac-2ceb-48e5-8edd-26c054ca9704": {
+      "type": "custom-space",
+      "settings": {
+        "full_width": false,
+        "show_line": false,
+        "type_show": "line",
+        "margin_top": 30,
+        "margin_bottom": 5
       }
     },
     "8ede7e64-fcd8-46d2-be76-a87ecab921c2": {
@@ -139,8 +159,10 @@
   },
   "order": [
     "67e0db29-a2b4-4290-a881-a23f43128f33",
+    "c7c8925f-6d81-42f8-b930-0750a386d1ac",
     "c60a934c-13d3-4275-9dc0-6a31bf82bb40",
     "main",
+    "4d3317ac-2ceb-48e5-8edd-26c054ca9704",
     "8ede7e64-fcd8-46d2-be76-a87ecab921c2",
     "form",
     "abcc7d71-9e3f-462f-a227-18f8d8419423",
