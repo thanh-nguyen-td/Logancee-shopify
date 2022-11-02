@@ -1,19 +1,19 @@
 <div class="custom-space-container {% unless section.settings.full_width %} page-width {% endunless %}">
     <div style="margin-top:{{section.settings.margin_top}}px;margin-bottom:{{section.settings.margin_bottom}}px;">
         {% if section.settings.show_line %}
-        {% if section.setting.type_show == "line" %}
-            <div class="space__content line" >
-                T
-            </div>
-        {% else %}
-            <div class="custom-icon-space">
-                - - -
-                <div class="circle">T</div>
-                -
-                <div class="circle">T</div>
-                - - -
-            </div>
-        {% endif %}
+            {% if section.settings.type_show == "line" %}
+                <div class="space__content line" >
+                    T
+                </div>
+            {% else %}
+                <div class="custom-icon-space">
+                    - - -
+                    <div class="circle">T</div>
+                    -
+                    <div class="circle">T</div>
+                    - - -
+                </div>
+            {% endif %}
         {% else %}
             <div class="space__content">t</div>
         {% endif %}
