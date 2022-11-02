@@ -3,14 +3,6 @@
     "649fe241-ed97-4047-975e-69fac116633b": {
       "type": "custom-support",
       "settings": {
-        "title_1": "Shop Worldwide",
-        "content_1": "Shop Worldwide",
-        "title_2": "Shop Worldwide",
-        "content_2": "Shop Worldwide",
-        "title_3": "Shop Worldwide",
-        "content_3": "Shop Worldwide",
-        "title_4": "Shop Worldwide",
-        "content_4": "Shop Worldwide"
       }
     },
     "form": {
@@ -25,15 +17,23 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "3708b768-fc6e-49bf-9d29-76d0e81b75ec": {
+      "type": "google-map",
+      "settings": {
+        "full_width": false
       }
     }
   },
   "order": [
     "649fe241-ed97-4047-975e-69fac116633b",
     "form",
-    "main"
+    "main",
+    "3708b768-fc6e-49bf-9d29-76d0e81b75ec"
   ]
 }
