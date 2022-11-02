@@ -1,7 +1,74 @@
 {
   "sections": {
+    "67e0db29-a2b4-4290-a881-a23f43128f33": {
+      "type": "image-banner",
+      "blocks": {
+        "template--14997315354647__67e0db29-a2b4-4290-a881-a23f43128f33-1667373775ad29b8ec-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--14997315354647__67e0db29-a2b4-4290-a881-a23f43128f33-1667373775ad29b8ec-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s)",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--14997315354647__67e0db29-a2b4-4290-a881-a23f43128f33-1667373775ad29b8ec-0",
+        "template--14997315354647__67e0db29-a2b4-4290-a881-a23f43128f33-1667373775ad29b8ec-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "649fe241-ed97-4047-975e-69fac116633b": {
       "type": "custom-support",
+      "blocks": {
+        "0c4c969d-3c77-401c-b11a-bd7c211b5054": {
+          "type": "card",
+          "settings": {
+            "title": "Shop Worldwide",
+            "description": "Shop Worldwide",
+            "icon_svg": ""
+          }
+        },
+        "fd32ea72-2509-47bf-802f-6cfe13d65090": {
+          "type": "card",
+          "settings": {
+            "title": "Shop Worldwide",
+            "description": "Shop Worldwide",
+            "icon_svg": ""
+          }
+        },
+        "3970e3b8-4e59-4656-a0b1-fb93ed6cf502": {
+          "type": "card",
+          "settings": {
+            "title": "Shop Worldwide",
+            "description": "Shop Worldwide",
+            "icon_svg": ""
+          }
+        }
+      },
+      "block_order": [
+        "0c4c969d-3c77-401c-b11a-bd7c211b5054",
+        "fd32ea72-2509-47bf-802f-6cfe13d65090",
+        "3970e3b8-4e59-4656-a0b1-fb93ed6cf502"
+      ],
       "settings": {
       }
     },
@@ -67,6 +134,7 @@
     }
   },
   "order": [
+    "67e0db29-a2b4-4290-a881-a23f43128f33",
     "649fe241-ed97-4047-975e-69fac116633b",
     "main",
     "8ede7e64-fcd8-46d2-be76-a87ecab921c2",
