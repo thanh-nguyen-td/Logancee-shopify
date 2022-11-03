@@ -85,7 +85,7 @@
         "f0c3589c-832a-4473-a103-98dd9c561877": {
           "type": "text",
           "settings": {
-            "text_liquid": "<h4 style=\"color:#999\">Share contact information, store details, and brand content with your customers.<\/h4>"
+            "text_liquid": "<h4 style=\"color:#999; font-size:13px\">Share contact information, store details, and brand content with your customers.<\/h4>"
           }
         }
       },
