@@ -227,7 +227,6 @@ p{
 .tabs-container {
     display: flex;
     flex-wrap: wrap;
-    background: gold;
     align-items:center;
     justify-content:center
 }

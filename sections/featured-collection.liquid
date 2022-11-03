@@ -50,7 +50,7 @@
       <div style="margin-bottom:1rem" class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
          <div class="center_justify">
-            <h2 class="title {{ section.settings.heading_size }} text_600" style="font-weight:600">{{ section.settings.title | escape }}</h2>
+            <h2 class="title {{ section.settings.heading_size }} text_600" style="font-weight:600;letter-spacing:4px">{{ section.settings.title | escape }}</h2>
          </div>
         {%- endif -%}
         {%- if section.settings.description != blank or section.settings.show_description and section.settings.collection.description != empty -%}
@@ -60,15 +60,15 @@
       <div style="margin:{{block.settings.custom_liquid}}px">
       {% render 'custom-icon' %}
     </div>
-      <div class="tabs-container">
-          <h3>BEST SELLER</h3>
+      <div class="tabs-container" style="margin-bottom: 30px;">
+          <h3 style="font-size:14px;letter-spacing:2px">BEST SELLER</h3>
         <div class="item">
           <div class="circle">T</div>
-          <h3>NEW ARRIVAL</h3>
+          <h3 style="font-size:14px;letter-spacing:2px">NEW ARRIVAL</h3>
         </div>
         <div class="item">
           <div class="circle">T</div>
-          <h3>MOST WANTED</h3>
+          <h3 style="font-size:14px;letter-spacing:2px">MOST WANTED</h3>
         </div>
       </div>
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}">
@@ -134,9 +134,9 @@
     align-items:center
   }
   .tabs-container .item .circle {
-    width: 8px;
-    height:8px; 
-    border-radius:4px;
+    width: 6px;
+    height:6px; 
+    border-radius:3px;
     background:#999; 
     color:transparent;
     margin:0 10px 3px 10px

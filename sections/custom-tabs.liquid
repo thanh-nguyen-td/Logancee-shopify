@@ -1,4 +1,4 @@
-<div class="page-width tabs-container">
+{%- comment -%} <div class="page-width tabs-container">
     <input type="radio" name="mytabs" id="tab1" checked="checked"/>
     <label for="tab1">Tab1</label>
     <div class="tab-content">
@@ -22,8 +22,8 @@
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique enim ullam est veniam obcaecati nihil possimus soluta quisquam. Inventore, quia velit. Fuga placeat quam iste repudiandae culpa quas doloribus? Ipsum asperiores nesciunt iste mollitia, dignissimos modi id aliquid libero soluta?
         </p>
-    </div>
-   {%- comment -%} <div class="head">
+    </div> {%- endcomment -%}
+ <div class="head">
     <h3>PRODUCT DESCRIPTION</h3>
     <h3>PREVIEW</h3>
     <h3>TAGS</h3>
@@ -40,7 +40,7 @@
         <li><h4>Length 745</h4></li>
         <li><h4>Length 74</h4></li>
     </ul>
-   </div> {%- endcomment -%}
+   </div>
 </div>
 {% style %}
     .tabs-container .head {
