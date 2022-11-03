@@ -222,20 +222,32 @@ p{
     color:#999
 }
 
-.custom-icon-space {
-    display:flex; 
-    align-items:center;
-    justify-content: center;
-    color:#999;
-    width: 100%;
-}
-.custom-icon-space .circle,
-.custom-icon-circle {
-    background: #999;
-    height:8px;
-    width:8x;
-    border-radius:4px; 
-    color:transparent;
-    margin:5px;
-}
 
+
+.tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: gold;
+    align-items:center;
+    justify-content:center
+}
+.tabs-container input[type='radio']{
+   display: none;
+}
+.tabs-container label{
+    font-size: 14px;
+    padding: 20px;
+    border:1px  solid #999
+}
+.tabs-container .tab-content {
+    width: 100%;
+    padding: 20px;
+    order: 1;
+    display: none;
+}
+.tabs-container input[type='radio']:checked + label + .tab-content {
+    display: block;
+}
+.tabs-container input[type='radio']:checked + label {
+    border:1px solid red;
+}

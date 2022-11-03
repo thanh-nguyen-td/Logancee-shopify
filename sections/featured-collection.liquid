@@ -57,12 +57,8 @@
           <div class="collection__description {{ section.settings.description_style }}">{%- if section.settings.show_description -%}{{ section.settings.collection.description }}{%- else -%}{{ section.settings.description }}{% endif %}</div>
         {%- endif -%}
       </div>
-      <div class="custom-icon-space" style="margin:{{block.settings.custom_liquid}}px">
-        - - -
-        <div class="circle">T</div>
-        -
-        <div class="circle">T</div>
-        - - -
+      <div style="margin:{{block.settings.custom_liquid}}px">
+      {% render 'custom-icon' %}
     </div>
       <div class="tabs-container">
           <h3>BEST SELLER</h3>

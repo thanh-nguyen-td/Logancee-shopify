@@ -9,12 +9,8 @@
                     <div style="margin:{{block.settings.custom_liquid}}px ;opacity:0">T</div>
               
                 {% when "icon_space" %}
-                    <div class="custom-icon-space" style="margin:{{block.settings.custom_liquid}}px">
-                        - - -
-                        <div class="circle">T</div>
-                        -
-                        <div class="circle">T</div>
-                        - - -
+                    <div style="margin:{{block.settings.custom_liquid}}px">
+                       {% render 'custom-icon' %}
                     </div>
                 {% else %}
                 {% if block.settings.image != blank %}
