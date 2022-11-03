@@ -159,7 +159,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "CHECK OUT PRODUCT",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
