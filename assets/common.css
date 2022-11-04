@@ -5,6 +5,7 @@
 
     --color-black-text: #000;
     --color-white-text: #fff;
+    --color-gray-text:#999;
 
     --color-black-bg: #000;
     --color-white-bg: #fff;
@@ -20,6 +21,7 @@ a,
 p{
     font-family: var(--font-body-family);
     font-style: var(--font-body-style);
+   
 }
 /* text color */
 .text_link{
@@ -107,72 +109,6 @@ p{
 
 .flex_column {
     flex-grow: 1;
-}
-.list-card-container{
-    height: 100%;
-}
-.wrap-card-image-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-.overlay {
-    width: 100%;
-    height: 100%;
-    color: var(--color-transparent);
-    background: var(--color-black);
-    opacity: 0.5;
-    position: absolute;
-    display: none;
-}
-.wrap-card-image-container img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.wrap-card-image-container .wrap-text-card{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    flex-direction: column;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    padding: 0 30px;
-   
-}
-.wrap-card-image-container:hover .overlay,
-.wrap-card-image-container:hover .wrap-text-card {
-    display: block;
-}
-.wrap-card-image-container .wrap-text-card h4 {
-    font-size: 20px;
-} 
-.wrap-card-image-container .wrap-text-card h1 {
-    margin-bottom: 0px;
-} 
-.wrap-card-image-container .wrap-text-card p {
-    margin-top: 10px;
-    margin-bottom: 50px;
-} 
-.custom-button {
-    padding:13px 25px ;
-    background: transparent;
-    font-size: 14px;
-    border: 1px solid var(--color-white-border);
-    color:var(--color-white-button)
-}
-.custom-button:hover {
-    border: 1px solid var(--color-black-border);
-    color:var(--color-black-button)
-}
-
-@media screen and (max-width:1670px) {
-    .wrap-card-image-container img {
-       
-    }
 }
 
 .container-content-card {

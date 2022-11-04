@@ -19,6 +19,84 @@
         {% endfor %}
     </div>
 </div>
+
+{% style %}
+.list-card-container{
+    height: 100%;
+}
+.list-card-container .wrap-card-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    color: var(--color-transparent);
+    background: var(--color-black);
+    opacity: 0.5;
+    position: absolute;
+    display: none;
+}
+.list-card-container .wrap-card-image-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.list-card-container .wrap-card-image-container .wrap-text-card{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 0 30px;
+   
+}
+.list-card-container .wrap-card-image-container:hover .overlay,
+.list-card-container .wrap-card-image-container:hover .wrap-text-card {
+    display: block;
+}
+.list-card-container .wrap-card-image-container .wrap-text-card h4 {
+    font-size: 15px;
+    letter-spacing:3px;
+    margin-bottom:40px;
+    opacity:70%;
+    font-weight:500
+} 
+.list-card-container .wrap-card-image-container .wrap-text-card h1 {
+    margin-bottom: 0px;
+    font-weight:700;
+    color:#f2f2f2
+} 
+.list-card-container .wrap-card-image-container .wrap-text-card p {
+    margin-top: 10px;
+    font-size:13px;
+    margin-bottom: 40px;
+    color:#f2f2f2
+} 
+.list-card-container .custom-button {
+    padding:13px 25px ;
+    background: transparent;
+    font-size: 14px;
+    border: 1px solid var(--color-white-border);
+    color:var(--color-white-button)
+}
+.list-card-container .custom-button:hover {
+    border: 1px solid var(--color-black-border);
+    color:var(--color-black-button)
+}
+
+@media screen and (max-width:1670px) {
+    .list-card-container .wrap-card-image-container img {
+       
+    }
+}
+{% endstyle %}
+
 {% schema %}
 {
     "name": "Card line",

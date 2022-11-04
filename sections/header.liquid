@@ -394,8 +394,8 @@
 
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-        <nav class="header__inline-menu">
-          <ul class="list-menu list-menu--inline" role="list">
+        <nav class="header__inline-menu"  style="margin-left:auto">
+          <ul class="list-menu list-menu--inline" role="list" style="margin-right: 3.8rem;">
             {%- for link in section.settings.menu.links -%}
               <li>
                 {%- if link.links != blank -%}
@@ -403,7 +403,7 @@
                     <details id="Details-HeaderMenu-{{ forloop.index }}">
                       <summary class="header__menu-item list-menu__item link focus-inset">
                         {% if forloop.index == 3 %}
-                          {% render 'ticker',content:'hot',color:'#CD0004' %}
+                          {% render 'ticker',content:'HOT!',color:'#CD0004' %}
                         {% endif %}
                         <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                         {% render 'icon-caret' %}
@@ -497,7 +497,7 @@
       {%- endif -%}
     {%- endif -%}
 
-    <div class="header__icons">
+    <div class="header__icons" style="display:flex; margin-right:24px">
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
