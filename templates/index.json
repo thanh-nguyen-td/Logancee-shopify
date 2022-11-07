@@ -74,8 +74,8 @@
           "type": "text",
           "settings": {
             "text": "<p>WELCOME TO LOGANCEE STORE<\/p>",
-            "font_size": 20,
-            "style": "font-weight:600; letter-spacing:5px"
+            "font_size": 14,
+            "style": ""
           }
         },
         "e5c57642-c11d-4fa9-bf21-29e73fc37e2d": {
