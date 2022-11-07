@@ -61,14 +61,14 @@
         {% render 'custom-icon' %}
       </div>
       <div class="tabs-container" style="margin-bottom: 30px;margin-top:30px">
-          <h3 style="font-size:14px;letter-spacing:2px">BEST SELLER</h3>
+          <h3>BEST SELLER</h3>
         <div class="item">
           <div class="circle">T</div>
-          <h3 style="font-size:14px;letter-spacing:2px">NEW ARRIVAL</h3>
+          <h3>NEW ARRIVAL</h3>
         </div>
         <div class="item">
           <div class="circle">T</div>
-          <h3 style="font-size:14px;letter-spacing:2px">MOST WANTED</h3>
+          <h3>MOST WANTED</h3>
         </div>
       </div>
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}">
@@ -142,7 +142,9 @@
     margin:0 10px 3px 10px
   }
   .tabs-container h3 {
-    font-weight:600
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:1px
   }
   .tabs-container .item h3:nth-child(2){
     color:#999
