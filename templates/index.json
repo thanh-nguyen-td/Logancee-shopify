@@ -73,7 +73,9 @@
         "25de3679-6079-4277-be2d-9da755544536": {
           "type": "text",
           "settings": {
-            "text_liquid": "<h1 style=\"font-weight:600;font-size:2rem;letter-spacing:5px\">WELCOME TO LOGANCEE  STORE<\/h1>"
+            "text": "<p>WELCOME TO LOGANCEE STORE<\/p>",
+            "font_size": 21,
+            "style": "font-weight:600; letter-spacing:5px"
           }
         },
         "e5c57642-c11d-4fa9-bf21-29e73fc37e2d": {
@@ -85,7 +87,9 @@
         "f0c3589c-832a-4473-a103-98dd9c561877": {
           "type": "text",
           "settings": {
-            "text_liquid": "<h4 style=\"color:#999; font-size:13px;\">Share contact information, store details, and brand content with your customers.<\/h4>"
+            "text": "<p>This is text<\/p>",
+            "font_size": 14,
+            "style": ""
           }
         }
       },
