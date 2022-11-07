@@ -1,10 +1,8 @@
-
-
 <div class="container-text-button-img page-width">
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when "text" %}
-                    <div style="font-size:{{block.settings.font_size}}px;{{block.settings.style}}">{{ block.settings.text }}</div>
+                    <div class="{% if block.settings.is_title %} text_title {% endif %}" style="font-size:{{block.settings.font_size}}px;{{block.settings.style}}">{{ block.settings.text }}</div>
                 {% when "button" %}
                     <a style="background:#fff" class="custom_btn" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
                 {% when "custom_space" %}
@@ -58,6 +56,12 @@
                     "id":"text",
                     "label":"Text",
                     "default":"<p>This is text</p>"
+                },
+                {
+                    "type":"checkbox",
+                    "id":"is_title",
+                    "label":"is title",
+                    "default":false
                 },
                 {
                     "type":"range",

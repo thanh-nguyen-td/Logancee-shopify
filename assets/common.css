@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 :root {
     --color-transparent: transparent;
     --color-black: #000;
@@ -16,6 +17,20 @@
     --color-gray-border: #999;
     --color-black-border: #000;
     --color-white-border: #fff;
+
+    --font-text-xs:12;
+    --font-text-sm:14;
+    --font-text-base:16;
+    --font-text-lg:18;
+    --font-text-xl:20;
+    --font-text-2xl:24;
+    --font-text-3xl:30;
+    --font-text-4xl:36;
+
+    --font-text-normal: 400;
+    --font-text-medium: 500;
+    --font-text-semibold: 600;
+    --font-text-bold: 700;
 }
 a,
 p{
@@ -114,6 +129,14 @@ p{
 /* button */
 .custom_btn {
     padding:13px 20px;
+}
+
+/* content */
+.text_title p{
+    letter-spacing: 4px;
+    font-size: var(--font-text-sm)px;
+    font-family: 'Trueno', sans-serif;
+    font-weight: var(--font-text-semibold);
 }
 
 .container-content-card {
