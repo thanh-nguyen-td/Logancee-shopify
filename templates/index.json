@@ -89,7 +89,7 @@
           "settings": {
             "text": "<p>This is tShare contact information, store details,<\/p><p>and brand content with your customers.ext<\/p>",
             "font_size": 13,
-            "style": "color:#999"
+            "style": "color:#999; margin-top:20px"
           }
         }
       },
