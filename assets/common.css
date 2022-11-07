@@ -67,6 +67,16 @@ p{
     font-weight: 700;
 }
 
+.text_14 {
+    font-size: var(--font-text-sm);
+}
+.text_15 {
+    font-size: var(--font-text-15);
+}
+.text_16 {
+    font-size: var(--font-text-base);
+}
+
 /* margin */
 .mt_10{
     margin-top: 10px;
@@ -153,9 +163,9 @@ p{
 }
 
 /* content */
+.text_title,
 .text_title p{
     letter-spacing: 4px;
-    font-size:var(--font-text-base);
     font-weight: var(--font-text-bold);
 }
 
@@ -186,10 +196,6 @@ p{
 .container-content-card p {
     color: #999;
 }
-
-
-
-
 
 .tabs-container {
     display: flex;
