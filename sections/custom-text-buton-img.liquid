@@ -2,14 +2,13 @@
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when "text" %}
-                    <div>{{ block.settings.text_liquid }}</div>
+                    <div style="{{block.settings.style}}">{{ block.settings.text }}</div>
                 {% when "button" %}
-                    <a style="padding:13px 20px; background:#fff" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
-                {% when "custom_liquid" %}
-                    <div style="margin:{{block.settings.custom_liquid}}px ;opacity:0">T</div>
-              
+                    <a style="background:#fff" class="custom_btn" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                {% when "custom_space" %}
+                    <div style="margin:{{block.settings.custom_space}}px ;opacity:0">T</div>
                 {% when "icon_space" %}
-                    <div style="margin:{{block.settings.custom_liquid}}px">
+                    <div style="margin:{{block.settings.custom_space}}px">
                        {% render 'custom-icon' %}
                     </div>
                 {% else %}
@@ -44,16 +43,32 @@
 {
     "name":"Text Button Image",
     "tag":"section",
+    "settings":[
+
+    ],
     "blocks": [
         {
             "type":"text",
             "name":"Text",
             "settings":[
                 {
-                    "type":"liquid",
-                    "id":"text_liquid",
+                    "type":"richtext",
+                    "id":"text",
                     "label":"Text",
                     "default":"<p>This is text</p>"
+                },
+                {
+                    "type":"range",
+                    "id":"font_size",
+                    "label":"Font size",
+                    "default":14,
+                    "min":8,
+                    "max":32
+                },
+                {
+                    "type":"text",
+                    "id":"style",
+                    "label":"Style"
                 }
             ]
         },
@@ -94,13 +109,13 @@
             ]
         },
         {
-            "type":"custom_liquid",
-            "name":"Custom liquid",
+            "type":"custom_space",
+            "name":"Custom space",
             "settings":[
                 {
                     "type":"range",
-                    "id":"custom_liquid",
-                    "label":"Custom liquid",
+                    "id":"custom_space",
+                    "label":"Space",
                     "default":20,
                     "min":2,
                     "max":50
