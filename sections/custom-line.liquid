@@ -27,6 +27,36 @@
     </div>
 </div>  
 
+{% style %}
+    .list-text-icon-container .list-text-icon__content{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+}
+.list-text-icon-container .bd-right{
+    border-right:1px solid #999;
+}
+.list-text-icon-container .bg-gray {
+    background: #f7f7f7;
+}
+.list-text-icon-container .list-text-icon__content .wrap-img {
+    margin-bottom: 15px;
+    color:#999
+}
+.list-text-icon-container .list-text-icon__content h2 {
+    font-size:14px;
+    font-weight:700
+}
+.list-text-icon-container .list-text-icon__content h4 {
+    font-size:14px;
+    font-weight:500;
+    color:var(--color-gray-text)
+}
+{% endstyle %}
+
 {% schema %}
 {
     "name": "Card text icon",
