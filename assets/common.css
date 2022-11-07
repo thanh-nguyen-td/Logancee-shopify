@@ -34,6 +34,8 @@
     --font-text-semibold: 600;
     --font-text-bold: 700;
 
+    --font-family-text:'Lato'
+
     /* announcement-bar */
     --text-gray:#666
 }
@@ -175,7 +177,6 @@ p{
 .text_title p{
     letter-spacing: 4px;
     font-weight: var(--font-text-bold);
-    font-family: lato;
 }
 
 .container-content-card {
