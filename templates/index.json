@@ -91,7 +91,7 @@
             "text": "<p>This is tShare contact information, store details,<\/p><p>and brand content with your customers.ext<\/p>",
             "is_title": false,
             "font_size": 12,
-            "style": "color:#999; margin-top:15px; font-weight:600"
+            "style": "color:#999; margin-top:15px; font-weight:500"
           }
         }
       },
