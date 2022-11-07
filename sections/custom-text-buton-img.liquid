@@ -1,8 +1,10 @@
+{% assign text-styles = "{{block.settings.style}};font-size:{{block.settings.font_size}}px" %}
+
 <div class="container-text-button-img page-width">
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when "text" %}
-                    <div style="{{block.settings.style}}">{{ block.settings.text }}</div>
+                    <div style="{{text-styles}}">{{ block.settings.text }}</div>
                 {% when "button" %}
                     <a style="background:#fff" class="custom_btn" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
                 {% when "custom_space" %}
