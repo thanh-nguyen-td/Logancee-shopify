@@ -135,7 +135,7 @@ p{
 .text_title p{
     letter-spacing: 4px;
     font-size: var(--font-text-sm)px;
-    font-family: 'Trueno', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: var(--font-text-semibold);
 }
 
