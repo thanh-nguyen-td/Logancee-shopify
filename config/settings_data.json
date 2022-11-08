@@ -130,8 +130,8 @@
           "show_line_separator": false,
           "enable_sticky_header": false,
           "margin_bottom": 0,
-          "padding_top": 28,
-          "padding_bottom": 28
+          "padding_top": 32,
+          "padding_bottom": 32
         }
       },
       "footer": {
