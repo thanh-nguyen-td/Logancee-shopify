@@ -15,7 +15,7 @@
         "template--14997315223575__0cae59f7-1aef-456c-976a-07ef3b06fb11-16673498050178815a-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "SHOP NO SIDEBAR 4 COLUMN",
             "heading_size": "h1"
           }
         },
@@ -50,6 +50,7 @@
       "settings": {
         "full_width": false,
         "show_line": false,
+        "type_show": "line",
         "margin_top": 15,
         "margin_bottom": 5
       }
