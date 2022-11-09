@@ -3,15 +3,15 @@
     {%- when 'announcement' -%}
       <div class="page-width custom-announcement  color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
         {%- if block.settings.text != blank -%}
-          <div class="row announcement-bar">
-            <div class="col-sm-6 col-md-6 col-12">
+          <div class="row announcement-bar" style="">
+            <div class="col-sm-6 col-md-6 col-12"  >
               <div class="announcement__left">
                   <div class="items">
                     <span class="wrap-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 28 28" class="iconify iconify--fluent"><path fill="currentColor" d="m7.85 2.703l1.937-.584a2.75 2.75 0 0 1 3.301 1.506l1.358 3.02a2.75 2.75 0 0 1-.633 3.14l-2.067 1.926c-.277.263-.067 1.288.945 3.042c1.013 1.755 1.796 2.449 2.157 2.341l2.708-.828a2.75 2.75 0 0 1 3.034 1.02l1.93 2.675a2.75 2.75 0 0 1-.339 3.606l-1.492 1.413a3.75 3.75 0 0 1-3.676.863c-3.126-.957-6.021-3.797-8.724-8.48C5.58 12.673 4.557 8.717 5.27 5.485a3.75 3.75 0 0 1 2.58-2.782Z"></path></svg>
                     </span>
                     <span>Call Us: </span>
-                    <span>0988888888</span>
+                    <span class="announcement__phone">0988888888</span>
                     <span class="line-right">t</span>
                   </div>
                   <div class="items">
@@ -23,7 +23,7 @@
                   </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-12">
+            <div class="col-sm-6 col-md-6 col-12" style=" padding:0">
               <div class="announcement__right">
                 <div class="right__items">
                   {% if shop.customer_accounts_enabled %}
@@ -67,7 +67,7 @@
 {% style %}
 
 :root {
-  --announcement-color-gray-text:var(--color-gray-text);
+  --announcement-color-gray-text:#666;
   --announcement-color-black-text:var(--color-black-text);
   --announcement-color-gray-border:var(--color-gray-border);
 }
@@ -92,25 +92,29 @@
     justify-content:center;
     align-items:center; 
     margin-right:5px;
-    color:#464546
+    color:#666
   }
   .custom-announcement .line-right{
     height: 10px;
     background:var(--announcement-color-gray-border); 
     width:1px; 
-    color:transparent;
+    color:transparent !important;
     margin:0 10px
 }
-  .custom-announcement .announcement__left .items span:nth-child(2) {
+  .custom-announcement .announcement__left .items span {
     color: var(--announcement-color-gray-text);
 
+  }
+  .custom-announcement .announcement__phone{
+    font-weight:500
   }
   .custom-announcement .announcement__right{
     display:flex; 
     justify-content:flex-end;
     align-items:center;
-    font-size:12px;
+    font-size:11px;
     height:100%;
+    font-weight:500
   }
 
   .custom-announcement .announcement__right a {
@@ -119,8 +123,9 @@
   }
   .custom-announcement .announcement__right .custom-select {
     color: var(--announcement-color-gray-text);
-    font-size:12px;
-    border:0
+    font-size:11px;
+    border:0;
+    font-weight:500
   }
 
   @media screen and (max-width: 768px) {

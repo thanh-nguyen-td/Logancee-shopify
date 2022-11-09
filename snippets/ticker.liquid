@@ -1,3 +1,14 @@
+{% comment %}
+    trả về ticker trên thanh menu
+
+    Accepts:
+    - content: nội dung
+    - color: màu nền
+
+     Usage:
+        {% render 'ticker',content:'HOT!',color:'#CD0004' %}
+{% endcomment %}
+
 <div class="ticker-container">
     <div class="ticker__body">
         <p>
@@ -21,10 +32,10 @@
     }
     .ticker-container .ticker__body {
         background:{{color}}; 
-        padding:1px 4px;
+        padding:2px 4px;
         border-radius:2px;
         color:#fff;
-        font-size:10px
+        font-size:8px
     }
     .ticker-container .ticker__body p {
         margin:0

@@ -19,25 +19,27 @@
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
 
-  .footer ul {
-    list-style-type:square;
-    color:#999; 
-    margin-left:10px
+  .footer .footer__text {
+    color:#999;
+    font-family:'lato';
+    font-size: 12px;
+    font-weight:500
   }
-  .footer ul li a {
-    color:#999 !important
-  }
-  .footer ul li a:hover {
-    color:#000 !important;
-    text-decoration: none !important;
 
+  .footer .footer__title {
+    color:#000;
+    font-family:'Montserrat';
+    font-size: var(--font-text-sm)
   }
 
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .footer .footer__top-grid {
+    display:grid; 
+    grid-template-columns:30% 22% 1fr 25%;
+  }
 
 
   @media screen and (min-width: 750px) {
@@ -49,6 +51,23 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+  @media screen and (max-width: 990px) {
+    .footer .footer__top-grid {
+    display:grid; 
+    grid-template-columns:1fr 1fr;
+    margin-bottom:20px
+  }
+  }
+  @media screen and (max-width: 600px) {
+    .footer .footer__top-grid {
+    display:grid; 
+    grid-template-columns:1fr;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+  }
   }
 {%- endstyle -%}
 
@@ -65,8 +84,34 @@
             assign footer_grid_class = 'grid--3-col-tablet'
           endif
         -%}
-        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+        <div class="footer__top-grid">
+          {%-for block in section.blocks %}
+          {% case block.type %}
+              {%- when 'text_contact' -%}
+                <div style="margin-left:20px">
+                  {%- if block.settings.heading != blank -%}
+                    <h2 class="footer-block__heading" style="font-size: 14px;">{{- block.settings.heading | escape -}}</h2>
+                  {%- endif -%}
+                  {% render 'footer-text-contact' , block:block%}
+                </div>
+              
+              {%- when 'img_with_text' -%}
+               <div style=" margin-right:50px;padding:0 20px" class="center_justify">
+                {% render 'footer-img-with-text', block:block %}
+               </div>
+            {% else %}
+            <div>
+              {%- if block.settings.heading != blank -%}
+                <h2 class="footer-block__heading" style="margin-left:15px;font-size:14px">{{- block.settings.heading | escape -}}</h2>
+              {%- endif -%}
+              {% render 'footer-menu', block:block %}
+            </div>
+          {% endcase %}
+          {% endfor %}
+        </div>
+        {%- comment -%} <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
           {%- for block in section.blocks -%}
+            
             <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.heading != blank -%}
                 <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
@@ -79,12 +124,15 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank -%}
-                    <ul class="footer-block__details-content list-unstyled">
+                    <ul class="footer-block__details-content list-unstyled" style="background: pink;border:1px solid red">
                       {%- for link in block.settings.menu.links -%}
-                        <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
+                        <li  style="background: gold;" >
+                          <div style="background: violet;">
+                            <div style="height: 5px; width:5px; background:#999;color:transparent; margin-right:5px">T</div>
+                            <a href="{{ link.url }}" style="margin: 0;" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                              {{ link.title }}
+                            </a>
+                        </div>
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -113,7 +161,7 @@
                 {%- endcase -%}
             </div>
           {%- endfor -%}
-        </div>
+        </div> {%- endcomment -%}
       {%- endif -%}
 
       <div class="footer-block--newsletter">
@@ -171,7 +219,7 @@
                 <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
                   {%- render 'icon-twitter' -%}
                   <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                </a>
+                </a> 
               </li>
             {%- endif -%}
             {%- if settings.social_facebook_link != blank -%}
@@ -350,8 +398,8 @@
           </div>
         {%- endif -%}
         <div class="footer__copyright caption">
-          <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
-          <small class="copyright__content">{{ powered_by_link }}</small>
+          <small class="copyright__content" style="font-size:13px">&copy; {{ 'now' | date: "%Y" }}, <strong>{{ shop.name | link_to: routes.root_url }}</strong></small>
+          <small class="copyright__content" style="font-size:13px">{{ powered_by_link }}</small>
         </div>
       </div>
     </div>

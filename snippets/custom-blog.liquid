@@ -13,18 +13,26 @@
             src="{{ article.image.src | image_url: width: 533}}" width="auto"  height="auto" loading="lazy"/>
     </div>
     <div class="card-blog-post__content">
-            <h2>{{ article.title | truncate: 50 | escape }}</h2>
+            <h2 class="text_12 uppercase text_600">{{ article.title | truncate: 50 | escape }}</h2>
           <div class="card-blog-post__content-conment">
-            <p>
-               {{ article.published_at | time_tag: format: 'date' }}
-            </p>
-            <p>
-               {{ 'blogs.article.comments' | t: count: article.comments_count }}
-            </p>
+            <span>
+                <p>
+                    <span style="margin-right:5px">
+                        {% render 'icon-icon', type:'calender',size:10 %}
+                    </span>
+                   {{ article.published_at | date: '%d-%m-%Y' }}
+                </p>
+            </span>
+            <span>
+                <p>
+                    <span style="margin-right:5px">{% render 'icon-icon', type:'message', size:15 %}</span>
+                   {{ 'blogs.article.comments' | t: count: article.comments_count }}
+                </p>
+            </span>
+           
           </div>
     </div>
 </a>
-
 {% style %}
     .card-blog-post-container {
         width:100%;
@@ -61,10 +69,11 @@
     .card-blog-post-container .card-blog-post__content-conment {
         display:flex;
         flex-direction: row;
+        margin-top:5px
     }
     .card-blog-post-container .card-blog-post__content-conment p {
         margin:0;
-        font-size:13px
+        font-size:10px
     }
     .card-blog-post-container .card-blog-post__content-conment p:first-child{
        margin-right:20px

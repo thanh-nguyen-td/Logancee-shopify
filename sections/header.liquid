@@ -395,7 +395,7 @@
     {%- if section.settings.menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
         <nav class="header__inline-menu"  style="margin-left:auto">
-          <ul class="list-menu list-menu--inline" role="list" style="margin-right: 3.8rem;">
+          <ul class="list-menu list-menu--inline" role="list" style="margin-right: 4.3rem;">
             {%- for link in section.settings.menu.links -%}
               <li>
                 {%- if link.links != blank -%}
@@ -497,7 +497,7 @@
       {%- endif -%}
     {%- endif -%}
 
-    <div class="header__icons" style="display:flex; margin-right:24px">
+    <div class="header__icons" style="display:flex; margin-right:1.5rem">
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
