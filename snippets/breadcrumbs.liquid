@@ -9,22 +9,22 @@
 {% endcomment %}
 
 {% style %}
-    .custom-a,
-    .custom-text,
-    .custom-icon-left{
-        color:#999 !important;
+    .breadcrumb-container .custom-a,
+    .breadcrumb-container .custom-text,
+    .breadcrumb-container .custom-icon-left{
+        color:#fff !important;
         margin: 0 2px;
     }
-    .custom-a{
+    .breadcrumb-container .custom-a{
       text-decoration: none;
     }
-    .custom-a:hover{
+    .breadcrumb-container .custom-a:hover{
         color:#000 !important;
     },
 {% endstyle %}
 {% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
 
-<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+<nav class="breadcrumb-container" role="navigation" aria-label="breadcrumbs">
 
   <a href="/" title="Home" class="custom-a" >Home</a>
 
