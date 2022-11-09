@@ -19,17 +19,16 @@
             "heading_size": "h1"
           }
         },
-        "template--14997315223575__0cae59f7-1aef-456c-976a-07ef3b06fb11-16673498050178815a-1": {
-          "type": "text",
+        "3e5e7cd9-3f11-4c28-a617-54f596051bff": {
+          "type": "show_breadcrumbs",
           "settings": {
-            "text": "Give customers details about the banner image",
-            "text_style": "body"
+            "pd_breadcrumbs": 4
           }
         }
       },
       "block_order": [
         "template--14997315223575__0cae59f7-1aef-456c-976a-07ef3b06fb11-16673498050178815a-0",
-        "template--14997315223575__0cae59f7-1aef-456c-976a-07ef3b06fb11-16673498050178815a-1"
+        "3e5e7cd9-3f11-4c28-a617-54f596051bff"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
