@@ -106,8 +106,11 @@
               {%- if block.settings.button_label_2 != blank -%}
                 <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
               {%- endif -%}
-
             </div>
+            {%- when 'show_breadcrumbs' -%}
+                <div style="padding:0 {{block.settings.pd_breadcrumbs}}px">
+                  {%render 'breadcrumbs'%}
+                </div>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -411,6 +414,20 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "name":"Show breadcrumbs",
+      "type":"show_breadcrumbs",
+      "settings":[
+        {
+          "type":"range",
+          "id":"pd_breadcrumbs",
+          "label":"Padding breacrumbs",
+          "default":4,
+          "min":1,
+          "max":20
         }
       ]
     }
