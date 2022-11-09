@@ -30,7 +30,7 @@
 
   {% if template contains 'page' %}
 
-    <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+    <span aria-hidden="true" class="custom-icon-left">/</span>
 
     <span class="custom-text">{{ page.title }}</span>
 
@@ -38,19 +38,19 @@
 
     {% if collection.url %}
 
-      <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+      <span aria-hidden="true" class="custom-icon-left">/</span>
 
       {{ collection.title | link_to: collection.url }}
 
     {% endif %}
 
-    <span aria-hidden="true">&rsaquo;</span>
+    <span aria-hidden="true">/</span>
 
     <span class="custom-text">{{ product.title }}</span>
 
   {% elsif template contains 'collection' and collection.handle %}
 
-    <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+    <span aria-hidden="true" class="custom-icon-left">/</span>
 
     {% if current_tags %}
 
@@ -58,7 +58,7 @@
 
       {{ collection.title | link_to: url }}
 
-      <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+      <span aria-hidden="true" class="custom-icon-left">/</span>
 
       <span class="custom-text">{{ current_tags | join: " + " }}</span>
 
@@ -70,13 +70,13 @@
 
   {% elsif template == 'blog' %}
 
-    <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+    <span aria-hidden="true" class="custom-icon-left">/</span>
 
     {% if current_tags %}
 
       {{ blog.title | link_to: blog.url }}
 
-      <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+      <span aria-hidden="true" class="custom-icon-left">/</span>
 
       <span class="custom-text">{{ current_tags | join: " + " }}</span>
 
@@ -88,17 +88,17 @@
 
   {% elsif template == 'article' %}
 
-    <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+    <span aria-hidden="true" class="custom-icon-left">/</span>
 
     {{ blog.title | link_to: blog.url }}
 
-    <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+    <span aria-hidden="true" class="custom-icon-left">/</span>
 
     <span class="custom-text">{{ article.title }}</span>
 
   {% else %}
 
-   <span aria-hidden="true" class="custom-icon-left">&rsaquo;</span>
+   <span aria-hidden="true" class="custom-icon-left">/</span>
 
    <span class="custom-text">{{ page_title }}</span>
 
@@ -106,4 +106,4 @@
 
 </nav>
 
-{% endunless %} 
+{% endunless %}
