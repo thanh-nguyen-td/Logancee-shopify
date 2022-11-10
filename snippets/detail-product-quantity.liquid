@@ -11,16 +11,34 @@
 
 {% endcomment %}
 
+{% style %}
+    .detail-product-quantity div:first-child h4 {
+        margin: 0 5px;
+    }
 
-<div style="display:flex">
-    <div id="inventory-{{ section.id }}" class="" style=" display:flex; align-items:center"> 
+    .detail-product-quantity .detail-product__archives-container {
+        display:flex; 
+        align-items:center; 
+    }
+    .detail-product-quantity .detail-product__archives-text {
+        color: #96c900
+    }
+    .detail-product-quantity h4 {
+        font-size:var(--font-text-xs)
+    }
+{% endstyle %}
+
+
+<div class="detail-product-quantity center_align">
+    <div id="inventory-{{ section.id }}" class="center_align"> 
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><path fill="currentColor" d="m12 21.05l-9-7l1.65-1.25L12 18.5l7.35-5.7L21 14.05ZM12 16L3 9l9-7l9 7Z"></path></svg>
-        <h4 style="margin: 0 5px;">Only <strong>{{ product.selected_or_first_available_variant.inventory_quantity }}</strong> left</h4>
+        <h4 >Only <strong>{{ product.selected_or_first_available_variant.inventory_quantity }}</strong> left</h4>
     </div>
-    <div style="display:flex; align-items:center; margin-left:15px; padding-left:15px;border-left:1px solid #999">
-        <h4 style="margin: 0 ;">
-            <span>Availalble:</span>
-            <span style="color:#96c900">In Stock</span>
+    <div class="line-right">t</div>
+    <div class="detail-product__archives-container">
+        <h4 class="mg_0">
+            <span><strong>Availalble:</strong></span>
+            <span class="detail-product__archives-text">In Stock</span>
         </h4>
     </div>
 </div>

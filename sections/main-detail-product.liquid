@@ -9,22 +9,6 @@
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
-  .custom-main-product-container .wrap-icon-rate {
-    height:20px;
-    display:flex
-  }
-  .custom-main-product-container .wrap-icon-rate .icon-rate{
-    color:gold
-  }
-  .custom-main-product-container .assess-product {
-    display:flex
-  }
-  .custom-main-product-container .assess-product h4 {
-    margin:0 15px;
-    border-left:1px solid #999;
-    padding-left:15px;
-    color:#999
-  }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -47,8 +31,8 @@
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-    <div class="grid__item product__media-wrapper">
-      <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
+  <div class="grid__item product__media-wrapper bg">
+      <media-gallery  id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
@@ -80,14 +64,16 @@
             {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                 <li id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item grid__item slider__slide{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-                  {%- liquid
-                    assign media_position = media_position | default: 0 | plus: 1
-                    assign lazy_load = false
-                    if media_position > 1
-                      assign lazy_load = true
-                    endif
-                    render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
-                  -%}
+                  <div>
+                    {%- liquid
+                      assign media_position = media_position | default: 0 | plus: 1
+                      assign lazy_load = false
+                      if media_position > 1
+                        assign lazy_load = true
+                      endif
+                      render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load
+                    -%}
+                  </div>
                 </li>
               {%- endunless -%}
             {%- endfor -%}
@@ -225,38 +211,14 @@
             {%- when 'quantity' -%}
               {% render 'detail-product-quantity', product:product %}
             {%- when 'rate' -%}
-              <div class="assess-product">
-                <div class="wrap-icon-rate">
-                  <span class="icon-rate">
-                    {% render 'icon-icon', type:'rate' %}
-                  </span>
-                  <span class="icon-rate">
-                    {% render 'icon-icon', type:'rate' %}
-                  </span>
-                  <span class="icon-rate">
-                    {% render 'icon-icon', type:'rate' %}
-                  </span>
-                  <span class="icon-rate">
-                    {% render 'icon-icon', type:'rate' %}
-                  </span>
-                  <span class="icon-rate">
-                    {% render 'icon-icon', type:'rate' %}
-                  </span>
-                </div>
-                <div>
-                  <h4>4 Review(s)</h4>
-                </div>
-                <div>
-                  <h4>Add your review</h4>
-                </div>
-              </div>
+             {% render 'detail-product-rate' %}
           {%- when 'text' -%}
-            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+            <p class="text_14 product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
-              <h1>{{ product.title | escape }}</h1>
+              <h1 class="text_15 uppercase text_600">{{ product.title | escape }}</h1>
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
                   {{ product.title | escape }}
@@ -490,7 +452,12 @@
       </div>
     </div>
   </div>
-
+<div class="main-product__top">
+  <div class="main-product__top-left bg">
+    {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load %}
+  </div>
+  <div class="main-product__top-right" style="background: pink;">t</div>
+</div>
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
       <button id="ModalClose-{{ section.id }}" type="button" class="product-media-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>

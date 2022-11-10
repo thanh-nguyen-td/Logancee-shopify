@@ -1,0 +1,54 @@
+{% comment %}
+
+  Renders a icon
+  Request:null
+  Accepts:
+  - type:hear
+  Usage:
+   {% render 'detail-product-rate' %}
+
+{% endcomment %}
+
+{% style %}
+    .detail-product-assess .wrap-icon-rate {
+    display:flex;
+    margin-right:5px
+  }
+  .detail-product-assess .wrap-icon-rate .icon-rate{
+    color:gold
+  }
+  .detail-product-assess h4 {
+    font-size:var(--font-text-xs);
+    font-weight:var(--font-text-normal);
+    margin:0;
+    padding-left:10px;
+    font-family:var(--font-family-text)
+  }
+{% endstyle %}
+
+<div class="detail-product-assess center_align">
+    <div class="wrap-icon-rate">
+      <span class="icon-rate">
+        {% render 'icon-icon', type:'rate', size:18 %}
+      </span>
+      <span class="icon-rate">
+        {% render 'icon-icon', type:'rate', size:18 %}
+      </span>
+      <span class="icon-rate">
+        {% render 'icon-icon', type:'rate', size:18 %}
+      </span>
+      <span class="icon-rate">
+        {% render 'icon-icon', type:'rate', size:18 %}
+      </span>
+      <span class="icon-rate">
+        {% render 'icon-icon', type:'rate', size:18 %}
+      </span>
+    </div>
+    <div>
+      <h4>4 Review(s)</h4>
+    </div>
+    <div class="line-right">t</div>
+    <div>
+      <h4>Add your review</h4>
+    </div>
+  </div>

@@ -202,6 +202,14 @@ p{
     padding:13px 20px;
 }
 
+.line-right{
+    height: 10px;
+    background:var(--color-gray-border); 
+    width:1px; 
+    color:transparent !important;
+    margin:0 10px
+}
+
 /* content */
 .text_title,
 .text_title p{
@@ -262,4 +270,9 @@ p{
 }
 .tabs-container input[type='radio']:checked + label {
     border:1px solid red;
+}
+
+.main-product__top {
+    display: grid;
+    grid-template-columns: 50% 1fr;
 }

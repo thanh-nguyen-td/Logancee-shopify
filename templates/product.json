@@ -36,7 +36,7 @@
       }
     },
     "main": {
-      "type": "custom-main-product",
+      "type": "main-detail-product",
       "blocks": {
         "title": {
           "type": "title",
