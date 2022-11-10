@@ -67,15 +67,15 @@
             "show_quantity": true
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
             "font_size": "text_14"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
           }
         },
         "8a8bcf9c-7844-4a15-901f-7a43105d7e93": {
@@ -97,8 +97,8 @@
         "caption",
         "price",
         "acf870b0-26d3-4946-a0f9-9aa2b0f1df02",
-        "quantity_selector",
         "description",
+        "quantity_selector",
         "8a8bcf9c-7844-4a15-901f-7a43105d7e93",
         "share"
       ],
