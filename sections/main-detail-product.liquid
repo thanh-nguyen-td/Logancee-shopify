@@ -343,8 +343,6 @@
               </details>
             </share-button>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
-          {%- when 'description_text' -%}
-            <div>thanhlaal</div>
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
@@ -625,38 +623,6 @@
       ]   
     },
     {
-      "type": "description_text",
-      "name": "Description",
-      "settings":[
-        {
-          "type":"text",
-          "id":"description_text",
-          "default":"This is Description",
-          "label":"Description"
-        },
-        {
-          "type":"select",
-          "id":"font_size",
-          "default":"text_14",
-          "label":"Font size",
-          "options":[
-            {
-              "value": "text_12",
-              "label":"size xs"
-            },
-            {
-              "value": "text_14",
-              "label":"size sm"
-            },
-            {
-              "value": "text_16",
-              "label":"size base"
-            }
-          ]
-        }
-      ]   
-    },
-    {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
       "settings": [
@@ -743,7 +709,29 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1
+      "limit": 1,
+      "settings":[
+        {
+          "type":"select",
+          "id":"font_size",
+          "default":"text_14",
+          "label":"Font size",
+          "options":[
+            {
+              "value": "text_12",
+              "label":"size xs"
+            },
+            {
+              "value": "text_14",
+              "label":"size sm"
+            },
+            {
+              "value": "text_16",
+              "label":"size base"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "share",
