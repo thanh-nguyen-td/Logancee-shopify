@@ -81,7 +81,7 @@
         "8a8bcf9c-7844-4a15-901f-7a43105d7e93": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<h4>\n<span style=\"color:#999\">SKU:<\/span>\n<span>12345678<\/span>\n<\/h4>"
+            "custom_liquid": "<h4>\n<span style=\"color:#999;font-size:12px\">SKU:<\/span>\n<span style=\"font-size:12px\">12345678<\/span>\n<\/h4>"
           }
         },
         "share": {
