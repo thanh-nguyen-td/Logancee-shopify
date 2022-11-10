@@ -248,7 +248,7 @@
             </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
-              <div class="product__description rte quick-add-hidden">
+              <div class="product__description rte quick-add-hidden text_12 text_gray">
                 {{ product.description }}
               </div>
             {%- endif -%}
@@ -419,6 +419,10 @@
                 </div>
               </div>
             </noscript>
+          {%- when 'space_info' -%}
+            <div class="bg">
+              thanh kaka
+            </div>
           {%- when 'buy_buttons' -%}
            <div style="width:50%"> {%- render 'detail-product-buy-button',product:product, block:block, product_form_id:product_form_id -%}</div>
           {%- when 'rating' -%}
@@ -609,6 +613,30 @@
           "label":"Show rate"
         }
       ]   
+    },
+    {
+      "type":"space_info",
+      "name":"Space info",
+      "settings":[
+        {
+          "type":"range",
+          "id":"margin_top",
+          "default":2,
+          "min":2,
+          "max":100,
+          "step":2,
+          "label":"Margin top"
+        },
+        {
+          "type":"range",
+          "id":"margin_bottom",
+          "default":2,
+          "min":2,
+          "max":100,
+          "step":2,
+          "label":"Margin bottom"
+        }
+      ]
     },
     {
       "type": "quantity",
