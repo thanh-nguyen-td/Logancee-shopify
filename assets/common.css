@@ -178,8 +178,17 @@ p{
     align-items: center;
 }
 
+.flex_column {
+    flex-direction: column;
+}
+.flex_row {
+    flex-direction: row;
+}
 .width-full {
     width:100% ;
+}
+.height-full {
+    height:100% ;
 }
 
 /* row column */
@@ -189,9 +198,7 @@ p{
     flex-wrap: wrap;
 }
 
-.flex_column {
-    flex-grow: 1;
-}
+
 
 .bg {
     background: red;

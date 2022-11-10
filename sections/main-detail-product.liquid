@@ -9,6 +9,11 @@
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
+  .product .line-space {
+    height:1px; 
+    background:var(--color-gray-border);
+    color:transparent;
+  }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -31,7 +36,7 @@
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-  <div class="grid__item product__media-wrapper bg">
+  <div class="grid__item product__media-wrapper">
       <media-gallery  id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
         <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
@@ -248,7 +253,7 @@
             </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
-              <div class="product__description rte quick-add-hidden text_12 text_gray">
+              <div class="product__description rte quick-add-hidden text_12 text_gray" style="border-top:1px solid #999; border-bottom:1px solid #999">
                 {{ product.description }}
               </div>
             {%- endif -%}
@@ -274,33 +279,7 @@
             </div>
           
           {%- when 'quantity_selector' -%}
-           <div style="display: flex;">
-            <div style="flex-basis: 10%;" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
-              <label class="form__label" for="Quantity-{{ section.id }}">
-                {{ 'products.product.quantity.label' | t }}
-              </label>
-
-              <quantity-input class="quantity">
-                <button class="quantity__button no-js-hidden" name="minus" type="button">
-                  <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-                  {% render 'icon-minus' %}
-                </button>
-                <input class="quantity__input"
-                    type="number"
-                    name="quantity"
-                    id="Quantity-{{ section.id }}"
-                    min="1"
-                    value="1"
-                    form="{{ product_form_id }}"
-                  >
-                <button class="quantity__button no-js-hidden" name="plus" type="button">
-                  <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-                  {% render 'icon-plus' %}
-                </button>
-              </quantity-input>
-            </div>
-            <div style="width:100%; margin-left:30px"> {%- render 'detail-product-buy-button',product:product, block:block, product_form_id:product_form_id -%}</div>
-           </div>
+          {% render 'detail-product-input-quantity', block:block %}
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
@@ -420,8 +399,8 @@
               </div>
             </noscript>
           {%- when 'space_info' -%}
-            <div class="bg">
-              thanh kaka
+            <div class="line-space" style=" margin-top:{{block.settings.margin_top}}px;margin-bottom:{{block.settings.margin_bottom}}px">
+              t
             </div>
           {%- when 'buy_buttons' -%}
            <div style="width:50%"> {%- render 'detail-product-buy-button',product:product, block:block, product_form_id:product_form_id -%}</div>
@@ -460,7 +439,6 @@
   <div class="main-product__top-left bg">
     {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load %}
   </div>
-  <div class="main-product__top-right" style="background: pink;">t</div>
 </div>
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
     <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
