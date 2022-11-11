@@ -279,7 +279,7 @@
             </div>
           
           {%- when 'quantity_selector' -%}
-          {% render 'detail-product-input-quantity', block:block %}
+            {% render 'detail-product-input-quantity', block:block %}
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
@@ -428,6 +428,7 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+        {% render 'social-network' %}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
