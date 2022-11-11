@@ -23,57 +23,83 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique enim ullam est veniam obcaecati nihil possimus soluta quisquam. Inventore, quia velit. Fuga placeat quam iste repudiandae culpa quas doloribus? Ipsum asperiores nesciunt iste mollitia, dignissimos modi id aliquid libero soluta?
         </p>
     </div> {%- endcomment -%}
- <div class="head">
-    <h3>PRODUCT DESCRIPTION</h3>
-    <h3>PREVIEW</h3>
-    <h3>TAGS</h3>
-    <h3>ADITIONAL INFORMATION</h3>
-   </div>
-   <div class="line">line</div>
-   <div class="content">
-    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque incidunt suscipit magnam nostrum aperiam tempore ullam quidem? Dolor natus ducimus delectus magnam et culpa modi, excepturi ea illo esse.</h4>
-    <ul>
-        <li><h4>Length 74</h4></li>
-        <li><h4>Lorem ipsum dolor sit amet.</h4></li>
-        <li><h4>Length 74</h4></li>
-        <li><h4>Ragular gif</h4></li>
-        <li><h4>Length 745</h4></li>
-        <li><h4>Length 74</h4></li>
-    </ul>
-   </div>
+<div class="page-width tabs-container">
+    <div class="head">
+        <h3>PRODUCT DESCRIPTION</h3>
+        <h3>PREVIEW</h3>
+        <h3>TAGS</h3>
+        <h3>ADITIONAL INFORMATION</h3>
+    </div>
+    <div class="tabs__line">line</div>
+    <div class="content">
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque incidunt suscipit magnam nostrum aperiam tempore ullam quidem? Dolor natus ducimus delectus magnam et culpa modi, excepturi ea illo esse.</h4>
+        <ul>
+            <li>
+                <div class="tabs__square">t</div><h4>Length 74</h4></li>
+            <li>
+                <div class="tabs__square">t</div><h4>Lorem ipsum dolor sit amet.</h4></li>
+            <li>
+                <div class="tabs__square">t</div><h4>Length 74</h4></li>
+            <li>
+                <div class="tabs__square">t</div><h4>Ragular gif</h4></li>
+            <li>
+                <div class="tabs__square">t</div><h4>Length 745</h4></li>
+            <li>
+                <div class="tabs__square">t</div><h4>Length 74</h4></li>
+        </ul>
+    </div>
 </div>
 {% style %}
+    
     .tabs-container .head {
         display:flex;
         align-items:center;
         justify-content:center
     }
     .tabs-container .head h3{
-        font-weight:600;
+        font-weight:var(--font-text-semibold);
         padding:20px;
         margin:0;
-        border-bottom:2px solid transparent
+        border-bottom:2px solid transparent;
+        font-size:var(--font-text-sm);
+        color:#cecece
     }
     .tabs-container .head h3:first-child{
-        border-bottom:2px solid #000
+        border-bottom:2px solid #000;
+        color:var(--color-black-text)
     }
     .tabs-container .head h3:hover{
         border-bottom:2px solid #000
     }
-    .tabs-container .line {
+    .tabs-container .tabs__line {
         height:1px;
         background:#999;
-        color:transparent
+        color:transparent;
+        width:100%
     }
     .tabs-container .content {
         margin-top:20px
     }
     .tabs-container .content ul {
         color:#999;
-        list-style-type: square
+        list-style-type: none
+    }
+    .tabs-container .content ul li {
+       display:flex;
+       align-items:center;
+       margin:10px 0;
+    }
+    .tabs-container .tabs__square{
+        height:5px;
+        width:5px;
+        background:var(--color-gray-border);
+        color:transparent;
+        margin-right:10px;
     }
     .tabs-container .content h4{
-        color:#999
+        color:#999;
+        font-size:var(--font-text-xs);
+        margin:0
     }
     @media screen and (max-width:800px){
         .tabs-container .head{

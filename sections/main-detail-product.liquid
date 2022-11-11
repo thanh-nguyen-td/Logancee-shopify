@@ -35,7 +35,7 @@
     <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
     <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
   {%- endif -%}
-  <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div  class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
   <div class="grid__item product__media-wrapper">
       <media-gallery  id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
         <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
@@ -204,11 +204,9 @@
         {%- endif -%}
       </media-gallery>
     </div>
-    <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
+    <div style="position:relative" class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
-       
-     
         {%- for block in section.blocks -%}
           {%- case block.type -%}
           {%- when '@app' -%}
@@ -428,16 +426,36 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
-        {% render 'social-network' %}
+        <div class="center_align">
+          <span class="text_12 text_500 text_gray">SHARE: </span>
+          <span>
+            {% render 'social-network' %}
+          </span>
+        </div>
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
         </a>
       </div>
+      <div style="display:flex; position:absolute;top:0;right:40px" >
+        {% for image in product.images limit:2 %}
+         
+          {% if forloop.index == 1 %}
+            <img src="{{image.src | img_url:'largge'}}" style="height: 60px;margin-right:10px"/>
+            {% else %}
+              <div style="position: relative;">
+                <img src="{{image.src | img_url:'largge'}}" style="height: 60px;position:absolute"/>
+                <div style="background: #fff;position:absolute; height:60px;width:40px;opacity:0.6" class="custom_center">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--akar-icons"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"></path></svg>
+                </div>
+              </div>
+          {% endif %}
+        {% endfor %}
+       </div>
     </div>
   </div>
 <div class="main-product__top">
-  <div class="main-product__top-left bg">
+  <div class="main-product__top-left">
     {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load %}
   </div>
 </div>

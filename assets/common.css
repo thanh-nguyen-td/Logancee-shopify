@@ -252,7 +252,7 @@ p{
     color: #999;
 }
 
-.tabs-container {
+/* .tabs-container {
     display: flex;
     flex-wrap: wrap;
     align-items:center;
@@ -277,7 +277,7 @@ p{
 }
 .tabs-container input[type='radio']:checked + label {
     border:1px solid red;
-}
+} */
 
 .main-product__top {
     display: grid;
