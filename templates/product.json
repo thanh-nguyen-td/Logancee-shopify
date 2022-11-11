@@ -24,7 +24,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
         "show_text_box": false,
