@@ -60,7 +60,7 @@
         {%- endif -%}
         <div class="card__content">        
           <div class="card__information">
-            <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+            <h3 class="card__heading{% if show_excerpt %} h2{% endif %} ">
               <a href="{{ article.url }}" class="full-unstyled-link">
                 {{ article.title | truncate: 50 | escape }}
               </a>
@@ -99,23 +99,23 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+          <h3 class="card__heading{% if show_excerpt %} title_sm uppercase{% endif %} ">
             <a href="{{ article.url }}" class="full-unstyled-link text_600">
               {{ article.title | truncate: 50 | escape }}
             </a>
           </h3>
-          <div class="article-card__info  h5" >
+          <div class="article-card__info" style=" font-size:11px">
             {%- if show_date -%}
-              <span style="border-right:1px solid #999; margin-right:15px;padding-right:15px; color:#999">{{ article.published_at | time_tag: format: 'date' }}</span>
+              <span class="text_gray" style="border-right:1px solid #999; margin-right:15px;padding-right:15px; ">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
             {%- if show_author -%}
-              <span style="color:#999">by: </span>
+              <span class="text_gray" >by: </span>
               <span class="text_600">{{ article.author }}</span>
             {%- endif -%}
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width" style="font-size:13px">
+              <p class="article-card__excerpt rte-width text_gray text_500" style="font-size:13px">
                 {%- if article.excerpt.size > 0 -%}
                   {{ article.excerpt | strip_html | truncatewords: 30 }}
                 {%- else -%}
@@ -130,8 +130,8 @@
             </div>
           {%- endif -%}
           <div  class="center_align">
-            <h3 style="margin: 0;margin-right:10px">READ MORE</h3>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify iconify--bi"><path fill="currentColor" fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>          </div>
+            <h3 class="title_xs mg_0 mr_5">READ MORE</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify iconify--bi"><path fill="currentColor" fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>          </div>
         </div>
         {%- if show_badge -%}
           <div class="card__badge {{ settings.badge_position }}">

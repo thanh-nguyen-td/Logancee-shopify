@@ -37,14 +37,13 @@
     --font-family-text:'Lato'
 
     /* announcement-bar */
-    --text-gray:#666
 }
 a,
 p{
     font-family: var(--font-body-family);
     font-style: var(--font-body-style);
-   
 }
+
 /* text color */
 .text_link{
     text-decoration: none;
@@ -58,7 +57,9 @@ p{
 .text_gray{
     color: var(--color-gray-text)
 }
-
+.text_gray_100{
+    color: #666
+}
 .uppercase{
     text-transform: uppercase !important;
 }
@@ -93,6 +94,19 @@ p{
 }
 .text_18 {
     font-size: var(--font-text-lg);
+}
+
+.title_xs {
+    font-size: var(--font-text-xs);
+    font-weight: var(--font-text-semibold);
+}
+.title_sm {
+    font-size: var(--font-text-sm);
+    font-weight: var(--font-text-semibold);
+}
+.title_base {
+    font-size: var(--font-text-base);
+    font-weight: var(--font-text-semibold);
 }
 
 /* margin */
@@ -184,6 +198,7 @@ p{
 .flex_row {
     flex-direction: row;
 }
+
 .width-full {
     width:100% ;
 }
