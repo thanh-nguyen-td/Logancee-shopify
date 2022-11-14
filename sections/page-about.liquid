@@ -1,13 +1,28 @@
 <div class="page-width">
-    {% for block in section.blocks %}
-        {% assign items = block.settings %}
-        <div>{{forloop.index}}</div>
-       {% if forloop.index != 0  %}
-          
-        {% else %}
-            
-       {% endif %} 
-    {% endfor %}
+    <div style="width:100%; display:flex">
+        <div style="width:50%">
+            {% for block in section.blocks %}
+                {% assign items = block.settings %}
+                {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+                {% if thecycle == 'odd' %}
+                  <div  style="padding:12px">
+                    <img src="{{items.image | img_url:'large'}}" width="100%" />
+                  </div>
+                {% endif %} 
+            {% endfor %}
+        </div>
+        <div  style="width:50%">
+            {% for block in section.blocks %}
+                {% assign items = block.settings %}
+                {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+                {% if thecycle == 'odd' %}
+                  <div  style="padding:12px">
+                    <img src="{{items.image | img_url:'large'}}" width="100%"/>
+                  </div>
+                {% endif %} 
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% schema %}
 {
