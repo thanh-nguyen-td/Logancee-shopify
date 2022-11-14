@@ -1,11 +1,40 @@
-<div class="page-width">
+{% style %}
+.page-image-container .page-image__head {
+    margin:6rem 0;
+    margin-top:7rem
+}
+    .page-image-container .page-image__head h4{
+        margin:0 18px;
+        color:var(--color-gray-text);
+        text-transform:uppercase
+    }
+    .page-image-container .page-image__head .active{
+        color:var(--color-black-text)
+    }
+    .page-image-container .pd-img{
+        padding:12px
+    }
+    @media screen and (max-width:768px){
+        .page-image-container .pd-img{
+        padding:5px
+    } 
+    }
+{% endstyle %}
+<div class="page-width page-image-container">
+    <div class="page-image__head center_justify">
+        <h4 class="title_sm active">All</h4>
+        <h4 class="title_sm">Branding</h4>
+        <h4 class="title_sm">Web design</h4>
+        <h4 class="title_sm">Photography</h4>
+        <h4 class="title_sm">Animation</h4>
+    </div>
     <div style="width:100%; display:flex">
         <div style="width:50%">
             {% for block in section.blocks %}
                 {% assign items = block.settings %}
                 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
                 {% if thecycle == 'odd' %}
-                  <div  style="padding:12px">
+                  <div class="pd-img">
                     <img src="{{items.image | img_url:'large'}}" width="100%" />
                   </div>
                 {% endif %} 
@@ -16,7 +45,7 @@
                 {% assign items = block.settings %}
                 {% capture thecycles %}{% cycle 'odd', 'even' %}{% endcapture %}
                 {% if thecycles == 'even' %}
-                  <div  style="padding:12px">
+                  <div class="pd-img">
                     <img src="{{items.image | img_url:'large'}}" width="100%"/>
                   </div>
                 {% endif %} 
