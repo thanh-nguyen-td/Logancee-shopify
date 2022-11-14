@@ -69,7 +69,7 @@
         value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
       />
       <textarea  
-        rows="5"
+        rows="8"
         class="custom-textarea"
         id="ContactForm-body"
         placeholder="Message"
@@ -124,7 +124,7 @@
       </div> {%- endcomment -%}
       <div class="wrap-button">
         <button type="submit" class="button">
-          Seen message
+          SEND MESSAGE
         </button>
       </div>
     {%- endform -%}
@@ -134,19 +134,31 @@
   .custom-contact-container .custom-input {
     border:0;
     background: #f6f6f6;
-    height:55px;
+    height:47px;
     width:100%;
-    font-size: 14px;
+    font-size:var(--font-text-xs);
     padding-left: 20px;
-    margin-bottom:20px
+    margin-bottom:20px;
+    font-weight:500
+}
+
+.custom-contact-container ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #999;
+  opacity: 1; /* Firefox */
+}
+
+.custom-contact-container textarea {
+  padding-top:15px;
+  
 }
 .custom-contact-container .custom-textarea{
     border:0;
     background: #f6f6f6;
     width:100%;
-    font-size: 14px;
     padding-left: 20px;
-    margin-bottom:20px
+    margin-bottom:20px;
+    font-size:var(--font-text-xs);
+    font-weight:500
 }
 .custom-contact-container .custom-input:focus-visible,
 .custom-contact-container .custom-textarea:focus-visible{
@@ -159,6 +171,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.custom-contact-container .wrap-button button {
+  font-size:var(--font-text-xs);
+  font-weight:var(--font-text-semibold);
+  padding:0 2.2rem;
 }
 {% endstyle %}
 {% schema %}
