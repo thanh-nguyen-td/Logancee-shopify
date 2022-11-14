@@ -2,9 +2,20 @@
   "sections": {
     "main": {
       "type": "page-about",
+      "blocks": {
+        "ae424ce5-5269-4bdf-bbd8-f8b7ba3561b4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f29d9806-6f25-41c0-bcf8-4095317e3497.jpg",
+            "title": "Title",
+            "descriptions": "this is descriptions"
+          }
+        }
+      },
+      "block_order": [
+        "ae424ce5-5269-4bdf-bbd8-f8b7ba3561b4"
+      ],
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     },
     "ba90a593-5de7-407a-91f5-779171b064e8": {
@@ -82,7 +93,8 @@
         "04c23e88-bbaa-42e7-b6db-104c3f7dff2a"
       ],
       "settings": {
-        "marrgin-card": 0
+        "full_width": true,
+        "padding_card": 0
       }
     }
   },
