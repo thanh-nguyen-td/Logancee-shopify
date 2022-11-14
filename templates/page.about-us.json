@@ -1,5 +1,40 @@
 {
   "sections": {
+    "ba90a593-5de7-407a-91f5-779171b064e8": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "e4a1b7d5-373d-42dc-b891-a35573092060": {
+          "type": "show_breadcrumbs",
+          "settings": {
+            "pd_breadcrumbs": 4
+          }
+        }
+      },
+      "block_order": [
+        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-0",
+        "e4a1b7d5-373d-42dc-b891-a35573092060"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "main": {
       "type": "page-about",
       "blocks": {
@@ -63,53 +98,6 @@
       "settings": {
       }
     },
-    "ba90a593-5de7-407a-91f5-779171b064e8": {
-      "type": "image-banner",
-      "blocks": {
-        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-2": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-0",
-        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-1",
-        "template--15000143888407__ba90a593-5de7-407a-91f5-779171b064e8-16671103681d98c1c5-2"
-      ],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "e6a8a35a-dd15-4d1d-a1d7-7f3abbd8bd35": {
       "type": "image-list",
       "blocks": {
@@ -144,8 +132,8 @@
     }
   },
   "order": [
-    "main",
     "ba90a593-5de7-407a-91f5-779171b064e8",
+    "main",
     "e6a8a35a-dd15-4d1d-a1d7-7f3abbd8bd35"
   ]
 }
