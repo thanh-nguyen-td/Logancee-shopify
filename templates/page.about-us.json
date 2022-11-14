@@ -42,6 +42,14 @@
             "title": "Title",
             "descriptions": "this is descriptions"
           }
+        },
+        "3d9fe21b-d6ef-4656-8568-4b4ef715297b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ngo-ngang-truoc-viet-nam-tuoi-dep-qua-nhung-buc-anh-nghe-thuat-du-lich-xuat-sac-nhat_2.jpg",
+            "title": "Title",
+            "descriptions": "this is descriptions"
+          }
         }
       },
       "block_order": [
@@ -49,7 +57,8 @@
         "e2964216-7bf7-4a4a-a858-8b2513d7a9b5",
         "b2c01e4a-0d2e-40ef-a64b-aac33a89b1aa",
         "a446bcab-a9ba-49e8-a58a-ea04154d8414",
-        "ae4a1599-0676-46c1-b393-179561492566"
+        "ae4a1599-0676-46c1-b393-179561492566",
+        "3d9fe21b-d6ef-4656-8568-4b4ef715297b"
       ],
       "settings": {
       }
