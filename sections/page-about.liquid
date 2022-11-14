@@ -14,8 +14,8 @@
         <div  style="width:50%">
             {% for block in section.blocks %}
                 {% assign items = block.settings %}
-                {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-                {% if thecycle == 'odd' %}
+                {% capture thecycles %}{% cycle 'odd', 'even' %}{% endcapture %}
+                {% if thecycles == 'even' %}
                   <div  style="padding:12px">
                     <img src="{{items.image | img_url:'large'}}" width="100%"/>
                   </div>
