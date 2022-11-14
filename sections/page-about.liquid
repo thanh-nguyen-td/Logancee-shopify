@@ -1,0 +1,41 @@
+<div class="page-width">
+    {% for block in section.blocks %}
+        {% assign items = block.settings %}
+        <div>{{forloop.index}}</div>
+       {% if forloop.index != 0  %}
+          
+        {% else %}
+            
+       {% endif %} 
+    {% endfor %}
+</div>
+{% schema %}
+{
+    "name":"page about",
+    "blocks":[
+        {
+            "type":"image",
+            "name":"Image",
+            "settings":[
+                {
+                    "type":"image_picker",
+                    "id":"image",
+                    "label":"Select image"
+                },
+                {
+                    "type":"text",
+                    "id":"title",
+                    "default":"Title",
+                    "label":"Title"
+                },
+                {
+                    "type":"text",
+                    "id":"descriptions",
+                    "default":"this is descriptions",
+                    "label":"Description"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
