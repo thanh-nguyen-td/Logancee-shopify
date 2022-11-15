@@ -119,11 +119,10 @@
           {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
         </span>
       {%- endif -%}
-     <div style="display: flex;align-items:flex-start">
-      <button class="uppercase" style="font-size: 12px;padding: 0 3.5rem;">
+    
+      <button type="button" class="uppercase" style="font-size: 12px;padding: 0 3.5rem;position:relative">
         Register now
       </button>
-     </div>
     {%- endform -%}
   </div>
   

@@ -80,25 +80,6 @@
           </h2>
           {{ form.errors | default_errors }}
         {%- endif -%}
-  
-        {%- comment -%} <div class="field"  style="font-size:12px">        
-          <input
-            type="email"
-            name="customer[email]"
-            id="CustomerEmail"
-            autocomplete="email"
-            autocorrect="off"
-            style="font-size:12px"
-            autocapitalize="off"
-            {% if form.errors contains 'form' %}
-              aria-invalid="true"
-            {% endif %}
-            placeholder="{{ 'customer.login_page.email' | t }}"
-          >
-          <label for="CustomerEmail mt_5" style="font-size:12px">
-            {{ 'customer.login_page.email' | t }}
-          </label>
-        </div> {%- endcomment -%}
         <input 
             class="custom_input" 
             type="email" 
@@ -111,8 +92,6 @@
                 aria-invalid="true"
               {% endif %}
         />
-
-  
         {%- if form.password_needed -%}
             <input 
                 class="custom_input" 
@@ -126,22 +105,6 @@
                 {% endif %}
                 placeholder="{{ 'customer.login_page.password' | t }}"
             />
-          {%- comment -%} <div class="field">          
-            <input
-              type="password"
-              value=""
-              name="customer[password]"
-              id="CustomerPassword"
-              autocomplete="current-password"
-              {% if form.errors contains 'form' %}
-                aria-invalid="true"
-              {% endif %}
-              placeholder="{{ 'customer.login_page.password' | t }}"
-            >
-            <label for="CustomerPassword">
-              {{ 'customer.login_page.password' | t }}
-            </label>
-          </div> {%- endcomment -%}
           <div style="display: flex;justify-content:space-between">
             <div style="display: flex;">
                 <div class="wraper-checkbox">
@@ -153,17 +116,12 @@
                 {{ 'customer.login_page.forgot_password' | t }}
               </a>
           </div>
-        
         {%- endif -%}
-  
-        <div style="display:flex; align-items:flex-start">
+       
             <button class="uppercase " style="padding: 0;margin-left:0;background:#fff;color:#000;font-size:12px;border:1px solid #e7e7e7">
                 Login
             </button>
-        </div>
-  
-        
-        
+      
       {%- endform -%}
     </div>
     

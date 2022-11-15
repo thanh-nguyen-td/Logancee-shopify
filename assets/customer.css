@@ -751,3 +751,7 @@ li[data-address] > h2 {
 .account-right {
   width: 66%;
 }
+
+.login-left button::after {
+  position: static;
+}
