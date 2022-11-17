@@ -17,10 +17,17 @@
             "heading": "ABOUT US",
             "heading_size": "h1"
           }
+        },
+        "f2a69f30-af6b-436e-aafe-7ba1ff485d8c": {
+          "type": "show_breadcrumbs",
+          "settings": {
+            "pd_breadcrumbs": 4
+          }
         }
       },
       "block_order": [
-        "template--15012856692759__bde24425-4401-4260-9075-7a1edc1d35e0-1668659463ae2fd6f7-0"
+        "template--15012856692759__bde24425-4401-4260-9075-7a1edc1d35e0-1668659463ae2fd6f7-0",
+        "f2a69f30-af6b-436e-aafe-7ba1ff485d8c"
       ],
       "settings": {
         "image_overlay_opacity": 0,
