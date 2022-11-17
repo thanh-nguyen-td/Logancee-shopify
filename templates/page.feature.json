@@ -30,6 +30,7 @@
         "f2a69f30-af6b-436e-aafe-7ba1ff485d8c"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "adapt_height_first_image": false,
@@ -41,10 +42,78 @@
         "stack_images_on_mobile": true,
         "show_text_below": true
       }
+    },
+    "1db88e68-325f-4a3d-a86b-e8d4f48e2919": {
+      "type": "custom-text-buton-img",
+      "blocks": {
+        "d9702e9c-f2a6-42d2-9d25-de8313ca38d2": {
+          "type": "custom_space",
+          "settings": {
+            "custom_space": 20
+          }
+        },
+        "5b383af3-ec1f-4b47-b0db-72c79a6694e3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>WELCOME TO LOGANCEE STORE<\/p>",
+            "is_title": true,
+            "font_size": 14,
+            "style": "margin-bottom:5px"
+          }
+        },
+        "fc4adab7-93ba-496c-bb61-0c4859152811": {
+          "type": "icon_space",
+          "settings": {
+            "custom_liquid": 18
+          }
+        },
+        "0d65e04f-bb8a-499c-9acf-a32e7cc24a44": {
+          "type": "custom_space",
+          "settings": {
+            "custom_space": 2
+          }
+        },
+        "fbe7d01e-1dd5-48ef-8651-5e7c55d06dbd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're a team of creative and make amazing site in ecommerce from Unite States. We love colour pastel,<br\/>highlight and simple, its make our design look so awesome<\/p>",
+            "is_title": false,
+            "font_size": 12,
+            "style": "font-weight:600"
+          }
+        },
+        "d2c8589d-afc7-4ea4-9e50-cd6dcc4f99c1": {
+          "type": "custom_space",
+          "settings": {
+            "custom_space": 12
+          }
+        },
+        "75c516de-9d60-4507-9af9-83fd2a995766": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vivamus tortor nisl, lobortis In, faucibus et, tempus at, dul. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant tuntristle sntils et netils At alclaa tame ar tIrnIs Ageta NIInr aligile Aenean seri ilisto non en venicilla lanreet Praesent insulm lihero alictor ar temnils ner casion. Maecenas ullamcorner. odio vel temnus egestas. dui orci faucibus orci. sit amet aliquet lectus dolor et guam. Pellentesque consequat luctus nurus. Nunc. et risus. Ftiam a nihh tuniellus dianissim metus eget nisi. Vestibulum sapien dolor. aliguet nec, porta ac, malesuada a. libe<br\/>o. Praesent feugiat nurus eget est. Nulla facilisi. Vestibulum tincidunt sapiens etvelit. Mauris urus. Maecenas eset mauris eu orci accumsan feugiat. Pellentesque eset velit. Nunc tincidunt<\/p>",
+            "is_title": false,
+            "font_size": 12,
+            "style": "color:#999"
+          }
+        }
+      },
+      "block_order": [
+        "d9702e9c-f2a6-42d2-9d25-de8313ca38d2",
+        "5b383af3-ec1f-4b47-b0db-72c79a6694e3",
+        "fc4adab7-93ba-496c-bb61-0c4859152811",
+        "0d65e04f-bb8a-499c-9acf-a32e7cc24a44",
+        "fbe7d01e-1dd5-48ef-8651-5e7c55d06dbd",
+        "d2c8589d-afc7-4ea4-9e50-cd6dcc4f99c1",
+        "75c516de-9d60-4507-9af9-83fd2a995766"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "bde24425-4401-4260-9075-7a1edc1d35e0"
+    "bde24425-4401-4260-9075-7a1edc1d35e0",
+    "1db88e68-325f-4a3d-a86b-e8d4f48e2919"
   ]
 }
