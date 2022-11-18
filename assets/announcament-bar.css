@@ -1,6 +1,7 @@
 :root {
     --announcement-color-gray-text:var(--color-gray-text-666);
     --announcement-color-gray-border:var(--color-gray-border);
+    --announcement-color-gray-border-200:var(--color-gray-border-200);
     --announcement-font-size: var(--font-text-sm);
     --announcement-font-1: var(--font-family-1);
     --announcement-font-weight:var(--font-text-bold);
@@ -8,7 +9,7 @@
     --announcement-font-size-select:var(--font-text-13)
   }
   .announcement-container  {
-    padding: 15px;
+    padding:15px 0 15px 0;
     }
   .announcement-container a,
   .announcement-container p {
@@ -61,8 +62,8 @@
     color:var(--announcement-color-gray-text);
   }                                                         
   .announcement-container .line-right{
-    height: 10px;
-    background:var(--announcement-color-gray-border); 
+    height: 14px;
+    background:var(--announcement-color-gray-border-200); 
     width:1px; 
     color:transparent !important;
     margin:0 10px
