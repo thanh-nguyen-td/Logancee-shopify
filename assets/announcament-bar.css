@@ -1,0 +1,75 @@
+:root {
+    --announcement-color-gray-text:var(--color-gray-text-666);
+    --announcement-color-gray-border:var(--color-gray-border);
+    --announcement-font-size: var(--font-text-sm);
+    --announcement-font-1: var(--font-family-1);
+    --announcement-font-weight:var(--font-text-bold);
+    --announcement-font-weight-select:var(--font-text-normal);
+    --announcement-font-size-select:var(--font-text-13)
+  }
+  .announcement-container  {
+    padding: 15px;
+    }
+  .announcement-container a,
+  .announcement-container p {
+    font-size: var(--announcement-font-size);
+    color:var(--announcement-color-gray-text);
+    margin:0;
+    line-height: var(--announcement-font-size);
+    font-family: var(--announcement-font-1);
+  }
+  .announcement-container select {
+    border: 0;
+    font-size: var(--announcement-font-size-select);
+    font-family: var(--announcement-font-1);
+    font-weight: var(--announcement-font-weight-select);
+    color:var(--announcement-color-gray-text);
+  }
+  .announcement-container .weight {
+    font-weight: var(--announcement-font-weight);
+  }
+  
+  .announcement__left{
+    display:flex;
+  } 
+ 
+  .announcement__left-item span {
+    color: var(--announcement-color-gray-text);
+
+  }
+  .announcement__right{
+    display:flex; 
+    justify-content:flex-end;
+    align-items:center;
+    height:100%;
+  }
+
+  .announcement__left-item,
+  .announcement__right-items{
+    display:flex;
+    align-items:center
+  }
+  .announcement__wrap-icon,
+  .announcement__wrap-icon
+  {
+    display:flex; 
+    justify-content:center;
+    align-items:center; 
+    margin-right:5px;
+    height:100%;
+    font-size: var(--announcement-font-size);
+    color:var(--announcement-color-gray-text);
+  }                                                         
+  .announcement-container .line-right{
+    height: 10px;
+    background:var(--announcement-color-gray-border); 
+    width:1px; 
+    color:transparent !important;
+    margin:0 10px
+}
+
+  @media screen and (max-width: 768px) {
+    .announcement-container .announcement__right{
+      justify-content:start;
+    }
+  }

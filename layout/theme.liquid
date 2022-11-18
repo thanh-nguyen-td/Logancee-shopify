@@ -16,7 +16,7 @@
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-
+    <script src="https://kit.fontawesome.com/d35e6f2ea4.js" crossorigin="anonymous"></script>
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -239,7 +239,7 @@
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
    
-{% render 'loader' %}
+{% render 'snippet' %}
 
     <script>
      
@@ -276,5 +276,6 @@
     {%- endif -%}
     {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
     {{ 'bootstrap.min.js' | asset_url | script_tag }}
+    <script src="{{ 'common.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>

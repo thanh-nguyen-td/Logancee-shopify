@@ -8,6 +8,7 @@
     --color-black-text: #000;
     --color-white-text: #fff;
     --color-gray-text:#999;
+    --color-gray-text-666:#666;
 
     --color-black-bg: #000;
     --color-white-bg: #fff;
@@ -15,12 +16,13 @@
     --color-black-button: #000;
     --color-white-button: #fff;
 
-    --color-gray-border: #999;
+    --color-gray-border: #cccccc80;
     --color-black-border: #000;
     --color-white-border: #fff;
     
     --font-text-10:10px;
     --font-text-xs:12px;
+    --font-text-13:13px;
     --font-text-sm:14px;
     --font-text-15:15px;
     --font-text-base:16px;
@@ -35,7 +37,7 @@
     --font-text-semibold: 600;
     --font-text-bold: 700;
 
-    --font-family-text:'Lato'
+    --font-family-1:'Lato'
 
     /* announcement-bar */
 }
@@ -318,16 +320,6 @@ p{
     padding-top: 20px !important;
 }
 
-.demo {
-    border:0;
-    background:red ;
-    
-}
-.demo:focus-visible {
-    border:0;
-    box-shadow: none;
-    
-}
 @media screen and (max-width:960px) {
     .is-show-price {
         display: none;
@@ -402,3 +394,54 @@ div .custom_input:last-child{
 	color: black !important;
     font-size: 12px;
 }
+
+.custom-select-none:focus-visible {
+    outline: 0.2rem solid transparent;
+    outline-offset: 0.3rem;
+    box-shadow: none;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select select {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    outline: none;
+    padding: 0 5px 0 0;
+    cursor: pointer;
+  }
+  
+
+  
+  .custom-select .selector-options {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    background: #fff;
+    border:1px solid var(--color-gray-border);
+    color: var(--color-gray-text-666);
+    min-width: 120px;
+    z-index: 1;
+    width: 96%;
+    position: absolute;
+    left: 2%;
+    top: 35%;
+  }
+  
+  .custom-select .selector-options li {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: var(--font-text-sm);
+    transition: background 0.3s ease;
+  }
+  
+  .custom-select .selector-options li:hover {
+    color:#000
+  }
