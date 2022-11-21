@@ -113,7 +113,7 @@
           "type": "text",
           "settings": {
             "text": "<p>IF YOU GOT ANY QUESTIONS<\/p><p>PLEASE BO NOT HESITATE TO SEND US A MESAGE<\/p>",
-            "is_title": false,
+            "is_title": true,
             "font_size": 14,
             "style": ""
           }
