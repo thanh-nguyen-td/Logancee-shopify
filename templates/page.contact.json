@@ -117,10 +117,17 @@
             "font_size": 14,
             "style": ""
           }
+        },
+        "1f8e997d-85d1-4214-9ca1-51f704cb5b93": {
+          "type": "custom_space",
+          "settings": {
+            "custom_space": 2
+          }
         }
       },
       "block_order": [
-        "65de2553-4790-47e1-aaad-017b19426521"
+        "65de2553-4790-47e1-aaad-017b19426521",
+        "1f8e997d-85d1-4214-9ca1-51f704cb5b93"
       ],
       "settings": {
       }
