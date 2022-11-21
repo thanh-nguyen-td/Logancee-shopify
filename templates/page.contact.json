@@ -154,6 +154,7 @@
     },
     "3708b768-fc6e-49bf-9d29-76d0e81b75ec": {
       "type": "google-map",
+      "disabled": true,
       "settings": {
         "full_width": false
       }
@@ -164,8 +165,8 @@
         "full_width": false,
         "show_line": false,
         "type_show": "line",
-        "margin_top": 22,
-        "margin_bottom": 22
+        "margin_top": 100,
+        "margin_bottom": 100
       }
     }
   },
