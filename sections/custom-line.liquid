@@ -12,11 +12,15 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" class="iconify iconify--clarity"><path fill="currentColor" d="M18 6.72a5.73 5.73 0 1 0 5.73 5.73A5.73 5.73 0 0 0 18 6.72Zm0 9.46a3.73 3.73 0 1 1 3.73-3.73A3.73 3.73 0 0 1 18 16.17Z" class="clr-i-outline clr-i-outline-path-1"></path><path fill="currentColor" d="M18 2A11.79 11.79 0 0 0 6.22 13.73c0 4.67 2.62 8.58 4.54 11.43l.35.52a99.61 99.61 0 0 0 6.14 8l.76.89l.76-.89a99.82 99.82 0 0 0 6.14-8l.35-.53c1.91-2.85 4.53-6.75 4.53-11.42A11.79 11.79 0 0 0 18 2Zm5.59 22l-.36.53c-1.72 2.58-4 5.47-5.23 6.9c-1.18-1.43-3.51-4.32-5.23-6.9l-.35-.53c-1.77-2.64-4.2-6.25-4.2-10.31a9.78 9.78 0 1 1 19.56 0c0 4.1-2.42 7.71-4.19 10.31Z" class="clr-i-outline clr-i-outline-path-2"></path><path fill="none" d="M0 0h36v36H0z"></path></svg>
                                     {% when 'message' %}
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-sample-full" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--bx"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8a8 8 0 0 1-8 8z"></path><path fill="currentColor" d="M12 11c-2 0-2-.63-2-1s.7-1 2-1s1.39.64 1.4 1h2A3 3 0 0 0 13 7.12V6h-2v1.09C9 7.42 8 8.71 8 10c0 1.12.52 3 4 3c2 0 2 .68 2 1s-.62 1-2 1c-1.84 0-2-.86-2-1H8c0 .92.66 2.55 3 2.92V18h2v-1.08c2-.34 3-1.63 3-2.92c0-1.12-.52-3-4-3z"></path></svg>
+                                    {% when 'email' %}
+                                        {% render 'icon-icon', type: "email", size: "100%" %}
+                                    {% when 'phone' %}
+                                        {% render 'icon-icon', type: "phone", size: "100%" %}
                                     {% else %}
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-sample-full" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--bx"><path fill="currentColor" d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.898 5.516 5 6.934V22l5.34-4.005C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm0 14h-.333L9 18v-2.417l-.641-.247C5.67 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6s-3.589 6-8 6z"></path></svg>
                                 {% endcase %}
                             </div>
-                            <h2 class="text_black uppercase">{{ items.title }}</h2>
+                            <h2 class="text_black uppercase" style="font-size:{{items.title_size}}px ;">{{ items.title }}</h2>
                             <h4 class="text_black">{{ items.description }}</h4>
                         </div>
 
@@ -114,6 +118,14 @@
                                 "label":"Message"
                             },
                             {
+                                "value":"email",
+                                "label":"Email"
+                            },
+                            {
+                                "value":"phone",
+                                "label":"Phone"
+                            },
+                            {
                                 "value":"circle_dollar",
                                 "label":"Circle dollar"
                             }
@@ -124,6 +136,14 @@
                     "id": "title",
                     "label": "Title",
                     "default":"Title"
+                },
+                {
+                    "type": "range",
+                    "id": "title_size",
+                    "label": "Title size",
+                    "min":10,
+                    "max":20,
+                    "default":14
                 },
                 {
                     "type": "richtext",
