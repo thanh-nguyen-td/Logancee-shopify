@@ -13,7 +13,7 @@
             src="{{ article.image.src | image_url: width: 533}}" width="auto"  height="auto" loading="lazy"/>
     </div>
     <div class="card-blog-post__content">
-            <h2 class="text_12 uppercase text_600">{{ article.title | truncate: 50 | escape }}</h2>
+            <h2 class="blog-post__title uppercase text_600">{{ article.title | truncate: 50 | escape }}</h2>
           <div class="card-blog-post__content-conment">
             <span>
                 <p>
@@ -34,6 +34,9 @@
     </div>
 </a>
 {% style %}
+    .blog-post__title {
+        font-size:var(--font-text-sm)
+    }
     .card-blog-post-container {
         width:100%;
         align-items: start;
@@ -73,7 +76,7 @@
     }
     .card-blog-post-container .card-blog-post__content-conment p {
         margin:0;
-        font-size:10px
+        font-size:var(--font-text-xs)
     }
     .card-blog-post-container .card-blog-post__content-conment p:first-child{
        margin-right:20px

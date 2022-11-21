@@ -22,7 +22,7 @@
   .footer .footer__text {
     color:#999;
     font-family:'lato';
-    font-size: 12px;
+    font-size: 13px;
     font-weight:500
   }
 
@@ -84,7 +84,7 @@
             assign footer_grid_class = 'grid--3-col-tablet'
           endif
         -%}
-        <div class="footer__top-grid">
+        {%- comment -%} <div class="footer__top-grid">
           {%-for block in section.blocks %}
           {% case block.type %}
               {%- when 'text_contact' -%}
@@ -108,8 +108,8 @@
             </div>
           {% endcase %}
           {% endfor %}
-        </div>
-        {%- comment -%} <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+        </div> {%- endcomment -%}
+       <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
           {%- for block in section.blocks -%}
             
             <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
@@ -124,10 +124,10 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank -%}
-                    <ul class="footer-block__details-content list-unstyled" style="background: pink;border:1px solid red">
+                    {%- comment -%} <ul class="footer-block__details-content list-unstyled" >
                       {%- for link in block.settings.menu.links -%}
-                        <li  style="background: gold;" >
-                          <div style="background: violet;">
+                        <li>
+                          <div>
                             <div style="height: 5px; width:5px; background:#999;color:transparent; margin-right:5px">T</div>
                             <a href="{{ link.url }}" style="margin: 0;" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
                               {{ link.title }}
@@ -135,10 +135,11 @@
                         </div>
                         </li>
                       {%- endfor -%}
-                    </ul>
+                    </ul> {%- endcomment -%}
+                    {% render 'footer-menu', block:block %}
                   {%- endif -%}
                 {%- when 'image' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }} bg">
                     {%- if block.settings.image != blank -%}
                       {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
                       <img
@@ -161,7 +162,7 @@
                 {%- endcase -%}
             </div>
           {%- endfor -%}
-        </div> {%- endcomment -%}
+        </div>
       {%- endif -%}
 
       <div class="footer-block--newsletter">
