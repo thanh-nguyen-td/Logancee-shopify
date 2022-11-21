@@ -51,8 +51,9 @@
         "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-0": {
           "type": "card",
           "settings": {
-            "select_icon": "map_pin",
+            "select_icon": "phone",
             "title": "Phone",
+            "title_size": 16,
             "description": "<p>Phone 01: (0091) 8547 632521<\/p>"
           }
         },
@@ -61,14 +62,16 @@
           "settings": {
             "select_icon": "map_pin",
             "title": "address",
+            "title_size": 16,
             "description": "<p>Description<\/p>"
           }
         },
         "template--14997315354647__c60a934c-13d3-4275-9dc0-6a31bf82bb40-16673751778f5f4554-2": {
           "type": "card",
           "settings": {
-            "select_icon": "map_pin",
+            "select_icon": "email",
             "title": "Email",
+            "title_size": 16,
             "description": "<p>Description<\/p>"
           }
         }
@@ -82,7 +85,7 @@
         "padding_card": 9,
         "border_right": true,
         "number_column": 3,
-        "size_icon": 35
+        "size_icon": 36
       }
     },
     "main": {
