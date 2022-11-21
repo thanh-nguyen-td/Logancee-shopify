@@ -612,8 +612,8 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size:13px;
-  font-weight: 600;
+  font-size:var(--font-text-sm);
+  font-weight: var(--font-text-medium);
   font-family: inherit;
 }
 
@@ -2356,16 +2356,16 @@ input[type='checkbox'] {
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 2.2rem;
+  width: 2.2rem;
   fill: none;
   vertical-align: middle;
 }
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 3.4rem;
-  width: 3.4rem;
+  height: 4rem;
+  width: 4rem;
   padding: 0;
 }
 
@@ -2572,7 +2572,7 @@ font-size: 6px;
 .header--top-center .header__heading-link {
   margin-left: 0;
 }
-
+/* hidden menu web */
 @media screen and (min-width: 990px) {
   .header__inline-menu {
     display: block;
@@ -2629,7 +2629,7 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
- font-weight:700;
+ font-weight:var(--font-text-semibold);
   text-underline-offset: 0.3rem;
 }
 

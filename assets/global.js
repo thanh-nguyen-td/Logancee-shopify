@@ -406,6 +406,14 @@ class MenuDrawer extends HTMLElement {
 
 customElements.define('menu-drawer', MenuDrawer);
 
+// var showMenuMobiButton = document.getElementById('show-menu-mobi')
+// var showMenuMobi = document.getElementById("Details-menu-drawer-container")
+// showMenuMobiButton.addEventListener('click',()=> {
+//   console.log("thanh kaka")
+//   this.header.classList.add('menu-open');
+ 
+// })
+
 class HeaderDrawer extends MenuDrawer {
   constructor() {
     super();
