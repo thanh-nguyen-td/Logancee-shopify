@@ -240,7 +240,7 @@ p{
 /* content */
 .text_title,
 .text_title p{
-   
+   font-size: var(--font-text-lg);
     font-weight: var(--font-text-semibold);
 }
 

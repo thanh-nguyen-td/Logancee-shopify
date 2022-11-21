@@ -50,7 +50,7 @@
       <div style="margin-bottom:1rem" class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
          <div class="center_justify">
-            <h2 class="text_title text_15" style="" >{{ section.settings.title | escape }}</h2>
+            <h2 class="text_title" style="" >{{ section.settings.title | escape }}</h2>
          </div>
         {%- endif -%}
         {%- if section.settings.description != blank or section.settings.show_description and section.settings.collection.description != empty -%}
@@ -142,9 +142,9 @@
     margin:0 10px 3px 10px
   }
   .tabs-container h3 {
-    font-weight:700;
-    font-size:12px;
-    letter-spacing:1px
+    font-weight:600;
+    font-size:var(--font-text-sm);
+   
   }
   .tabs-container .item h3:nth-child(2){
     color:#999
