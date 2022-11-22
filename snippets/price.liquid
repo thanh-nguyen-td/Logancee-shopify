@@ -29,13 +29,17 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 -%}
-
-{% style %}
+{% if detai-product %}
+  {% style %}
   .price .price-item {
- font-size:24px;
- font-weight:var(--font-text-semibold)
-}
-{% endstyle %}
+    font-size:24px;
+    font-weight:var(--font-text-semibold)
+   }
+   {% endstyle %}
+{% endif %}
+
+ 
+
 
 <div class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
