@@ -24,25 +24,107 @@
 {%- endcapture -%}
 
 <div class="featured-collection-slider">
-        <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
-          <!-- hoặc sử dụng vòng lặp for từ collection truyền vào trong content -->
-            {% for block in section.blocks  %}
-              <div class="carousel-cell">
-                <img style="width:100%" src="{{block.settings.image | img_url:'large'}}"/>
-              </div> 
-            {% endfor %}
-        </div>
-          <div class="carousel__wrap-button">
-            <div class="carousel__button">Prev</div>
-            <div class="carousel__button">Next</div>
+  <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
+    <!-- hoặc sử dụng vòng lặp for từ collection truyền vào trong content -->
+      {% for block in section.blocks  %}
+        <div class="carousel-cell">
+          <div class="carousel__items">
+            <img style="width:100%" src="{{block.settings.image | img_url:'large'}}"/>
+            <div class="carousel__content">
+              <h3 class="carousel__heading">{{ block.settings.heading }}</h3>
+              <h2 class="carousel__title">{{ block.settings.title }}</h2>
+              <h4 class="carousel__description">{{ block.settings.description }}</h4>
+              <div class="carousel__content-button">
+               <div class="hehe">
+                <a href="#">{{ block.settings.button }}</a>
+               </div>
+              </div>
+            </div>
           </div>
-       
-</div>
-
-  <div class="demo1">
-   <div class="demo2"> thanh</div>
+        </div> 
+      {% endfor %}
   </div>
+ 
+  <div class="carousel__wrap-button">
+    <div class="carousel__button">Prev</div>
+    <div class="carousel__button">Next</div>
+  </div>
+</div>
     <style>
+      .carousel__heading{
+        color:#fff;
+        font-size: var(--font-text-sm);
+        text-transform: uppercase;
+        font-weight: var(--font-text-semibold);
+        letter-spacing:3px ;
+        margin-bottom:50px;
+        font-family:var(--font-family-1)
+      }
+      .carousel__title{
+        color:#fff;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: var(--font-text-semibold);
+        margin-bottom: 30px;
+      }
+      .carousel__description{
+        color:#fff;
+        font-size: var(--font-text-sm);
+        font-weight: var(--font-text-normal);
+        margin-bottom: 30px;
+      }
+      .carousel__content-button {
+       margin: 2px 0;
+        color:#fff;
+        display: block;
+      }
+    
+      .carousel__content-button > div {
+      font-size: var(--font-text-13);
+      text-transform: uppercase;
+      font-weight: var(--font-text-semibold);
+      margin: 5px;
+      padding: 10px 20px;
+      border:1px solid #fff;
+    }
+    .carousel__content-button > div a {
+      text-decoration: none;
+      color:#fff;
+    }
+    .carousel__content-button:hover {
+      border:2px solid #fff;
+      margin: 0;
+      animation: show 0.5s ease-out normal;
+    }
+    .carousel__content-button:hover > div,
+    .carousel__content-button:hover > div a{
+      background: #fff;
+      color:  rgba(0, 0, 0, 0.5);
+    
+    }
+      .carousel__items {
+        position:relative
+      }
+
+      .carousel__items:hover .carousel__content{
+        animation: show 0.5s ease-out normal;
+        display: flex;
+      }
+      .carousel__content {
+        position:absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display:none;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        background: #000;
+        background: rgba(0, 0, 0, 0.5);
+        padding:0 40px;
+        text-align: center;
+        
+      }
       .flickity-button {
         background: transparent;
         z-index: 3;
@@ -62,6 +144,7 @@
         position:absolute;
         top:45%;
         padding: 0 10px;
+        max-height: 0.1px;
       
       }
       .carousel__button {
@@ -79,7 +162,6 @@
         .featured-collection-slider{
           margin: 0 auto;
           position:relative;
-          background: gold;
         }
         .featured-collection-slider .carousel-cell{
           width:25%;
@@ -89,6 +171,16 @@
         .flickity-button:disabled{
           pointer-events: all!important;
         }
+
+        @keyframes show{
+          from{
+            transform:scale(0.8);
+          }
+          to{
+            transform: scale(1);
+          }
+        }
+
         @media screen and (max-width: 920px){
           .featured-collection-slider{
             padding-left: 15px;
@@ -143,6 +235,35 @@
             "type": "image_picker",
             "id": "image",
             "label": "Select image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default":"Men's shop"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":"Alexsandro luigi shoes"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description",
+            "default":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint iure at velit possimus. Dignissimos!"
+          },
+          {
+            "type": "text",
+            "id": "button",
+            "label": "Button",
+            "default":"Explore now"
+          },
+          {
+            "type": "url",
+            "id": "link_button",
+            "label": "Url button"
           }
         ]
       }
