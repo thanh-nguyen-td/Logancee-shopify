@@ -11,13 +11,81 @@
     .page-image-container .page-image__head .active{
         color:var(--color-black-text)
     }
-    .page-image-container .pd-img{
-        padding:12px
+    .page-image__wrap-img{
+        position:relative;
+        width:100%;
+        overflow: hidden;
+    } 
+
+    .page-image-container .page-image__wrap-img:hover .page-image__overlay {
+        display:flex;
+        animation:show 0.5s ease-out normal
+    }
+    .page-image-container .page-image__wrap-img:hover .page-image__content{
+        display:block;
+        animation:show 0.5s ease-out normal
+    }
+
+    .page-image__content h2 {
+        font-size:18px;
+        font-weight:var(--font-text-semibold)
+    }
+    .page-image__content h3 {
+        font-size:var(--font-text-sm);
+        font-weight:var(--font-text-normal);
+        font-family:var(--font-family-1)
+    }
+
+    .page-image__overlay{
+        background: #fff;
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        z-index:2;
+        margin-right:50px;
+        display:none;
+        opacity:0.7
+    }
+    .page-image__content {
+        z-index: 3;
+        position:absolute;
+        bottom:25px;
+        left:30px;
+        display:none
+    }
+    .page-image-loadmore {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:18px;
+        font-weight:var(--font-text-semibold);
+        margin-top:4.5rem;
+        letter-spacing:1px;
+        margin-bottom:5rem;
+        
+    }
+    .page-image-loadmore a {
+        color:#000;
+        text-decoration:none
+    }
+    .page-image-loadmore a:hover {
+        color:#000;
+        opacity:0.5
+    }
+
+    @keyframes show{
+        from {
+           transform:scale(0.9);
+           opacity:0.5
+        }
+        to {
+            transform:scale(1);
+            opacity:0.7
+        }
     }
     @media screen and (max-width:768px){
-        .page-image-container .pd-img{
-        padding:5px
-    } 
+       
     }
 {% endstyle %}
 <div class="page-width page-image-container">
@@ -34,8 +102,17 @@
                 {% assign items = block.settings %}
                 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
                 {% if thecycle == 'odd' %}
-                  <div class="pd-img">
-                    <img src="{{items.image | img_url:'large'}}" width="100%" />
+                  <div class="pd-img page-image__wrap-img">
+                    <img src="{{items.image | img_url:'large'}}" width="100%" loading="lazy" height="auto" style=""/>
+                    <div class="custom_center page-image__overlay">
+                       <div>
+                        <i class="fa-regular fa-plus"  style="font-size:100px;"></i>
+                       </div>
+                    </div>
+                    <div class="page-image__content">
+                        <h2>AMBER BOTTLE</h2>
+                        <h3>Branding Identity, Web Design</h3>
+                    </div>
                   </div>
                 {% endif %} 
             {% endfor %}
@@ -45,12 +122,24 @@
                 {% assign items = block.settings %}
                 {% capture thecycles %}{% cycle 'odd', 'even' %}{% endcapture %}
                 {% if thecycles == 'even' %}
-                  <div class="pd-img">
-                    <img src="{{items.image | img_url:'large'}}" width="100%"/>
+                  <div class="pd-img page-image__wrap-img">
+                    <img src="{{items.image | img_url:'large'}}" width="100%" loading="lazy" height="auto"/>
+                    <div class="custom_center page-image__overlay">
+                        <div>
+                         <i class="fa-regular fa-plus"  style="font-size:100px;"></i>
+                        </div>
+                     </div>
+                     <div class="page-image__content">
+                         <h2>AMBER BOTTLE</h2>
+                         <h3>Branding Identity, Web Design</h3>
+                     </div>
                   </div>
                 {% endif %} 
             {% endfor %}
         </div>
+    </div>
+    <div class="page-image-loadmore uppercase">
+       <a href="#"> Load more...</a>
     </div>
 </div>
 {% schema %}

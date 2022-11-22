@@ -60,19 +60,12 @@
         {%- endif -%}
         <div class="card__content">        
           <div class="card__information">
-            <h3 class="card__heading{% if show_excerpt %} h2{% endif %} ">
+            <h3 class="card__heading card-blog__title">
               <a href="{{ article.url }}" class="full-unstyled-link">
                 {{ article.title | truncate: 50 | escape }}
               </a>
             </h3>
-            <div class="article-card__info caption-with-letter-spacing h5">
-              {%- if show_date -%}
-                <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
-              {%- endif -%}
-              {%- if show_author -%}
-                <span>{{ article.author }}</span>
-              {%- endif -%}
-            </div>
+          
             {%- if show_excerpt -%}
               {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
                 <p class="article-card__excerpt rte-width">
@@ -99,27 +92,27 @@
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading{% if show_excerpt %} title_sm uppercase{% endif %} ">
+          <h3 class="card__heading{% if show_excerpt %} title_sm uppercase{% endif %} card-blog__title">
             <a href="{{ article.url }}" class="full-unstyled-link text_600">
               {{ article.title | truncate: 50 | escape }}
             </a>
           </h3>
-          <div class="article-card__info" style=" font-size:11px">
+          <div class="card-blog__infomations">
             {%- if show_date -%}
               <span class="text_gray" style="border-right:1px solid #999; margin-right:15px;padding-right:15px; ">{{ article.published_at | time_tag: format: 'date' }}</span>
             {%- endif -%}
             {%- if show_author -%}
               <span class="text_gray" >by: </span>
-              <span class="text_600">{{ article.author }}</span>
+              <span class="text_500">{{ article.author }}</span>
             {%- endif -%}
           </div>
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-              <p class="article-card__excerpt rte-width text_gray text_500" style="font-size:13px">
+              <p class="article-card__excerpt rte-width card-blog__descriptions">
                 {%- if article.excerpt.size > 0 -%}
-                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                  {{ article.excerpt | strip_html | truncatewords: 10 }}
                 {%- else -%}
-                  {{ article.content | strip_html | truncatewords: 30 }}
+                  {{ article.content | strip_html | truncatewords: 10 }}
                 {%- endif -%}
               </p>
             {%- endif -%}
@@ -130,7 +123,7 @@
             </div>
           {%- endif -%}
           <div  class="center_align">
-            <h3 class="title_xs mg_0 mr_5">READ MORE</h3>
+            <h3 class="title_sm mg_0 mr_5">READ MORE</h3>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify iconify--bi"><path fill="currentColor" fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>          </div>
         </div>
         {%- if show_badge -%}
@@ -146,5 +139,15 @@
 {% style %}
   .custom-card-blog .card {
     border:0
+  }
+  .card-blog__title {
+    font-size:var(--font-text-base)
+  }
+  .card-blog__infomations{
+    font-size:var(--font-text-sm);
+  }
+  .card-blog__descriptions {
+    font-size:var(--font-text-sm);
+    color:var(--color-text-gray-666)
   }
 {% endstyle %}

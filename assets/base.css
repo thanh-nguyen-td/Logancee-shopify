@@ -244,7 +244,7 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 990px) {
   .page-width--narrow {
-    max-width: 67rem;
+    max-width: 74rem;
     padding: 0;
   }
 
@@ -573,7 +573,7 @@ table:not([class]) th {
 .center {
   text-align: center;
 }
-
+@keyframes
 .right {
   text-align: right;
 }
