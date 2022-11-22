@@ -23,51 +23,63 @@
 }
 {%- endcapture -%}
 
-<div class="featured-collection-slider page-width">
-    {% if section.settings.title != blank %}
-    <div class="section-header text-center">
-      <!-- <h2>{{ section.settings.title | escape }}</h2> -->
-      <h2>Carousel</h2>
-    </div>
-    {% endif %}
-    {%- assign collection = collections[section.settings.feature-collection] -%}
-    {%- assign product_limit = section.settings.product_count -%}
+<div class="featured-collection-slider">
         <div class="products-carousel js-flickity" data-flickity='{{ flickity_options }}'>
-     
-         <!-- content card-->
-            <div class="carousel-cell">
-                <img style="height:300px;width:100%" src="https://taybacsensetravel.com/nview/at_diem-danh-nhung-diem-san-anh-dep-tim-lim-mua-lua-chin_db5d8cde5c181c521cffcbcb181b19e1.jpg"/>
-            </div>  
-            <div class="carousel-cell">
-                <img style="height:300px;width:100%" src="https://taybacsensetravel.com/nview/at_diem-danh-nhung-diem-san-anh-dep-tim-lim-mua-lua-chin_db5d8cde5c181c521cffcbcb181b19e1.jpg"/>
-            </div>  
-            <div class="carousel-cell">
-                <img style="height:300px;width:100%" src="https://taybacsensetravel.com/nview/at_diem-danh-nhung-diem-san-anh-dep-tim-lim-mua-lua-chin_db5d8cde5c181c521cffcbcb181b19e1.jpg"/>
-            </div>  
-            <div class="carousel-cell">
-                <img style="height:300px;width:100%" src="https://taybacsensetravel.com/nview/at_diem-danh-nhung-diem-san-anh-dep-tim-lim-mua-lua-chin_db5d8cde5c181c521cffcbcb181b19e1.jpg"/>
-            </div>  
-            <div class="carousel-cell">
-                <img style="height:300px;width:100%" src="https://taybacsensetravel.com/nview/at_diem-danh-nhung-diem-san-anh-dep-tim-lim-mua-lua-chin_db5d8cde5c181c521cffcbcb181b19e1.jpg"/>
-            </div>  
-       <!-- end content -->
-       {%comment%}
           <!-- hoặc sử dụng vòng lặp for từ collection truyền vào trong content -->
-            {% for product in collection.products limit: product_limit %}
+            {% for block in section.blocks  %}
               <div class="carousel-cell">
-                <img style="height:300px;width:100%" src="https://taybacsensetravel.com/nview/at_diem-danh-nhung-diem-san-anh-dep-tim-lim-mua-lua-chin_db5d8cde5c181c521cffcbcb181b19e1.jpg"/>
+                <img style="width:100%" src="{{block.settings.image | img_url:'large'}}"/>
               </div> 
             {% endfor %}
-        {%endcomment%}
         </div>
+          <div class="carousel__wrap-button">
+            <div class="carousel__button">Prev</div>
+            <div class="carousel__button">Next</div>
+          </div>
+       
 </div>
 
+  <div class="demo1">
+   <div class="demo2"> thanh</div>
+  </div>
     <style>
+      .flickity-button {
+        background: transparent;
+        z-index: 3;
+        width:65px;
+        height:65px;
+        color: transparent;
+
+      }
+      .flickity-button:hover{
+        background: transparent;
+        color: transparent;
+      }
+      .carousel__wrap-button {
+        display:flex;
+        justify-content:space-between;
+        width:100%;
+        position:absolute;
+        top:45%;
+        padding: 0 10px;
+      
+      }
+      .carousel__button {
+        font-size:16px; 
+        width:65px;
+        height:65px; 
+        word-wrap: break-word;
+        padding:10px 8px;
+        letter-spacing: 7px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        background:rgba(161, 161, 161, 0.8) none repeat scroll 0 0
+      }
         .featured-collection-slider{
-          padding-left: 55px;
-          padding-right: 55px;
-          max-width: 1200px;
           margin: 0 auto;
+          position:relative;
+          background: gold;
         }
         .featured-collection-slider .carousel-cell{
           width:25%;
@@ -92,7 +104,12 @@
           }
         }
         </style>
+<script>
+ var he = document.querySelector(".demo1 .demo2")
+ console.log("demo:", {hay:he})
+</script>
 {% schema %}
+
 {
     "name":"Carousel",
     "tag":"section",
