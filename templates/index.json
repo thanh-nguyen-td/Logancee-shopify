@@ -6,31 +6,56 @@
         "80915a33-a744-4b6f-bf6a-3eccebd85cda": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide1.jpg"
+            "image": "shopify:\/\/shop_images\/block_slide1.jpg",
+            "heading": "Men's shop",
+            "title": "Alexsandro luigi shoes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint iure at velit possimus. Dignissimos!",
+            "button": "Explore now",
+            "link_button": ""
           }
         },
         "a4c0ff3e-486b-4d7c-97a0-6da331b4b048": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide2.jpg"
+            "image": "shopify:\/\/shop_images\/block_slide2.jpg",
+            "heading": "Men's shop",
+            "title": "Alexsandro luigi shoes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint iure at velit possimus. Dignissimos!",
+            "button": "Explore now",
+            "link_button": ""
           }
         },
         "f14778b9-d0fc-4a6a-bf25-b97ad48bfc6a": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide3.jpg"
+            "image": "shopify:\/\/shop_images\/block_slide3.jpg",
+            "heading": "Men's shop",
+            "title": "Alexsandro luigi shoes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint iure at velit possimus. Dignissimos!",
+            "button": "Explore now",
+            "link_button": ""
           }
         },
         "3bb1d53e-8acf-4f9f-8fae-2d19d4a1c06d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide4.jpg"
+            "image": "shopify:\/\/shop_images\/block_slide4.jpg",
+            "heading": "Men's shop",
+            "title": "Alexsandro luigi shoes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint iure at velit possimus. Dignissimos!",
+            "button": "Explore now",
+            "link_button": ""
           }
         },
         "198b8db9-a791-401e-b1aa-ed98b43b4cc0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide5.jpg"
+            "image": "shopify:\/\/shop_images\/block_slide5.jpg",
+            "heading": "Men's shop",
+            "title": "Alexsandro luigi shoes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint iure at velit possimus. Dignissimos!",
+            "button": "Explore now",
+            "link_button": ""
           }
         }
       },
@@ -207,6 +232,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "2504a4b2-3860-415a-9c01-43435921b4f5": {
+      "type": "section-product",
+      "settings": {
+        "collection": "frontpage"
+      }
     }
   },
   "order": [
@@ -218,6 +249,7 @@
     "0e2f925a-6930-4551-8215-bd7939dfb519",
     "featured_collection",
     "0538d815-1674-41b9-bc8b-82c45d972293",
-    "20188831-632a-4de8-ae7c-55bb7305bf4d"
+    "20188831-632a-4de8-ae7c-55bb7305bf4d",
+    "2504a4b2-3860-415a-9c01-43435921b4f5"
   ]
 }
