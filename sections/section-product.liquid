@@ -1,0 +1,25 @@
+<div>
+    <div>thanh heehe</div>
+    {% for block in section.blocks %}
+        <div>thanh kaka</div>
+    {% endfor %}
+</div>
+{% schema %}
+    {
+      "name":"Section product",
+      "tag":"section",
+      "settings":[
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+            }
+      ],
+      "presets":[
+				{
+					"category":"Collection",
+					"name":"Section product"
+				}
+			]
+    }
+{% endschema %}
