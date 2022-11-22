@@ -24,7 +24,7 @@
                 </p>
             </span>
             <span>
-                <p>
+                <p class="card-blog-post__content-comment">
                     <span style="margin-right:5px">{% render 'icon-icon', type:'message', size:15 %}</span>
                    {{ 'blogs.article.comments' | t: count: article.comments_count }}
                 </p>
@@ -35,7 +35,14 @@
 </a>
 {% style %}
     .blog-post__title {
-        font-size:var(--font-text-sm)
+        font-size:var(--font-text-sm);
+        color:var(--color-white-text)
+    }
+    .card-blog-post__content-comment:hover{
+        color:#000
+    }
+    .blog-post__title:hover {
+        color:#000
     }
     .card-blog-post-container {
         width:100%;
@@ -67,7 +74,6 @@
     }
     .card-blog-post-container .card-blog-post__content h2 {
         margin:0;
-        color:var(--color-white-text)
     }
     .card-blog-post-container .card-blog-post__content-conment {
         display:flex;
