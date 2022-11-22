@@ -1,61 +1,50 @@
 {
   "sections": {
-    "4cad5647-ef85-493a-9605-efd993c8ea5a": {
-      "type": "custom-card-line",
+    "c0c49a4a-1519-4eac-96cf-6a6969ceb4d7": {
+      "type": "img-carousel",
       "blocks": {
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-0": {
-          "type": "card",
+        "80915a33-a744-4b6f-bf6a-3eccebd85cda": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shirt-12.jpg",
-            "heading": "Mens shop",
-            "title": "Title",
-            "content": "Content",
-            "text_button": "Button content",
-            "button_url": ""
+            "image": "shopify:\/\/shop_images\/block_slide1.jpg"
           }
         },
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-1": {
-          "type": "card",
+        "a4c0ff3e-486b-4d7c-97a0-6da331b4b048": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shirt-21.jpg",
-            "heading": "Mens shop",
-            "title": "Title",
-            "content": "Content",
-            "text_button": "Button content",
-            "button_url": ""
+            "image": "shopify:\/\/shop_images\/block_slide2.jpg"
           }
         },
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-2": {
-          "type": "card",
+        "f14778b9-d0fc-4a6a-bf25-b97ad48bfc6a": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shirt-12.jpg",
-            "heading": "Mens shop",
-            "title": "Title",
-            "content": "Content",
-            "text_button": "Button content",
-            "button_url": ""
+            "image": "shopify:\/\/shop_images\/block_slide3.jpg"
           }
         },
-        "7b22e74d-5523-463b-9d74-fac750efc0e5": {
-          "type": "card",
+        "3bb1d53e-8acf-4f9f-8fae-2d19d4a1c06d": {
+          "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shirt-21.jpg",
-            "heading": "Mens shop",
-            "title": "Title",
-            "content": "Content",
-            "text_button": "Button content",
-            "button_url": ""
+            "image": "shopify:\/\/shop_images\/block_slide4.jpg"
+          }
+        },
+        "198b8db9-a791-401e-b1aa-ed98b43b4cc0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/block_slide5.jpg"
           }
         }
       },
       "block_order": [
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-0",
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-1",
-        "template--14997314994199__4cad5647-ef85-493a-9605-efd993c8ea5a-1666780077b5f91c7a-2",
-        "7b22e74d-5523-463b-9d74-fac750efc0e5"
+        "80915a33-a744-4b6f-bf6a-3eccebd85cda",
+        "a4c0ff3e-486b-4d7c-97a0-6da331b4b048",
+        "f14778b9-d0fc-4a6a-bf25-b97ad48bfc6a",
+        "3bb1d53e-8acf-4f9f-8fae-2d19d4a1c06d",
+        "198b8db9-a791-401e-b1aa-ed98b43b4cc0"
       ],
       "settings": {
-        "padding_card": 0
+        "title": "Featured Collection",
+        "feature-collection": "",
+        "product_count": 4
       }
     },
     "7dbb9d76-f7bf-40c8-a685-c0c1f72ad697": {
@@ -218,57 +207,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "c0c49a4a-1519-4eac-96cf-6a6969ceb4d7": {
-      "type": "img-carousel",
-      "blocks": {
-        "80915a33-a744-4b6f-bf6a-3eccebd85cda": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide1.jpg"
-          }
-        },
-        "a4c0ff3e-486b-4d7c-97a0-6da331b4b048": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide2.jpg"
-          }
-        },
-        "f14778b9-d0fc-4a6a-bf25-b97ad48bfc6a": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide3.jpg"
-          }
-        },
-        "3bb1d53e-8acf-4f9f-8fae-2d19d4a1c06d": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide4.jpg"
-          }
-        },
-        "198b8db9-a791-401e-b1aa-ed98b43b4cc0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/block_slide5.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "80915a33-a744-4b6f-bf6a-3eccebd85cda",
-        "a4c0ff3e-486b-4d7c-97a0-6da331b4b048",
-        "f14778b9-d0fc-4a6a-bf25-b97ad48bfc6a",
-        "3bb1d53e-8acf-4f9f-8fae-2d19d4a1c06d",
-        "198b8db9-a791-401e-b1aa-ed98b43b4cc0"
-      ],
-      "settings": {
-        "title": "Featured Collection",
-        "feature-collection": "",
-        "product_count": 4
-      }
     }
   },
   "order": [
-    "4cad5647-ef85-493a-9605-efd993c8ea5a",
+    "c0c49a4a-1519-4eac-96cf-6a6969ceb4d7",
     "7dbb9d76-f7bf-40c8-a685-c0c1f72ad697",
     "c9bc59b5-7011-467f-9a58-3bdace613bdf",
     "5f309aa5-1218-4a1b-8e7c-4d0cfdab5fbe",
@@ -276,7 +218,6 @@
     "0e2f925a-6930-4551-8215-bd7939dfb519",
     "featured_collection",
     "0538d815-1674-41b9-bc8b-82c45d972293",
-    "20188831-632a-4de8-ae7c-55bb7305bf4d",
-    "c0c49a4a-1519-4eac-96cf-6a6969ceb4d7"
+    "20188831-632a-4de8-ae7c-55bb7305bf4d"
   ]
 }
