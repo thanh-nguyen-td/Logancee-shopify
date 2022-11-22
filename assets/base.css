@@ -573,7 +573,7 @@ table:not([class]) th {
 .center {
   text-align: center;
 }
-@keyframes
+
 .right {
   text-align: right;
 }
@@ -1949,10 +1949,10 @@ input[type='checkbox'] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  width: calc(17rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
   display: flex;
   border-radius: var(--inputs-radius);
-  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+  min-height: calc((var(--inputs-border-width) * 2) + 4.9rem);
 }
 
 .quantity:after {
@@ -1965,7 +1965,7 @@ input[type='checkbox'] {
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+  box-shadow: 0 0 0 var(--inputs-border-width) var(--color-gray-border);
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -1986,8 +1986,8 @@ input[type='checkbox'] {
 
 .quantity__input {
   color: currentColor;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: var(--font-text-base);
+  font-weight: 600;
   opacity: 0.85;
   text-align: center;
   background-color: transparent;

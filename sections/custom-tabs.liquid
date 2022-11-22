@@ -31,8 +31,8 @@
         <h3>ADITIONAL INFORMATION</h3>
     </div>
     <div class="tabs__line">line</div>
-    <div class="content">
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque incidunt suscipit magnam nostrum aperiam tempore ullam quidem? Dolor natus ducimus delectus magnam et culpa modi, excepturi ea illo esse.</h4>
+    <div class="content tabs-content">
+        <h4 class="tabs-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque incidunt suscipit magnam nostrum aperiam tempore ullam quidem? Dolor natus ducimus delectus magnam et culpa modi, excepturi ea illo esse.</h4>
         <ul>
             <li>
                 <div class="tabs__square">t</div><h4>Length 74</h4></li>
@@ -56,12 +56,18 @@
         align-items:center;
         justify-content:center
     }
+    .tabs-content__description {
+        color:var(--color-gray-text-666);
+        font-size:var(--font-text-sm);
+        margin:0;
+    }
+
     .tabs-container .head h3{
         font-weight:var(--font-text-semibold);
         padding:20px;
         margin:0;
         border-bottom:2px solid transparent;
-        font-size:var(--font-text-sm);
+        font-size:var(--font-text-base);
         color:#cecece
     }
     .tabs-container .head h3:first-child{
@@ -78,7 +84,7 @@
         width:100%
     }
     .tabs-container .content {
-        margin-top:20px
+        margin-top:30px
     }
     .tabs-container .content ul {
         color:#999;
@@ -89,17 +95,17 @@
        align-items:center;
        margin:10px 0;
     }
+    .tabs-container .content li h4{
+    color:var(--color-gray-text-666);
+    font-size:var(--font-text-13);
+    margin:0;
+    }
     .tabs-container .tabs__square{
         height:5px;
         width:5px;
-        background:var(--color-gray-border);
+        background:var(--color-gray-text-666);
         color:transparent;
         margin-right:10px;
-    }
-    .tabs-container .content h4{
-        color:#999;
-        font-size:var(--font-text-xs);
-        margin:0
     }
     @media screen and (max-width:800px){
         .tabs-container .head{

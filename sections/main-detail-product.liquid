@@ -19,6 +19,18 @@
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
+    .detail-product__title {
+      font-size:18px;
+      font-weight:var(--font-text-semibold);
+      text-transform:uppercase
+    }
+    .detail-product__description {
+      font-size:var(--font-text-sm);
+      border-top:1px solid #cccccc80;
+      border-bottom:1px solid #cccccc80;
+      color:var(--color-gray-text-666)
+    }
+
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top }}px;
@@ -43,7 +55,7 @@
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
             {{ "accessibility.skip_to_product_info" | t }}
           </a>
-          <ul id="Slider-Gallery-{{ section.id }}" class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile" role="list">
+          <ul id="Slider-Gallery-{{ section.id }}" style="background: red;border:1px solid green" class=" product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile" role="list">
             {%- liquid
               assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
               assign media_count = product.media.size
@@ -212,7 +224,7 @@
           {%- when '@app' -%}
             {% render block %}
             {%- when 'quantity' -%}
-              {% render 'detail-product-quantity', product:product %}
+              {% render 'detail-product-quantity', product: product %}
             {%- when 'rate' -%}
              {% render 'detail-product-rate' %}
           {%- when 'text' -%}
@@ -221,7 +233,7 @@
             </p>
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
-              <h1 class="text_15 uppercase text_600">{{ product.title | escape }}</h1>
+              <h1 class="detail-product__title">{{ product.title | escape }}</h1>
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
                   {{ product.title | escape }}
@@ -251,7 +263,7 @@
             </div>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
-              <div class="product__description rte quick-add-hidden text_12 text_gray" style="border-top:1px solid #999; border-bottom:1px solid #999">
+              <div class="product__description rte quick-add-hidden detail-product__description">
                 {{ product.description }}
               </div>
             {%- endif -%}
@@ -277,7 +289,7 @@
             </div>
           
           {%- when 'quantity_selector' -%}
-            {% render 'detail-product-input-quantity', block:block %}
+            {% render 'detail-product-input-quantity', block: block %}
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden quick-add-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
@@ -427,7 +439,7 @@
           {%- endcase -%}
         {%- endfor -%}
         <div class="center_align">
-          <span class="text_12 text_500 text_gray">SHARE: </span>
+          <span class="text_14 text_600 text_gray">SHARE: </span>
           <span>
             {% render 'social-network' %}
           </span>

@@ -230,8 +230,8 @@ p{
 }
 
 .line-right{
-    height: 10px;
-    background:var(--color-gray-border); 
+    height: 15px;
+    background:var(--color-gray-border-200); 
     width:1px; 
     color:transparent !important;
     margin:0 10px

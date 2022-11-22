@@ -30,6 +30,13 @@
   endif
 -%}
 
+{% style %}
+  .price .price-item {
+ font-size:24px;
+ font-weight:var(--font-text-semibold)
+}
+{% endstyle %}
+
 <div class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
