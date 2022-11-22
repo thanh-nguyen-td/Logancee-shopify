@@ -120,6 +120,7 @@
           "settings": {
             "select_icon": "map_pin",
             "title": "MONEY BACK",
+            "title_size": 14,
             "description": "<p>Description<\/p>"
           }
         },
@@ -128,6 +129,7 @@
           "settings": {
             "select_icon": "message",
             "title": "MONEY BACK",
+            "title_size": 14,
             "description": "<p>100% Money back - 30 day<\/p>"
           }
         },
@@ -136,6 +138,7 @@
           "settings": {
             "select_icon": "circle_dollar",
             "title": "Title",
+            "title_size": 14,
             "description": "<p>Description<\/p>"
           }
         }
@@ -176,7 +179,7 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "show_secondary_image": true,
