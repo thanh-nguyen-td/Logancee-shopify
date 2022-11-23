@@ -1,38 +1,21 @@
 {
   "sections": {
-    "67e0db29-a2b4-4290-a881-a23f43128f33": {
-      "type": "image-banner",
+    "f84ecbd1-6fbe-41d7-a15b-2b060deb3a98": {
+      "type": "section-img-banner",
       "blocks": {
-        "template--14997315354647__67e0db29-a2b4-4290-a881-a23f43128f33-1667373775ad29b8ec-0": {
+        "1dc9c7b6-d78d-40f3-ab06-575ab337e5e0": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "a0643a16-e85a-4874-82b6-33120e618159": {
-          "type": "show_breadcrumbs",
-          "settings": {
-            "pd_breadcrumbs": 4
+            "heading": "This is heading"
           }
         }
       },
       "block_order": [
-        "template--14997315354647__67e0db29-a2b4-4290-a881-a23f43128f33-1667373775ad29b8ec-0",
-        "a0643a16-e85a-4874-82b6-33120e618159"
+        "1dc9c7b6-d78d-40f3-ab06-575ab337e5e0"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/breadcrumb-bg-3.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "type_img": "small"
       }
     },
     "c7c8925f-6d81-42f8-b930-0750a386d1ac": {
@@ -168,27 +151,10 @@
         "margin_top": 100,
         "margin_bottom": 100
       }
-    },
-    "f84ecbd1-6fbe-41d7-a15b-2b060deb3a98": {
-      "type": "section-img-banner",
-      "blocks": {
-        "1dc9c7b6-d78d-40f3-ab06-575ab337e5e0": {
-          "type": "heading",
-          "settings": {
-            "heading": "This is heading"
-          }
-        }
-      },
-      "block_order": [
-        "1dc9c7b6-d78d-40f3-ab06-575ab337e5e0"
-      ],
-      "settings": {
-        "type_img": "small"
-      }
     }
   },
   "order": [
-    "67e0db29-a2b4-4290-a881-a23f43128f33",
+    "f84ecbd1-6fbe-41d7-a15b-2b060deb3a98",
     "c7c8925f-6d81-42f8-b930-0750a386d1ac",
     "c60a934c-13d3-4275-9dc0-6a31bf82bb40",
     "main",
@@ -197,7 +163,6 @@
     "form",
     "abcc7d71-9e3f-462f-a227-18f8d8419423",
     "3708b768-fc6e-49bf-9d29-76d0e81b75ec",
-    "c6e35fc1-1140-4dcb-be79-7ee685379f9f",
-    "f84ecbd1-6fbe-41d7-a15b-2b060deb3a98"
+    "c6e35fc1-1140-4dcb-be79-7ee685379f9f"
   ]
 }
