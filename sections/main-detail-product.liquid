@@ -14,6 +14,37 @@
     background:var(--color-gray-border);
     color:transparent;
   }
+  .detail-product__wrap-img-top {
+    display:flex; 
+    position:absolute;
+    top:0;
+    right:0px;
+   
+  }
+  
+  .detail-product__wrap-img-top img {
+    height: 60px;
+  }
+  .detail-product__overlay-img-top{
+    background:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0.6;
+    justify-content:center;
+    align-items:center;
+    display:none;
+    font-size:14px
+  }
+  .detail-product__img-top:hover .detail-product__overlay-img-top {
+    display:flex
+  }
+  .detail-product__img-top{
+    position:relative;
+    margin:0 5px
+  }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -55,7 +86,7 @@
           <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
             {{ "accessibility.skip_to_product_info" | t }}
           </a>
-          <ul id="Slider-Gallery-{{ section.id }}" style="background: red;border:1px solid green" class=" product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile" role="list">
+          <ul id="Slider-Gallery-{{ section.id }}" class=" product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile" role="list">
             {%- liquid
               assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
               assign media_count = product.media.size
@@ -138,7 +169,7 @@
                   assign media_index = media_index | plus: 1
                 -%}
                 <li id="Slide-Thumbnails-{{ section.id }}-0" class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}" data-target="{{ section.id }}-{{ featured_media.id }}" data-media-position="{{ media_index }}">
-                  <button class="thumbnail global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
+                  <button style="" class="thumbnail global-media-settings global-media-settings--no-shadow {% if featured_media.preview_image.aspect_ratio > 1 %}thumbnail--wide{% else %}thumbnail--narrow{% endif %}"
                     aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                     aria-current="true"
                     aria-controls="GalleryViewer-{{ section.id }}"
@@ -449,18 +480,22 @@
           {% render 'icon-arrow' %}
         </a>
       </div>
-      <div style="display:flex; position:absolute;top:0;right:40px" >
-        {% for image in product.images limit:2 %}
-         
+      <div style="" class="detail-product__wrap-img-top">
+        {% for image in product.images limit: 2 %}
           {% if forloop.index == 1 %}
-            <img src="{{image.src | img_url:'largge'}}" style="height: 60px;margin-right:10px"/>
-            {% else %}
-              <div style="position: relative;">
-                <img src="{{image.src | img_url:'largge'}}" style="height: 60px;position:absolute"/>
-                <div style="background: #fff;position:absolute; height:60px;width:40px;opacity:0.6" class="custom_center">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1.5em" height="1.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--akar-icons"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16m-7-7l7 7l-7 7"></path></svg>
-                </div>
+            <div class="detail-product__img-top">
+              <img  src="{{image.src | img_url:'largge'}}" width="auto" height="auto" loading="lazy"/>
+              <div class="detail-product__overlay-img-top">
+                <i class="fa-solid fa-arrow-left"></i>
               </div>
+            </div>
+            {% else %}
+            <div class="detail-product__img-top">
+              <img src="{{image.src | img_url:'largge'}}" width="auto" height="auto" loading="lazy"/>
+              <div class="detail-product__overlay-img-top">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
           {% endif %}
         {% endfor %}
        </div>

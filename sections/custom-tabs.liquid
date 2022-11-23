@@ -1,37 +1,14 @@
-{%- comment -%} <div class="page-width tabs-container">
-    <input type="radio" name="mytabs" id="tab1" checked="checked"/>
-    <label for="tab1">Tab1</label>
-    <div class="tab-content">
-        <h2>Tabs 1</h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique enim ullam est veniam obcaecati nihil possimus soluta quisquam. Inventore, quia velit. Fuga placeat quam iste repudiandae culpa quas doloribus? Ipsum asperiores nesciunt iste mollitia, dignissimos modi id aliquid libero soluta?
-        </p>
-    </div>
-    <input type="radio" name="mytabs" id="tab2"/>
-    <label for="tab2">Tab2</label>
-    <div class="tab-content">
-        <h2>Tabs 2</h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique enim ullam est veniam obcaecati nihil possimus soluta quisquam. Inventore, quia velit. Fuga placeat quam iste repudiandae culpa quas doloribus? Ipsum asperiores nesciunt iste mollitia, dignissimos modi id aliquid libero soluta?
-        </p>
-    </div>
-    <input type="radio" name="mytabs" id="tab3"/>
-    <label for="tab3">Tab3</label>
-    <div class="tab-content">
-        <h2>Tabs 3</h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique enim ullam est veniam obcaecati nihil possimus soluta quisquam. Inventore, quia velit. Fuga placeat quam iste repudiandae culpa quas doloribus? Ipsum asperiores nesciunt iste mollitia, dignissimos modi id aliquid libero soluta?
-        </p>
-    </div> {%- endcomment -%}
-<div class="page-width tabs-container">
-    <div class="head">
-        <h3>PRODUCT DESCRIPTION</h3>
-        <h3>PREVIEW</h3>
-        <h3>TAGS</h3>
-        <h3>ADITIONAL INFORMATION</h3>
-    </div>
+<div class="section-tabs page-width">
+    <ul class="tabs">
+        <li class="tab" data-content-id="tab-content-1">PRODUCT DESCRIPTION</li>
+        <li class="tab" data-content-id="tab-content-2">PREVIEW</li>
+        <li class="tab" data-content-id="tab-content-3">TAGS</li>
+        <li class="tab" data-content-id="tab-content-4">ADITIONAL INFORMATION</li>
+        <li class="tab" data-content-id="tab-content-5">Custom tab info</li>
+        <li class="tab" data-content-id="tab-content-6">Custom tab video</li>
+    </ul>
     <div class="tabs__line">line</div>
-    <div class="content tabs-content">
+    <div class="tab-content" id="tab-content-1">
         <h4 class="tabs-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque incidunt suscipit magnam nostrum aperiam tempore ullam quidem? Dolor natus ducimus delectus magnam et culpa modi, excepturi ea illo esse.</h4>
         <ul>
             <li>
@@ -48,59 +25,80 @@
                 <div class="tabs__square">t</div><h4>Length 74</h4></li>
         </ul>
     </div>
+    <div class="tab-content" id="tab-content-2">
+        <h4 class="tabs-content__description tab__weight">Lorem ipsum dolor sit amet, consectetur adipiscing elit !</h4>
+        <h4 class="tabs-content__description">Suspendisse ultricies scelerisque turpis, elementum ornare arcu posuere mollis. Donec vitae tempor ante, ut tempus augue. Maecenas aliquam, ante quis egestas molestie, ipsum sapien faucibus lorem, ac placerat magna purus id quam. Proin id felis sapien.</h4>
+
+    </div>
+    <div class="tab-content" id="tab-content-3">Tab content 3</div>
+    <div class="tab-content" id="tab-content-4">Tab content 4</div>
+    <div class="tab-content" id="tab-content-5">Tab content 5</div>
+    <div class="tab-content" id="tab-content-6">Tab content 6</div>
 </div>
 {% style %}
-    
-    .tabs-container .head {
-        display:flex;
-        align-items:center;
-        justify-content:center
-    }
-    .tabs-content__description {
-        color:var(--color-gray-text-666);
-        font-size:var(--font-text-sm);
+    ul.tabs{
+        list-style-type: none;
         margin:0;
     }
-
-    .tabs-container .head h3{
+    li.tab{
+        display:inline-block;
+        text-transform:uppercase;
         font-weight:var(--font-text-semibold);
         padding:20px;
         margin:0;
         border-bottom:2px solid transparent;
         font-size:var(--font-text-base);
-        color:#cecece
+        color:#cecece;
+        cursor:pointer;
+       
     }
-    .tabs-container .head h3:first-child{
+    li.tab.active,
+    .tab:hover{
         border-bottom:2px solid #000;
-        color:var(--color-black-text)
+        color:#000;
     }
-    .tabs-container .head h3:hover{
-        border-bottom:2px solid #000
+    .tab-content {
+        display: none;
+        margin-top:30px
     }
-    .tabs-container .tabs__line {
+    .tab-content.active{
+        display: block;
+    }
+    /* content */
+    .tabs-content__description {
+        color:var(--color-gray-text-666);
+        font-size:var(--font-text-sm);
+        margin:0;
+        line-height:27px;
+        font-family:var(--font-family-1);
+    }
+    .tab__weight{
+        font-weight:700
+    }
+    .tab-content ul {
+        color:#999;
+        list-style-type: none
+    }
+    .tab-content ul li {
+       display:flex;
+       align-items:center;
+       margin:10px 0;
+    }
+    .tab-content ul li h4{
+        font-size:var(--font-text-13);
+        font-weight:var(--font-text-normal);
+        font-family:var(--font-family-1);
+        margin:0
+     
+    }
+
+  .tabs__line {
         height:1px;
         background:#999;
         color:transparent;
         width:100%
     }
-    .tabs-container .content {
-        margin-top:30px
-    }
-    .tabs-container .content ul {
-        color:#999;
-        list-style-type: none
-    }
-    .tabs-container .content ul li {
-       display:flex;
-       align-items:center;
-       margin:10px 0;
-    }
-    .tabs-container .content li h4{
-    color:var(--color-gray-text-666);
-    font-size:var(--font-text-13);
-    margin:0;
-    }
-    .tabs-container .tabs__square{
+   .tabs__square{
         height:5px;
         width:5px;
         background:var(--color-gray-text-666);
@@ -113,6 +111,30 @@
         }
     }
 {% endstyle %}
+<script>
+    var tabs = document.querySelectorAll('.tab')
+    var tabsContents = document.querySelectorAll('.tab-content')
+     tabs.forEach(function(tab) {
+        
+            tabs[0].classList.add('active');
+            tabsContents[0].classList.add('active');
+
+         tab.addEventListener('click',function() {
+
+             var contentId = this.dataset.contentId;
+             var content = document.getElementById(contentId)
+
+             tabsContents.forEach(function(content){
+                 content.classList.remove('active');
+             })
+             tabs.forEach(function(tab){
+                 tab.classList.remove('active');
+             })
+             this.classList.add('active');
+             content.classList.add('active');
+         })
+     })
+ </script>
 {% schema %}
 {
     "name":"Tabs",
