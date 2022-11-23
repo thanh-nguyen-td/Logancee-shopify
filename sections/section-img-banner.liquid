@@ -1,17 +1,58 @@
-<div class="s-img-banner">
-    {% if section.settings.image != blank %}
-        <img src="{{ section.settings.image | image_url: 'grande'}}" width="auto" height="auto" loading="lazy" class="s-img-banner__img"/>
+{% case section.settings.type_img %}
+    {% when "default" %}
+        {% assign size-image = "s-img-banner__img-default" %}
+    {% when "small" %}
+        {% assign size-image = "s-img-banner__img-small" %}
+    {% when "medium" %}
+        {% assign size-image = "s-img-banner__img-medium" %}
     {% else %}
-    {{ 'lifestyle-1' | placeholder_svg_tag: 's-img-banner__img' }}
-    {% endif %}
-    <div>
+        {% assign size-image = "s-img-banner__img-large" %}
+{% endcase %}
+
+<div class="s-img-banner">
+    <div class="s-img-banner__wrap-image {{ size-image }}" >
+        {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | image_url: 'grande'}}" width="auto" height="auto" loading="lazy" class="s-img-banner__img"/>
+        {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 's-img-banner__img' }}
+        {% endif %}
+    </div>
+    
+    <div style="background:green;">
         {% for block in section.blocks %}
-            <div>{{ block.text }}</div>
+            <div>{{ block.settings.heading }}</div>
         {% endfor %}
        
         {%render 'breadcrumbs'%}
     </div>
 </div>
+
+{% style %}
+    .s-img-banner__wrap-image{
+        background:red
+    }
+    .s-img-banner__img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+    }
+    .s-img-banner__img-default{
+        width:100%;
+        height: auto;
+    }
+    .s-img-banner__img-small{
+        width:100%;
+        height: 30rem;
+    }
+    .s-img-banner__img-medium{
+        width:100%;
+        height: 34rem;
+    }
+    .s-img-banner__img-large{
+        width:100%;
+        height: 39rem;
+    }
+{% endstyle %}
 {% schema %}
 {
     "name":"Section image banner",
