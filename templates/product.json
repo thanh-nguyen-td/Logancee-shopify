@@ -18,41 +18,6 @@
         "type_img": "default"
       }
     },
-    "01fb6607-1d98-46ac-bfe7-167cbe3dcbd0": {
-      "type": "image-banner",
-      "blocks": {
-        "template--14997315289111__01fb6607-1d98-46ac-bfe7-167cbe3dcbd0-16671076876588afee-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "SIMPLE PEODUCT",
-            "heading_size": "h1"
-          }
-        },
-        "3d2c111a-5b69-48f1-81fc-f0389a6b59d4": {
-          "type": "show_breadcrumbs",
-          "settings": {
-            "pd_breadcrumbs": 4
-          }
-        }
-      },
-      "block_order": [
-        "template--14997315289111__01fb6607-1d98-46ac-bfe7-167cbe3dcbd0-16671076876588afee-0",
-        "3d2c111a-5b69-48f1-81fc-f0389a6b59d4"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "main": {
       "type": "main-detail-product",
       "blocks": {
@@ -160,7 +125,6 @@
   },
   "order": [
     "c06905a8-5e92-4232-aa6d-e793eed980a3",
-    "01fb6607-1d98-46ac-bfe7-167cbe3dcbd0",
     "main",
     "587e7388-a6fe-4fc4-9264-718e77264468",
     "6788ffa8-42db-4563-b28a-1a3534abe6c6",
