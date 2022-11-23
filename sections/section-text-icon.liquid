@@ -3,9 +3,9 @@
         <div class="row">
             {% for block in section.blocks %}
                 {% assign items = block.settings %}
-                <div class="col" style="padding:0 {{ section.settings.padding_card }}px; ">
+                <div class="col-md-4 col-12 s-text-icon__card" style="padding:0 {{ section.settings.padding_card }}px; ">
                     {%- comment -%} content {%- endcomment -%}
-                        <div class="list-text-icon__content {% if section.settings.border_right %} {% if forloop.index < 3 %} bd-right {% endif %}{% else %} bg-gray {% endif %}">
+                        <div style="margin-top: 20px;" class="list-text-icon__content {% if section.settings.border_right %} {% if forloop.index < 3 %} bd-right {% endif %}{% else %} bg-gray {% endif %}">
                             <div class="wrap-img" style="height:{{section.settings.size_icon}}px; width:{{section.settings.size_icon}}px">
                                 {% case items.select_icon %}
                                     {% when 'map_pin' %}
