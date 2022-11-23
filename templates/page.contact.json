@@ -168,6 +168,23 @@
         "margin_top": 100,
         "margin_bottom": 100
       }
+    },
+    "f84ecbd1-6fbe-41d7-a15b-2b060deb3a98": {
+      "type": "section-img-banner",
+      "blocks": {
+        "1dc9c7b6-d78d-40f3-ab06-575ab337e5e0": {
+          "type": "heading",
+          "settings": {
+            "heading": "This is heading"
+          }
+        }
+      },
+      "block_order": [
+        "1dc9c7b6-d78d-40f3-ab06-575ab337e5e0"
+      ],
+      "settings": {
+        "type_img": "default"
+      }
     }
   },
   "order": [
@@ -180,6 +197,7 @@
     "form",
     "abcc7d71-9e3f-462f-a227-18f8d8419423",
     "3708b768-fc6e-49bf-9d29-76d0e81b75ec",
-    "c6e35fc1-1140-4dcb-be79-7ee685379f9f"
+    "c6e35fc1-1140-4dcb-be79-7ee685379f9f",
+    "f84ecbd1-6fbe-41d7-a15b-2b060deb3a98"
   ]
 }
