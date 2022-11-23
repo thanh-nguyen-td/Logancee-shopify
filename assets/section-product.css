@@ -1,0 +1,204 @@
+/* text */
+.section-product__heading{
+    font-size: 18px;
+    font-weight: var(--font-text-semibold);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.s-product__text-overlay{
+    font-size: var(--font-text-sm);
+    font-weight:var(--font-text-semibold);
+    text-transform: uppercase;
+}
+.s-product__text-red {
+    color:#cc0100
+}
+.s-product__title-content,
+.s-product__text-button {
+    font-size: var(--font-text-sm);
+    font-weight: var(--font-text-semibold);
+    text-transform: uppercase;
+}
+.s-product__price-content {
+    font-size: 18px;
+    font-weight: var(--font-text-semibold);
+}
+.s-product__card{
+    padding: 0 14px !important;
+}
+
+.s-product__body{
+    padding: 0;
+}
+.s-product__card-items {
+    position:relative;
+    width:100%;
+    height:72%;
+}
+/* image */
+.s-product__card-img {
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.s-product__hover-change-img:hover img:first-child{
+   opacity: 0;
+   transform: rotateY(80deg);
+}
+.s-product__hover-change-img:hover .s-product__overlay-plush{
+    transform: translateX(-40px);
+    opacity: 1;
+}
+.s-product__card-img img:last-child{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+.s-product__card-img img {
+   width:100%;
+   height:100%;
+   object-fit: cover;
+   opacity: 1;
+   transition: all 0.5s;
+}
+
+/* ovelay */
+.s-product__overlay{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+.s-product__overlay-child {
+    position: relative;
+    height: 100%;
+}
+.s-product__overlay-top {
+    position: absolute;
+    top:0;
+    width: 100%;
+    display: flex;
+    padding:20px;
+    justify-content: space-between;
+}
+.s-product__overlay-top div {
+    padding:2px 7px;
+    background:#fff
+}
+.s-product__overlay-bot {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.s-product__overlay-color {
+    height: 30px;
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.s-product__overlay-color div{
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    color:transparent;
+    margin: 1px;
+}
+.s-product__overlay-color div:first-child{
+   background: #000;
+}
+.s-product__overlay-color div:last-child{
+    background: gray;
+}
+.s-product__overlay-plush {
+    height: 40px;
+    width:40px;
+    background:#000;
+    color:#fff;
+    font-size:30px;
+    font-weight:200;
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    margin: 0;
+    padding-bottom: 4px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.s-product__overlay-plush:hover {
+    background:#fff;
+    color:#000;
+}
+
+/* content */
+.s-product__card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.s-product__card-content button {
+    height: 40px;
+    padding: 0 20px;
+    border:1px solid #666;
+    background: #fff;
+    box-shadow: none;
+}
+.s-product__card-wrap-bt{
+    display: flex;
+    margin-top: 10px;
+}
+
+.s-product__card-wrap-icon {
+    display: flex;
+}
+.s-product__card-wrap-icon div{
+   height: 40px;
+   width: 40px;
+   border:1px solid #666;
+   margin-left:5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 18px;
+   color: #999
+}
+
+
+/* tabs */
+.tabs-container {
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    margin-bottom:30px;
+    margin-top:25px
+}
+  .tabs-container .item {
+    display:flex;
+    justify-content:center;
+    align-items:center
+  }
+  .tabs-container .item .circle {
+    width: 6px;
+    height:6px; 
+    border-radius:3px;
+    background:#999; 
+    color:transparent;
+    margin:0 10px 3px 10px
+  }
+  .tabs-container h3 {
+    font-weight:600;
+    font-size:var(--font-text-sm);
+   
+  }
+  .tabs-container .item h3:nth-child(2){
+    color:#999
+  }
