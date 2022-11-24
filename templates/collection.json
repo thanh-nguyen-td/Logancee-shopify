@@ -44,6 +44,24 @@
         "show_text_below": true
       }
     },
+    "b985cbf9-5639-4c4d-bc98-133abaf4366e": {
+      "type": "section-img-banner",
+      "blocks": {
+        "52c22d3e-2dcb-4678-bd02-5513428bc64b": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHOP NO SIDEBAR 4 COLUMN"
+          }
+        }
+      },
+      "block_order": [
+        "52c22d3e-2dcb-4678-bd02-5513428bc64b"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/breadcrumb-bg-1.jpg",
+        "type_img": "default"
+      }
+    },
     "caaf7b1f-7225-4079-80a9-64bc265bc28f": {
       "type": "custom-space",
       "settings": {
@@ -76,6 +94,7 @@
   "order": [
     "banner",
     "0cae59f7-1aef-456c-976a-07ef3b06fb11",
+    "b985cbf9-5639-4c4d-bc98-133abaf4366e",
     "caaf7b1f-7225-4079-80a9-64bc265bc28f",
     "product-grid"
   ]
