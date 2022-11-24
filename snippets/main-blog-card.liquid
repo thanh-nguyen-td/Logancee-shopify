@@ -1,0 +1,75 @@
+{{ 'main-blog-card.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%} 
+    {% render 'main-blog-card', article: article %}
+{%- endcomment -%}
+
+<div class="blogs__card">
+    <div class="blog__card-wrap-img" style="height: 20rem;">
+        {% if article.image.src != blank %}
+            <div class="blog__card-img" >
+                <img
+                    srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                    {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {{ article.image.src | image_url }} {{ article.image.src.width }}w"
+                    src="{{ article.image.src | image_url: width: 533 }}"
+                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+                    alt="{{ article.image.src.alt | escape }}"
+                    class="motion-reduce"
+                    loading="lazy"
+                    width="{{ article.image.width }}"
+                    height="{{ article.image.height }}"
+                    style="width:100%; height:100%"
+                >
+            </div>
+        {% else %}
+                <div class="blog__card-img" id="blog-link">
+                    {{ article.content }}
+                </div>
+        {%- endif -%}
+    </div>
+    <div class="blog__card-content">
+        <div class="blog__card-content-title">
+            <a href="{{ article.url }}">
+             {{ article.title | truncate: 50 | escape }}
+            </a>
+        </div>
+        <div class="blog__card-content-info">
+            <div class="blog__card-content-date">
+                {{ article.published_at | time_tag: format: 'date' }}
+            </div>
+            <div class="blog__card-content-author">
+                <span class="text_gray" >by: </span>
+                <span class="text_500">{{ article.author }}</span>
+            </div>
+        </div>
+        <div class="blog__card-content-description">
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                <p class="article-card__excerpt rte-width card-blog__descriptions">
+                  {%- if article.excerpt.size > 0 -%}
+                    {{ article.excerpt | strip_html | truncatewords: 10 }}
+                  {%- else -%}
+                    {{ article.content | strip_html | truncatewords: 10 }}
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+        </div>
+        <div class="center_align">
+            <h3 class="title_sm mg_0 mr_5">READ MORE</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify iconify--bi"><path fill="currentColor" fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    var blogLink = document.getElementById('blog-link')
+    var blogImg = document.querySelector('.blog__card-img')
+    blogLink.children[0].width='100%';
+    blogLink.children[0].height='100%'
+    console.log("hehe", blogLink.children[0])
+    console.log("blogImg", blogImg.children[0].src)
+  </script>

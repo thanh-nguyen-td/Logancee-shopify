@@ -122,8 +122,12 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
-    
-            <ul id="product-grid" data-id="{{ section.id }}" class="
+            <div class="row">
+              {%- for product in collection.products -%}
+                {% render 'section-product-card', product: product, rate: true %}
+              {%- endfor -%}
+            </div>
+            {%- comment -%} <ul id="product-grid" data-id="{{ section.id }}" class="
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop">
               {%- for product in collection.products -%}
@@ -145,7 +149,7 @@
                   %}
                 </li>
               {%- endfor -%}
-            </ul>
+            </ul> {%- endcomment -%}
     
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
