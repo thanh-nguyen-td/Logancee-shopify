@@ -1,0 +1,108 @@
+{% comment %}
+
+  Renders:
+  - card product
+
+  Request:null
+  Accepts:null
+  Usage:
+  	 {% render 'section-product-card', product: product, rate: true %}
+
+{% endcomment %}
+
+{{ "section-product.css" | asset_url | stylesheet_tag }}
+<div class="col-12 col-md-6 col-lg-4 col-xl-3 s-product__card">
+    {%- assign product_form_id = 'quick-add-' | append: section_id | append: product.id -%}
+    <div class="s-product__card-items {% if product.media[1] != blank %}s-product__hover-change-img {% endif %} ">
+        <div class="s-product__card-img">
+            <img
+                srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+                src="{{ product.featured_media | img_url: 'large' }}" 
+                loading="lazy" 
+                width="{{ product.featured_media.width }}"
+                height="{{ product.featured_media.height }}"
+                class=""
+            />
+            <img
+                srcset="{%- if product.media[1].width >= 165 -%}{{ product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if product.media[1].width >= 360 -%}{{ product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if product.media[1].width >= 533 -%}{{ product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if product.media[1].width >= 720 -%}{{ product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if product.media[1].width >= 940 -%}{{ product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ product.media[1] | image_url }} {{ product.media[1].width }}w"
+              
+                src="{{ product.media[1] | img_url: 'large' }}" 
+                loading="lazy"
+                width="{{ product.media[1].width }}"
+                height="{{ product.media[1].height }}"
+              >
+        </div>
+        <div class="s-product__overlay">
+            <div class="s-product__overlay-child">
+                <div class="s-product__overlay-top text-overlay">
+                    <div class="s-product__text-overlay">New</div>
+                    <div class="s-product__text-overlay s-product__text-red">Sale</div>
+                </div>
+                <div class="s-product__overlay-bot">
+                    <div class="s-product__overlay-color">
+                        <div>T</div>
+                        <div>T</div>
+                    </div>
+                    <div class="s-product__overlay-plush custom_center">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="s-product__card-content">
+      <a href="{{ product.url }}" class="s-product__title-content">{{ product.title }}</a>
+      <h2 class="s-product__price-content">{{ product.price | money_with_currency }}</h2>
+     {% if rate %}
+        <div class="s-product__wrap-rate">
+            <span class="s-product__rate">
+              {% render 'icon-icon', type:'rate', size:18 %}
+            </span>
+            <span class="s-product__rate">
+              {% render 'icon-icon', type:'rate', size:18 %}
+            </span>
+            <span class="s-product__rate">
+              {% render 'icon-icon', type:'rate', size:18 %}
+            </span>
+            <span class="s-product__rate">
+              {% render 'icon-icon', type:'rate', size:18 %}
+            </span>
+            <span class="s-product__rate">
+              {% render 'icon-icon', type:'rate', size:18 %}
+            </span>
+          </div>
+     {% endif %}
+      <div class="s-product__card-wrap-bt">
+        <button  
+            id="{{ product_form_id }}-submit"
+            type="submit"
+            name="add" 
+            class="s-product__text-button">
+            <span>
+              {%- if product.selected_or_first_available_variant.available -%}
+                ADD TO CARD
+              {%- else -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- endif -%}
+            </span>
+            <span class="sold-out-message hidden">
+              {{ 'products.product.sold_out' | t }}
+            </span>
+        </button>
+        <div class="s-product__card-wrap-icon">
+            <div><i class="fa-regular fa-heart"></i></div>
+            <div><i class="fa-solid fa-chart-pie"></i></div>
+        </div>
+      </div>
+    </div>
+</div>

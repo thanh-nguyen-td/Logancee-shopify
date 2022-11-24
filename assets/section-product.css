@@ -19,6 +19,12 @@
     font-size: var(--font-text-sm);
     font-weight: var(--font-text-semibold);
     text-transform: uppercase;
+    text-decoration: none;
+    color:#000
+}
+.s-product__title-content:hover {
+    opacity: 0.5;
+    color:#000
 }
 .s-product__price-content {
     font-size: 18px;
@@ -201,4 +207,8 @@
   }
   .tabs-container .item h3:nth-child(2){
     color:#999
+  }
+
+  .s-product__rate {
+    color:gold
   }

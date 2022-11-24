@@ -11,7 +11,27 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  .recommen-wrap-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:4rem 0;
 
+  }
+.recommen-btn {
+  border:1px solid #999;
+  display:flex;
+  height:34px;
+  width:34px;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+  color:gray
+}
+.recommen-btn:hover{
+  background:#000;
+  color:#fff
+}
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -20,11 +40,21 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="page-width color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations class="product-recommendations page-width section-{{ section.id }}-padding isolate" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
-    {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
-      <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+  {% if recommendations.performed and recommendations.products_count > 0 %}
+      <h2 style="text-align: center;" class="product-recommendations__heading {{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+  <div class="recommen-wrap-btn">
+    <div class="recommen-btn">&lt</div>
+    <div class="text_gray">----------</div>
+    <div class="recommen-btn">&gt</div>
+  </div>
+  <div class="row" style="height: 100%;">
+    {% for product in recommendations.products limit: 4 %}
+        {% render 'section-product-card', product: product, rate: true %}
+    {% endfor %}
+</div>
+      {%- comment -%} <ul class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
         {% for recommendation in recommendations.products %}
           <li class="grid__item">
             {% render 'card-product',
@@ -36,8 +66,17 @@
             %}
           </li>
         {% endfor %}
-      </ul>
+      </ul> {%- endcomment -%}
     {% endif %}
+    {%- comment -%} <div class="row">
+      thanh kaka
+      {% for product in collections['Shirt-mens'].products %}
+        thanh
+      {% endfor %}
+      {% for collection in collections %}
+        {{- collection.title | link_to: collection.url }}
+      {% endfor %}
+  </div> {%- endcomment -%}
   </product-recommendations>
 </div>
 
