@@ -1,51 +1,64 @@
+{%- comment -%} {% render 'button-hover',
+  content: "login",
+  cl: "#000",
+  clh: "#fff",
+  bg: "#fff",
+  bgh: "#999",
+  bd: "#999"
+%} {%- endcomment -%}
 
-<div class="custom-bnt-hv">
-    <div>
-     <a href="#">{{ content }}</a>
-    </div>
-</div>
+  <div class="custom-btn-hv">
+    {% if submit %}
+      <button type="submit">
+        {{ content }}
+      </button>
+      {% else %}
+      <button>
+        {{ content }}
+      </button>
+    {% endif %}
+  </div>
 {% if type == "black" %}
     {% assign color_bt = "#000" %}
     {% assign color_tx = "#fff" %}
     {% assign color_bg = "#000" %}
 {% else %}
-    {% assign color_bt = "#fff" %}
+    {% assign color_bt = "red" %}
     {% assign color_bg = "transparent" %}
     {% assign color_tx = "rgba(0, 0, 0, 0.5)" %}
 {% endif %}
 
    {% style %}
-      .custom-bnt-hv {
-       margin: 2px 0;
-        color:{{ color_bt }};
-        display: block;
-        
-      }
-    
-      .custom-bnt-hv > div {
-      font-size: var(--font-text-13);
-      text-transform: uppercase;
-      font-weight: var(--font-text-semibold);
-      margin: 5px;
-      padding: 10px 20px;
-      border:1px solid {{ color_bt }};
-      background:{{ color_bg }}
-    }
-    .custom-bnt-hv > div a {
-      text-decoration: none;
-      color:{{ color_tx }};
-    }
-    .custom-bnt-hv:hover {
-      border:2px solid {{ color_bt }};
-      margin: 0;
-      animation: show 0.5s ease-out normal;
-    }
-    .custom-bnt-hv:hover > div,
-    .custom-bnt-hv:hover > div a{
-      background: {{ color_bt }};
-      color: {{color_tx}};
-    
-    }
+   .custom-btn-hv{
+    display:inline-block;
+    border:2px solid transparent;
+    transition: all 0.5s;
+   }
+   .custom-btn-hv button {
+    margin: 5px;
+    font-weight:600;
+    text-transform:uppercase;
+    height:50px;
+    color:{{ cl }};
+    border:0.5px solid {{ bd }};
+    background:{{ bg }};
+   }
+   .custom-btn-hv:hover{
+    border:2px solid {{ bd }};
+    display:inline-block;
+    animation: show 0.5s ease-out normal;
+   }
+   .custom-btn-hv:hover button{
+    border:2px solid {{ bd }};
+    display:inline-block;
+    background:{{ bgh }};
+    color:{{ clh }};
+   }
+   .custom-btn-hv button:before,
+   .custom-btn-hv button:after{
+    content:none
+   }
+   
 
     @keyframes show{
           from{

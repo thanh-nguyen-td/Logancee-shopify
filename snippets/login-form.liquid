@@ -1,3 +1,49 @@
+{% style %}
+  .login__title {
+    font-size:var(--font-text-lg);
+    font-weight:600
+  }
+  .login__desctiption{
+    font-size:var(--font-text-sm);
+    color:#999;
+    margin-top:18px
+  }
+  .login__wrap-checkbox {
+    display:flex;
+    align-items:center
+  }
+  .login__wrap-checkbox input[type=checkbox]:before {
+	font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 12px;
+    color: transparent !important;
+    background: #fff;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
+    margin-right: 7px;
+    
+}
+.login__wrap-checkbox input[type=checkbox]:checked:before {
+	color: black !important;
+    font-size: 10px;
+}
+.login__wrap-checkbox input[type=checkbox]{
+  margin-right:15px
+}
+.login__checkbox-text{
+  font-size:var(--font-text-xs) ;
+  margin:0 !important;
+  color:var(--color-gray-text);
+  font-weight:var(--font-text-medium);
+}
+.login__wrap-btn {
+  display: flex; 
+  justify-content:start;
+  margin-top:20px
+}
+{% endstyle %}
 <div class="customer login" style="padding: 0;margin-right:5.5rem">
     <h1 id="recover" tabindex="-1">
       {{ 'customer.recover_password.title' | t }}
@@ -50,10 +96,10 @@
       {%- endform -%}
     </div>
     <div style="text-align:left">
-        <h1 id="login" tabindex="-1" class="title_sm uppercase">
+        <h1 id="login" tabindex="-1" class="uppercase login__title">
             Log in your account
         </h1>
-        <h4 class="text_12 text_gray text_500 mt_20">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, nam.</h4>
+        <h4 class="login__desctiption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, nam.</h4>
     </div>
     <div>
       {%- if recover_success == true -%}
@@ -84,9 +130,11 @@
             class="custom_input" 
             type="email" 
             name="customer[email]" 
-            placeholder="Email"
+            placeholder="User name"
             autocorrect="off"
             autocomplete="email"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'User name'"
             id="CustomerEmail"
             {% if form.errors contains 'form' %}
                 aria-invalid="true"
@@ -104,24 +152,29 @@
                   aria-invalid="true"
                 {% endif %}
                 placeholder="{{ 'customer.login_page.password' | t }}"
+                onfocus="this.placeholder = ''"
+            onblur="this.placeholder = '{{ 'customer.login_page.password' | t }}'"
             />
           <div style="display: flex;justify-content:space-between">
-            <div style="display: flex;">
-                <div class="wraper-checkbox">
+            <div class="login__wrap-checkbox">
                     <input type="checkbox" style="outline: none;box-shadow:none"/>
-                </div>
-                <p class="text_12 text_gray mg_0" style="font-size:var(--font-text-10) ;font-weight:var(--font-text-semibold);margin:0">Keep me loggeed in</p>
+                <p class="login__checkbox-text">Keep me loggeed in</p>
             </div>
-            <a href="#recover" style="font-size:var(--font-text-10); color:#23A4D1;margin-right:0; text-decoration: none;">
+            <a href="#recover" style="font-size:var(--font-text-xs); color:#23A4D1;margin-right:0; text-decoration: none;">
                 {{ 'customer.login_page.forgot_password' | t }}
               </a>
           </div>
         {%- endif -%}
-       
-            <button class="uppercase " style="padding: 0;margin-left:0;background:#fff;color:#000;font-size:12px;border:1px solid #e7e7e7">
-                Login
-            </button>
-      
+        <div class="width-full login__wrap-btn">
+        {% render 'button-hover',
+          content: "login",
+          cl: "#000",
+          clh: "#fff",
+          bg: "#fff",
+          bgh: "#999",
+          bd: "#999"
+        %}
+        </div>
       {%- endform -%}
     </div>
     

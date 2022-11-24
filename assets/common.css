@@ -339,13 +339,13 @@ p{
     border:1px solid #e7e7e7;
     height:47px; 
     width:100%;
-    font-size:12px;
+    font-size:var(--font-text-xs);
     margin-bottom: 2.2rem;
-    font-weight: var(--font-text-medium);
+    font-weight: var(--font-text-normal);
     
 }
 .custom_input::placeholder{
-    color:#A2A1A2;
+    color:#7E838E;
     padding:10px;
 }
 .custom_input_bg{

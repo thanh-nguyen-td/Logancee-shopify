@@ -89,7 +89,15 @@
         {%- comment -%} <button type="submit" class="button">
           SEND MESSAGE
         </button> {%- endcomment -%}
-        {% render 'button-hover', content: "seen mesage" type: "black", submit: true %}
+        {% render 'button-hover', 
+          content: "seen mesage",
+          submit: true,
+          cl: '#fff',
+          clh: '#fff',
+          bg: '#000',
+          bgh: '#000',
+          bd: '#000'
+        %}
       </div>
     {%- endform -%}
   </div>

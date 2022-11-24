@@ -1,3 +1,19 @@
+{% style %}
+   .register__title {
+    font-size:var(--font-text-lg);
+    font-weight:600
+  }
+  .register__desctiption{
+    font-size:var(--font-text-sm);
+    color:#999;
+    margin-top:18px
+  }
+  .register__wrap-btn {
+  display: flex; 
+  justify-content:start;
+  margin-top:20px
+}
+{% endstyle %}
 <div class="customer register width-full" style="padding-left:7rem; border-left:1px solid #e7e7e7;">
     <svg style="display: none">
       <symbol id="icon-error" viewBox="0 0 13 13">
@@ -8,10 +24,10 @@
       </symbol>
     </svg>
     <div style="text-align:left">
-      <h1 class="title_sm">
+      <h1 class="register__title">
         DON'T HAVE AN ACCOUNT? REGISTER NOW
       </h1>
-      <h4 class="text_12 text_gray text_500 mt_20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui doloremque ea consequatur nihil excepturi optio dignissimos delectus sapiente commodi dolores!</h4>
+      <h4 class="register__desctiption">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui doloremque ea consequatur nihil excepturi optio dignissimos delectus sapiente commodi dolores!</h4>
     </div>
     {%- form 'create_customer', novalidate: 'novalidate' -%}
       {%- if form.errors -%}
@@ -120,9 +136,19 @@
         </span>
       {%- endif -%}
     
-      <button type="button" class="uppercase" style="font-size: 12px;padding: 0 3.5rem;position:relative">
+      {%- comment -%} <button type="button" class="uppercase" style="font-size: 12px;padding: 0 3.5rem;position:relative">
         Register now
-      </button>
+      </button> {%- endcomment -%}
+      <div class="register__wrap-btn">
+        {% render 'button-hover',
+          content: "Register now",
+          cl: "#fff",
+          clh: "#fff",
+          bg: "#454545",
+          bgh: "#454545",
+          bd: "#454545"
+        %}
+      </div>
     {%- endform -%}
   </div>
   
