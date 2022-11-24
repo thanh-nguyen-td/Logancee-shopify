@@ -1,52 +1,5 @@
 {
   "sections": {
-    "6533cb5a-be0e-48a0-8711-aae91ea8fbaa": {
-      "type": "image-banner",
-      "blocks": {
-        "template--14997315387415__6533cb5a-be0e-48a0-8711-aae91ea8fbaa-16671453017e48d47a-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "BLOG GRID NO SIDEBAR",
-            "heading_size": "h1"
-          }
-        },
-        "75d72a4b-4455-4aa1-a520-f8a82fd819ff": {
-          "type": "show_breadcrumbs",
-          "settings": {
-            "pd_breadcrumbs": 4
-          }
-        }
-      },
-      "block_order": [
-        "template--14997315387415__6533cb5a-be0e-48a0-8711-aae91ea8fbaa-16671453017e48d47a-0",
-        "75d72a4b-4455-4aa1-a520-f8a82fd819ff"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "main": {
-      "type": "main-blog",
-      "settings": {
-        "layout": "grid",
-        "show_image": true,
-        "image_height": "small",
-        "show_date": true,
-        "show_author": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "062f6389-79f2-4497-8da3-49a327691f54": {
       "type": "section-img-banner",
       "blocks": {
@@ -64,11 +17,22 @@
         "image": "shopify:\/\/shop_images\/breadcrumb-bg-5.jpg",
         "type_img": "default"
       }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "small",
+        "show_date": true,
+        "show_author": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "6533cb5a-be0e-48a0-8711-aae91ea8fbaa",
-    "main",
-    "062f6389-79f2-4497-8da3-49a327691f54"
+    "062f6389-79f2-4497-8da3-49a327691f54",
+    "main"
   ]
 }
