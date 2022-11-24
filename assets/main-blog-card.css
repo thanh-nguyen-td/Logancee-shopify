@@ -1,9 +1,17 @@
 .blogs__card {
    margin-top: 60px;
 }
+.blog__card-wrap-img{
+    height: 25rem;
+}
 .blog__card-img {
     width: 100%;
     height: 100%;
+}
+.blog__card-img img{
+   object-fit: cover;
+   width:100%; 
+   height:100%
 }
 .blog__card-content{
     margin-top: 30px;
@@ -30,6 +38,7 @@
     margin-right:15px;
     padding-right:15px;
     font-size: var(--font-text-xs);
+    color:#999
 }
 .blog__card-content-author {
     font-size: var(--font-text-xs);
@@ -37,8 +46,8 @@
 .blog__card-content-author span:last-child:hover{
     opacity: 0.5;
 }
-.blog__card-content-description {
+.blog__card-content-description p{
     font-size: var(--font-text-sm);
     font-family: var(--font-family-1);
-    color: 666;
+    color: #666;
 }

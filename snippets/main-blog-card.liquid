@@ -5,7 +5,7 @@
 {%- endcomment -%}
 
 <div class="blogs__card">
-    <div class="blog__card-wrap-img" style="height: 20rem;">
+    <div class="blog__card-wrap-img">
         {% if article.image.src != blank %}
             <div class="blog__card-img" >
                 <img
@@ -23,7 +23,6 @@
                     loading="lazy"
                     width="{{ article.image.width }}"
                     height="{{ article.image.height }}"
-                    style="width:100%; height:100%"
                 >
             </div>
         {% else %}
