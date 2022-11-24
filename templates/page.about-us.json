@@ -35,6 +35,24 @@
         "show_text_below": true
       }
     },
+    "0908fcc7-a548-41cc-8aed-319a98138ff3": {
+      "type": "section-img-banner",
+      "blocks": {
+        "57bd86ac-a240-4d5e-8a59-bc40f6277412": {
+          "type": "heading",
+          "settings": {
+            "heading": "PORTFOLIO GRID 2 COLUMN"
+          }
+        }
+      },
+      "block_order": [
+        "57bd86ac-a240-4d5e-8a59-bc40f6277412"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/breadcrumb-bg-4.jpg",
+        "type_img": "default"
+      }
+    },
     "main": {
       "type": "page-about",
       "blocks": {
@@ -101,6 +119,7 @@
   },
   "order": [
     "ba90a593-5de7-407a-91f5-779171b064e8",
+    "0908fcc7-a548-41cc-8aed-319a98138ff3",
     "main"
   ]
 }
