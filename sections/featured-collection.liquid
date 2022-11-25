@@ -50,7 +50,7 @@
       <div style="margin-bottom:1rem" class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
          <div class="center_justify">
-            <h2 class="text_title" style="" >{{ section.settings.title | escape }}</h2>
+            <h2 class="text_title" >{{ section.settings.title | escape }}</h2>
          </div>
         {%- endif -%}
         {%- if section.settings.description != blank or section.settings.show_description and section.settings.collection.description != empty -%}

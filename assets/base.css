@@ -2553,6 +2553,11 @@ details[open] > .header__submenu {
   z-index: 1;
 }
 
+details:hover > .header__submenu {
+  animation: animateMenuOpen var(--duration-default) ease;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
 @media (prefers-reduced-motion) {
   details[open] > .header__submenu {
     opacity: 1;

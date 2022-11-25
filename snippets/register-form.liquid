@@ -61,6 +61,7 @@
         {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
         autocomplete="given-name"
         placeholder="Name"
+        required
         />
         <input
           class="custom_input col custom_input_bg"
@@ -119,6 +120,7 @@
           aria-describedby="RegisterForm-password-error"
         {% endif %}
         placeholder="Password"
+        required
         />
         <input
           class="custom_input col custom_input_bg"
@@ -142,6 +144,7 @@
       <div class="register__wrap-btn">
         {% render 'button-hover',
           content: "Register now",
+          submit:true,
           cl: "#fff",
           clh: "#fff",
           bg: "#454545",
