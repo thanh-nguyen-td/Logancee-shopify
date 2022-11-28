@@ -88,7 +88,7 @@
        
     }
 {% endstyle %}
-<div class="page-width page-image-container">
+<div class="page-width page-image-container bg">
     <div class="page-image__head center_justify">
         <h4 class="title_sm active">All</h4>
         <h4 class="title_sm">Branding</h4>
@@ -96,7 +96,7 @@
         <h4 class="title_sm">Photography</h4>
         <h4 class="title_sm">Animation</h4>
     </div>
-    <div style="width:100%; display:flex">
+    <div style="width:100%; display:flex;background:red">
         <div style="width:50%">
             {% for block in section.blocks %}
                 {% assign items = block.settings %}

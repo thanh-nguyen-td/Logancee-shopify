@@ -1,8 +1,8 @@
 {% assign padding-number = section.settings.padding-card %}
-<div class="container {% unless section.settings.full_width %}page-width{% endunless %} list-img-container">
+<div class="{% unless section.settings.full_width %}page-width{% endunless %} list-img-container">
     <div class="row list-img-child">
         {% for block in section.blocks %}
-            <div class="col" style="padding:0 {{ section.settings.padding_card }}px;">
+            <div class="col-12 col-md-6 col-lg-4" style="padding:0 {{ section.settings.padding_card }}px; margin-bottom:30px">
                 {%- comment -%} content {%- endcomment -%}
                     <div class="list-img__content">
                         <div class="overlay" style="color:transparent">t</div>
@@ -19,6 +19,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+   
 }
 .list-img-container .list-img__content img {
     object-fit: cover;
