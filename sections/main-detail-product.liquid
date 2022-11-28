@@ -14,13 +14,10 @@
     background:var(--color-gray-border);
     color:transparent;
   }
+
   .detail-product__wrap-img-top {
-    display:flex; 
-    position:absolute;
-    top:0;
-    right:0px;
-   
-  }
+        display:none
+      }
   
   .detail-product__wrap-img-top img {
     height: 60px;
@@ -67,6 +64,13 @@
         padding-top: {{ section.settings.padding_top }}px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
+      .detail-product__wrap-img-top {
+    display:flex; 
+    position:absolute;
+    top:0;
+    right:0px;
+  }
+     
     }
   {%- endstyle -%}
 
@@ -501,9 +505,9 @@
        </div>
     </div>
   </div>
-<div class="main-product__top" style="background: red;height:300px">
-  <div class="main-product__top-left" style="background: green;height:250px">
-    {% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load %}
+<div class="main-product__top">
+  <div class="main-product__top-left">
+    {% render 'product-thumbnail', product: product, media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: lazy_load %}
   </div>
 </div>
   <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">

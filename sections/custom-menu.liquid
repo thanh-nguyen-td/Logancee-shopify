@@ -1,5 +1,5 @@
 {{ 'custom-menu.css' | asset_url | stylesheet_tag }}
-<nav class="head-wrap">
+<nav class="head-wrap" id="head-wrap">
    <div class="head-container ">
         <div class="head-logo"><a>Logancee</a></div>
         <input type="radio" name="slider" id="menuBtn">
@@ -7,6 +7,14 @@
         <div class="head-menu-container">
             <ul class="head-menu">
                 <label for="closeBtn"><i class="fa-solid fa-xmark"></i></label>
+                {% for link in section.settings.menu.links %}
+                    {% for blocks in section.blocks %}
+                        {% if blocks.settings.title_mega_menu == link.title %}
+                            thanh kaka
+                        {% endif %}
+                    {% endfor %}
+                    
+                {% endfor %}
                 <li>
                     <a href="#" class="desktop-item">Home</a>
                 </li>
@@ -79,11 +87,24 @@
        
    </div>
 </nav>
-    
+    <div style="background: red;">
+        {%- for link in section.settings.menu.links -%}
+            <div>{{link.title}}</div>
+        {%- endfor -%}
+    </div>
 {% style %}
   
 {% endstyle %}
-
+<script>
+    var nav = document.getElementById("head-wrap")
+    document.addEventListener("scroll",() => {
+        if (window.scrollY > 50) {
+            nav.classList.add('nav-top')
+        } else {
+            nav.classList.remove('nav-top')
+        }
+    })
+</script>
 {% schema %}
 {
     "name":"Menu",
@@ -99,6 +120,19 @@
             "id":"show_mega_menu",
             "default":true,
             "label":"Show mega menu"
+        }
+    ],
+    "blocks":[
+        {
+            "name":"Mega menu",
+            "type":"mega_menu",
+            "settings":[
+                {
+                    "type":"text",
+                    "id":"title_mega_menu",
+                    "label":"Title menu"
+                }
+            ]
         }
     ]
 }

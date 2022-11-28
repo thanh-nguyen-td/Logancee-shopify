@@ -1,21 +1,23 @@
 {% style %}
   .input-quantity {
     display:flex;
-    align-items:center
+    align-items:center;
+    flex-direction:row
   }
   .button-left{
     margin-left:30px
   }
-  @media screen (max-width:992px){
+  @media screen and (max-width:992px){
     .input-quantity {
-   flex-direction:column
+   flex-direction:column;
+   align-items:start;
   }
   .button-left{
-    margin-left:0px !importan
+    margin-left:0px
   }
   }
 {% endstyle %}
-<div style="" >
+<div class="input-quantity" >
     <div style="flex-basis: 10%;margin:2.5rem 0" class="center_align product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
       {%- comment -%} <label class="form__label" for="Quantity-{{ section.id }}">
         {{ 'products.product.quantity.label' | t }}

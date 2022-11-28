@@ -44,11 +44,13 @@
         height="{{ 973 | divided_by: media.preview_image.aspect_ratio | ceil }}"
         alt="{{ media.preview_image.alt | escape }}"
       >
+       
     </div>
     <a href="{% if media.media_type == 'video' %}{{ media.sources[1].url }}{% else %}{{ media | external_video_url }}{% endif %}" class="product__media-toggle">
       <span class="visually-hidden">{{ 'products.product.video_exit_message' | t: title: product.title | escape }}</span>
     </a>
   {%- else -%}
+
     <div  class="product__media media gradient global-media-settings" style="background:violet;height:200px;padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
       <img
         srcset="{% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
@@ -87,8 +89,8 @@
       endcase
     -%}
   </span>
-
-  <div class="product__media media media--transparent gradient global-media-settings" style="background:violet;height:200px;padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
+  <div style="color:transparent">{{media}}</div>
+  <div class="product__media media media--transparent gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
     <img
       srcset="{% if media.preview_image.width >= 493 %}{{ media.preview_image | image_url: width: 493 }} 493w,{% endif %}
         {% if media.preview_image.width >= 600 %}{{ media.preview_image | image_url: width: 600 }} 600w,{% endif %}

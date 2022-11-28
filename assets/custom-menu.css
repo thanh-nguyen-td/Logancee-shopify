@@ -23,10 +23,14 @@
     height: var(--height-head);
     z-index: 3;
     width: 100%;
-    position: fixed;
     line-height: var(--height-head);
     box-shadow: 0px 8px 12px rgb(0 0 0 / 18%);
-} 
+   
+}
+.nav-top {
+    top:0;
+    position: fixed;
+}
 nav .head-container {
     position: relative;
     max-width: 1200px;
