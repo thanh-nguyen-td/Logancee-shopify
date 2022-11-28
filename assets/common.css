@@ -423,11 +423,11 @@ div .custom_input:last-child{
     list-style: none;
     padding: 5px 0;
     margin: 0;
-    background: #fff;
+    background: red;
     border:1px solid var(--color-gray-border);
     color: var(--color-gray-text-666);
     min-width: 120px;
-    z-index: 1;
+    z-index: 30;
     width: 96%;
     position: absolute;
     left: 2%;
@@ -437,6 +437,7 @@ div .custom_input:last-child{
   .custom-select .selector-options li {
     height: 30px;
     display: flex;
+    z-index: 30;
     align-items: center;
     padding: 0 15px;
     cursor: pointer;
