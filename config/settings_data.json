@@ -200,10 +200,17 @@
             "settings": {
               "title_mega_menu": "Home"
             }
+          },
+          "33219066-7bd3-4041-af55-9ccf9828f8c7": {
+            "type": "mega_menu",
+            "settings": {
+              "title_mega_menu": "Shop"
+            }
           }
         },
         "block_order": [
-          "98a2bf92-696e-4377-abf3-399064914fb1"
+          "98a2bf92-696e-4377-abf3-399064914fb1",
+          "33219066-7bd3-4041-af55-9ccf9828f8c7"
         ],
         "settings": {
           "menu": "main-menu",
