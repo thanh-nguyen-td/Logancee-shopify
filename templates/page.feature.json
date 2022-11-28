@@ -8,39 +8,22 @@
         "padding_bottom": 28
       }
     },
-    "bde24425-4401-4260-9075-7a1edc1d35e0": {
-      "type": "image-banner",
+    "b1596a06-ccb4-41c9-a234-5a875043693d": {
+      "type": "section-img-banner",
       "blocks": {
-        "template--15012856692759__bde24425-4401-4260-9075-7a1edc1d35e0-1668659463ae2fd6f7-0": {
+        "ebee211e-ae11-4c6f-9523-a39c0fc722a4": {
           "type": "heading",
           "settings": {
-            "heading": "ABOUT US",
-            "heading_size": "h1"
-          }
-        },
-        "f2a69f30-af6b-436e-aafe-7ba1ff485d8c": {
-          "type": "show_breadcrumbs",
-          "settings": {
-            "pd_breadcrumbs": 4
+            "heading": "ABOUT US"
           }
         }
       },
       "block_order": [
-        "template--15012856692759__bde24425-4401-4260-9075-7a1edc1d35e0-1668659463ae2fd6f7-0",
-        "f2a69f30-af6b-436e-aafe-7ba1ff485d8c"
+        "ebee211e-ae11-4c6f-9523-a39c0fc722a4"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/chantilly-slide-2_1296x_9d516d08-17b1-41b8-81db-00cade4da214.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "image": "shopify:\/\/shop_images\/breadcrumb-bg-2.jpg",
+        "type_img": "small"
       }
     },
     "1db88e68-325f-4a3d-a86b-e8d4f48e2919": {
@@ -194,34 +177,15 @@
         "margin_top": 25,
         "margin_bottom": 5
       }
-    },
-    "b1596a06-ccb4-41c9-a234-5a875043693d": {
-      "type": "section-img-banner",
-      "blocks": {
-        "ebee211e-ae11-4c6f-9523-a39c0fc722a4": {
-          "type": "heading",
-          "settings": {
-            "heading": "ABOUT US"
-          }
-        }
-      },
-      "block_order": [
-        "ebee211e-ae11-4c6f-9523-a39c0fc722a4"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/breadcrumb-bg-2.jpg",
-        "type_img": "default"
-      }
     }
   },
   "order": [
     "main",
-    "bde24425-4401-4260-9075-7a1edc1d35e0",
+    "b1596a06-ccb4-41c9-a234-5a875043693d",
     "1db88e68-325f-4a3d-a86b-e8d4f48e2919",
     "4080b0f6-dddc-4f01-9065-4193e1bb4dde",
     "b8f7a434-73b9-4a7b-954f-7d6795d35a52",
     "e71bc7ef-d3e7-4e1b-867e-d2c1b88f0135",
-    "547f38b8-02e4-4177-8da4-5f12b06d6b00",
-    "b1596a06-ccb4-41c9-a234-5a875043693d"
+    "547f38b8-02e4-4177-8da4-5f12b06d6b00"
   ]
 }
