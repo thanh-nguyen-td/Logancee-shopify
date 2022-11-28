@@ -181,7 +181,7 @@
         "6d806176-8277-4af3-a5e2-56402414181d"
       ],
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "padding_card": 14
       }
     },
