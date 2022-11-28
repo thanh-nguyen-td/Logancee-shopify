@@ -15,7 +15,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/breadcrumb-bg-4.jpg",
-        "type_img": "default"
+        "type_img": "small"
       }
     },
     "main": {
