@@ -1,4 +1,21 @@
-<div style="" class="center_align">
+{% style %}
+  .input-quantity {
+    display:flex;
+    align-items:center
+  }
+  .button-left{
+    margin-left:30px
+  }
+  @media screen (max-width:992px){
+    .input-quantity {
+   flex-direction:column
+  }
+  .button-left{
+    margin-left:0px !importan
+  }
+  }
+{% endstyle %}
+<div style="" >
     <div style="flex-basis: 10%;margin:2.5rem 0" class="center_align product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
       {%- comment -%} <label class="form__label" for="Quantity-{{ section.id }}">
         {{ 'products.product.quantity.label' | t }}
@@ -23,5 +40,5 @@
         </button>
       </quantity-input>
     </div>
-    <div style=" margin-left:30px"> {%- render 'detail-product-buy-button',product:product, block:block, product_form_id:product_form_id -%}</div>
+    <div class="button-left"> {%- render 'detail-product-buy-button',product:product, block:block, product_form_id:product_form_id -%}</div>
    </div>

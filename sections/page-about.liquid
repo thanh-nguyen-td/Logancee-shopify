@@ -1,4 +1,7 @@
 {% style %}
+.page-image-container{
+  
+}
 .page-image-container .page-image__head {
     margin:6rem 0;
     margin-top:7rem
@@ -6,7 +9,8 @@
     .page-image-container .page-image__head h4{
         margin:0 18px;
         color:var(--color-gray-text);
-        text-transform:uppercase
+        text-transform:uppercase;
+        display:inline-table
     }
     .page-image-container .page-image__head .active{
         color:var(--color-black-text)
@@ -16,7 +20,6 @@
         width:100%;
         overflow: hidden;
     } 
-
     .page-image-container .page-image__wrap-img:hover .page-image__overlay {
         display:flex;
         animation:show 0.5s ease-out normal
@@ -73,7 +76,13 @@
         color:#000;
         opacity:0.5
     }
-
+    .page-image__body {
+        width:100%; 
+        display:flex;
+    }
+    .page-image__body-width {
+        width:50%
+    }
     @keyframes show{
         from {
            transform:scale(0.9);
@@ -85,19 +94,26 @@
         }
     }
     @media screen and (max-width:768px){
-       
+        .page-image__body {
+        width:100%; 
+        display:flex; 
+        flex-direction: column;
+    }
+    .page-image__body-width {
+        width:100%
+    }
     }
 {% endstyle %}
-<div class="page-width page-image-container bg">
-    <div class="page-image__head center_justify">
+<div class="page-width page-image-container">
+    <div class="page-image__head">
         <h4 class="title_sm active">All</h4>
         <h4 class="title_sm">Branding</h4>
         <h4 class="title_sm">Web design</h4>
         <h4 class="title_sm">Photography</h4>
         <h4 class="title_sm">Animation</h4>
     </div>
-    <div style="width:100%; display:flex;background:red">
-        <div style="width:50%">
+    <div class="page-image__body">
+        <div class="page-image__body-width">
             {% for block in section.blocks %}
                 {% assign items = block.settings %}
                 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
@@ -106,7 +122,7 @@
                     <img src="{{items.image | img_url:'large'}}" width="100%" loading="lazy" height="auto" style=""/>
                     <div class="custom_center page-image__overlay">
                        <div>
-                        <i class="fa-regular fa-plus"  style="font-size:100px;"></i>
+                        <i class="fa-regular fa-plus"  style="font-size:60px;"></i>
                        </div>
                     </div>
                     <div class="page-image__content">
@@ -117,7 +133,7 @@
                 {% endif %} 
             {% endfor %}
         </div>
-        <div  style="width:50%">
+        <div class="page-image__body-width">
             {% for block in section.blocks %}
                 {% assign items = block.settings %}
                 {% capture thecycles %}{% cycle 'odd', 'even' %}{% endcapture %}
@@ -126,7 +142,7 @@
                     <img src="{{items.image | img_url:'large'}}" width="100%" loading="lazy" height="auto"/>
                     <div class="custom_center page-image__overlay">
                         <div>
-                         <i class="fa-regular fa-plus"  style="font-size:100px;"></i>
+                         <i class="fa-regular fa-plus"  style="font-size:60px;"></i>
                         </div>
                      </div>
                      <div class="page-image__content">
@@ -141,6 +157,9 @@
     <div class="page-image-loadmore uppercase">
        <a href="#"> Load more...</a>
     </div>
+    {%- comment -%} <div style="width: 100vw; height:100%; background:red; position:fixed;top:160px; z-index:3;left:0">
+        thanh kaka
+    </div> {%- endcomment -%}
 </div>
 {% schema %}
 {

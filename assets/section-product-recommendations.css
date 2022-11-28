@@ -10,4 +10,6 @@
 .product-recommendations__heading {
   margin: 0;
   margin-bottom: 3rem;
+  font-size: 18px;
+  font-weight: 600;
 }
