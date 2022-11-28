@@ -114,7 +114,7 @@
       <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
         {%- comment -%} {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %} {%- endcomment -%}
       </aside>
-      {% render 'filter-product', collection:collection %}
+      {% render 'filter-product', collection: collection %}
     {%- endif -%}
    
     <div class="product-grid-container" id="ProductGridContainer">
@@ -134,7 +134,7 @@
             <div class="loading-overlay gradient"></div>
             <div class="row">
               {%- for product in collection.products -%}
-                {% render 'section-product-card', product: product, rate: true %}
+                {% render 'section-product-card', product: product, rate: true, type: "main" %}
               {%- endfor -%}
             </div>
             {%- comment -%} <ul id="product-grid" data-id="{{ section.id }}" class="

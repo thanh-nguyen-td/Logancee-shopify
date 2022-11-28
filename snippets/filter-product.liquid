@@ -51,12 +51,12 @@
       </div>
    </div> {%- endcomment -%}
    <div class="row">
-      <div class="col-xl-3 col-sm-6 col-12">
+      <div class="col-lg-3 col-sm-6 col-12">
          <div class="facet-filters__field">
             <h4 class="mg_0">Showing 1 to 16 of 17 total</h4>
          </div>
       </div>
-      <div class="col-xl-3 col-sm-6 col-12">
+      <div class="col-lg-3 col-sm-6 col-12">
          <div class="facet-filters__field">
             <h2 class="facet-filters__label caption-large text-body">
                <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
@@ -72,7 +72,7 @@
             </div>
          </div>
       </div>
-      <div class="col-xl-3  col-sm-6 col-12">
+      <div class="col-lg-3  col-sm-6 col-12">
             <div class="facet-filters__field">
                <h2 class="facet-filters__label caption-large text-body">
                   <label for="Show">Show:</label>
@@ -89,7 +89,7 @@
                </div>
          </div>
       </div>
-      <div class="col-xl-3 col-sm-6 col-12">
+      <div class="col-lg-3 col-sm-6 col-12">
          <div class=" wrap-icon">
             <span class="text_14 text_600 text_gray">VIEW</span>
             <span class="square-icont custom-icon">
@@ -149,6 +149,11 @@
    .facet-filters__field {
          display:flex;
          justify-content:center;
+         align-items:center
+      }
+      .facet-filters__field:first-child {
+         display:flex;
+         justify-content:start;
          align-items:center
       }
    @media screen and (max-width:992px){
