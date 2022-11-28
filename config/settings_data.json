@@ -191,6 +191,24 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "custom-menu": {
+        "type": "custom-menu",
+        "blocks": {
+          "98a2bf92-696e-4377-abf3-399064914fb1": {
+            "type": "mega_menu",
+            "settings": {
+              "title_mega_menu": "Home"
+            }
+          }
+        },
+        "block_order": [
+          "98a2bf92-696e-4377-abf3-399064914fb1"
+        ],
+        "settings": {
+          "menu": "main-menu",
+          "show_mega_menu": true
+        }
       }
     },
     "content_for_index": [
