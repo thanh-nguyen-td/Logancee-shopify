@@ -19,6 +19,7 @@
         position:relative;
         width:100%;
         overflow: hidden;
+        padding:15px
     } 
     .page-image-container .page-image__wrap-img:hover .page-image__overlay {
         display:flex;
@@ -42,13 +43,13 @@
     .page-image__overlay{
         background: #fff;
         position:absolute;
-        width:100%;
-        height:100%;
-        top:0;
+        width:calc(100% - 30px);
+        height:calc(100% - 30px);
+        top:15px;
         z-index:2;
-        margin-right:50px;
         display:none;
-        opacity:0.7
+        opacity:0.7;
+        
     }
     .page-image__content {
         z-index: 3;
