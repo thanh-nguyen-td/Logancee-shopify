@@ -8,19 +8,45 @@
             <ul class="head-menu">
                 <label for="closeBtn"><i class="fa-solid fa-xmark"></i></label>
                 {% for link in section.settings.menu.links %}
-                    {% for blocks in section.blocks %}
-                        {% if blocks.settings.title_mega_menu == link.title %}
-                            thanh kaka
+                    {% assign linkTitle = link.title | downcase %}
+                    {% for block in section.blocks %}
+                        {% assign blocksTitle = block.settings.title_mega_menu | downcase %}
+                        {% if linkTitle == blocksTitle %}
+                            <li>
+                                <a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+                                <input type="checkbox" id="showMenuMega" class="showMenuMega"/>
+                                <label for="showMenuMega" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
+                                <div class="head-menu__mega-box head-menu__shadown">
+                                    <div class="head-menu__mega-content">
+                                        
+                                        <div class="head-menu__row">
+                                            <header>Security services</header>
+                                            <ul class="head-menu__mega-links">
+                                                <li><a href="#">Site Seal</a></li>
+                                                <li><a href="#">VPS Hosting</a></li>
+                                                <li><a href="#">Privacy Seal</a></li>
+                                                <li><a href="#">Website design</a></li>
+                                              </ul>
+                                        </div>
+                                        <div class="head-menu__row">
+                                            <header>Security services 1</header>
+                                            <ul class="head-menu__mega-links">
+                                                <li><a href="#">Site Seal 1</a></li>
+                                                <li><a href="#">VPS Hosting 1</a></li>
+                                                <li><a href="#">Privacy Seal 1</a></li>
+                                                <li><a href="#">Website design 1</a></li>
+                                              </ul>
+                                        </div>
+                                        <div class="head-menu__row">
+                                            <img style="height:150px " src="https://jthemes.net/themes/f-html/logancee/assets/img/common/mega_images_1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         {% endif %}
                     {% endfor %}
                     
                 {% endfor %}
-                <li>
-                    <a href="#" class="desktop-item">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="desktop-item">Home</a>
-                </li>
                 <li>
                     <a href="#" class="desktop-item">Home</a>
                 </li>
@@ -87,11 +113,7 @@
        
    </div>
 </nav>
-    <div style="background: red;">
-        {%- for link in section.settings.menu.links -%}
-            <div>{{link.title}}</div>
-        {%- endfor -%}
-    </div>
+   
 {% style %}
   
 {% endstyle %}
