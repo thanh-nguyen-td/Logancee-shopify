@@ -206,11 +206,23 @@
             "settings": {
               "title_mega_menu": "Shop"
             }
+          },
+          "8a3f2bf2-db51-4f70-8d0b-04d632d927db": {
+            "type": "mega_img",
+            "settings": {
+              "title_menu": "",
+              "select_img": "shopify:\/\/shop_images\/mega_images_1.jpg",
+              "img_heading": "this is heading",
+              "img_title": "this is title",
+              "img_button": "Click me",
+              "img_button_url": ""
+            }
           }
         },
         "block_order": [
           "98a2bf92-696e-4377-abf3-399064914fb1",
-          "33219066-7bd3-4041-af55-9ccf9828f8c7"
+          "33219066-7bd3-4041-af55-9ccf9828f8c7",
+          "8a3f2bf2-db51-4f70-8d0b-04d632d927db"
         ],
         "settings": {
           "menu": "main-menu",
