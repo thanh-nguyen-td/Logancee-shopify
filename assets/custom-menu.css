@@ -21,7 +21,7 @@
 .head-wrap {
     background:var(--color-bg-head) ;
     height: var(--height-head);
-    z-index: 4;
+    z-index: 3;
     width: 100%;
     line-height: var(--height-head);
     box-shadow: 0px 8px 12px rgb(0 0 0 / 18%);
@@ -191,9 +191,11 @@ nav .head-container {
        background: #333;
        display: block;
        left: 0;
+       top:0;
        overflow-y: auto;
        line-height: 50px;
        padding: 50px 10px;
+       z-index:999
     }
     #closeBtn:checked ~ .head-menu-container .head-menu {
         display: none;
