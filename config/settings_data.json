@@ -210,7 +210,7 @@
           "8a3f2bf2-db51-4f70-8d0b-04d632d927db": {
             "type": "mega_img",
             "settings": {
-              "title_menu": "",
+              "title_menu": "Home",
               "select_img": "shopify:\/\/shop_images\/mega_images_1.jpg",
               "img_heading": "this is heading",
               "img_title": "this is title",
