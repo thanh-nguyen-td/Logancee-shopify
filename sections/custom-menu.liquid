@@ -39,7 +39,11 @@
                                 <span><i class="fa-solid fa-chevron-down"></i></span>
                                 <input type="checkbox" id="showMenuMega" class="showMenuMega"/>
                                 <label for="showMenuMega" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
+                               
                                 <div class="head-menu__mega-box head-menu__shadown">
+                                    <div style="background:red; width:100%">
+                                        <img style="width:100%" src="https://jthemes.net/themes/f-html/logancee/assets/img/common/banner-1.jpg" alt="">
+                                    </div>
                                     <div class="head-menu__mega-content">
                                         {%- for childlink in link.links -%}
                                             <div class="head-menu__row">
@@ -55,28 +59,30 @@
                                             </div> 
                                         {%- endfor -%}
                                         {% for block in section.blocks %}
-                                                {% assign blocksTitle = block.settings.title_mega_menu | downcase %}
-                                                {% if block.type == "mega_img" and blocksTitle == linkTitle %}
-                                                   <div>thanh kaka</div>
-                                                {% endif %}
-                                        {% endfor %}
-                                            <div class="head-menu__row">
-                                                <div class="head-menu__mega-img" style="position:relative">
-                                                    <img style="widht:100%" src="https://jthemes.net/themes/f-html/logancee/assets/img/common/mega_images_1.jpg" alt="">
-                                                    <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
-                                                        <h4 class="head-menu__mega-title-top head-menu__text-img">Mens</h4>
-                                                        <h3 class="head-menu__mega-title head-menu__text-img">Mens</h3>
-                                                        {% render 'button-hover',
-                                                            content: "Button",
-                                                            cl: "#fff",
-                                                            clh: "#000",
-                                                            bg: "transparent",
-                                                            bgh: "#fff",
-                                                            bd: "#fff"
-                                                        %}
+                                            {% if block.type == "mega_img" %}
+                                                {% assign blockTitle = block.settings.title_menu | downcase %}
+                                                {% if blockTitle == linkTitle %}
+                                                    <div class="head-menu__row">
+                                                        <div class="head-menu__mega-img" style="position:relative">
+                                                            <img style="widht:100%" src="https://jthemes.net/themes/f-html/logancee/assets/img/common/mega_images_1.jpg" alt="">
+                                                            <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
+                                                                <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
+                                                                <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
+                                                                {% render 'button-hover',
+                                                                    content: {{block.settings.img_button}},
+                                                                    cl: "#fff",
+                                                                    clh: "#000",
+                                                                    bg: "transparent",
+                                                                    bgh: "#fff",
+                                                                    bd: "#fff"
+                                                                %}
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
+                                                {% endif %}
+                                            {% endif %}
+                                                
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </li>
@@ -154,6 +160,12 @@
                     "label":"Image"
                 },
                 {
+                    "type":"checkbox",
+                    "id":"img_lv_one",
+                    "label":"Image lever 1",
+                    "default":false
+                },
+                {
                     "type":"text",
                     "id":"img_heading",
                     "label":"Heading",
@@ -175,6 +187,22 @@
                     "type":"url",
                     "id":"img_button_url",
                     "label":"Button url"
+                }
+            ]
+        },
+        {
+            "name":"Collection",
+            "type":"mega_collection",
+            "settings":[
+                {
+                    "type":"text",
+                    "id":"title_menu",
+                    "label":"Title menu"
+                },
+                {
+                    "type":"collection",
+                    "id":"colection",
+                    "label":"Collection menu"
                 }
             ]
         }
