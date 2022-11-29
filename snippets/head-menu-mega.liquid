@@ -1,0 +1,83 @@
+<a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+<span><i class="fa-solid fa-chevron-down"></i></span>
+<input type="checkbox" id="showMenuMega" class="showMenuMega"/>
+<label for="showMenuMega" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
+
+<div class="head-menu__mega-box head-menu__shadown">
+    {%- comment -%} mage image lever 1 {%- endcomment -%}
+    {% for block in section.blocks %}
+        {% if block.type == "mega_img" %}
+            {% assign blockTitle = block.settings.title_menu | downcase %}
+            {% if blockTitle == linkTitle %}
+                {% if block.settings.img_lv_one %}
+                    <div style="background:red; width:100%; position:relative">
+                        <img style="width:100%" src="https://jthemes.net/themes/f-html/logancee/assets/img/common/banner-1.jpg" alt="">
+                        {% if block.settings.show_content %}
+                            <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
+                                <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
+                                <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
+                                {% if block.settings.img_button != blank %}
+                                    {% render 'button-hover',
+                                        content: {{block.settings.img_button}},
+                                        cl: "#fff",
+                                        clh: "#000",
+                                        bg: "transparent",
+                                        bgh: "#fff",
+                                        bd: "#fff"
+                                    %}
+                                {% endif %}
+                               
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    
+    <div class="head-menu__mega-content">
+        {%- comment -%} mega list {%- endcomment -%}
+        {%- for childlink in link.links -%}
+            <div class="head-menu__row">
+                {% assign hiddenTitle = childlink.title | split: ">" | first %}
+                {% if hiddenTitle != "hidden" %}
+                    <header>{{ childlink.title | escape }}</header>
+                {% endif %}
+                <ul class="head-menu__mega-links">
+                    {%- for grandchildlink in childlink.links -%}
+                        <li><a href="{{ grandchildlink.url }}">{{ grandchildlink.title | capitalize }}</a></li>
+                    {%- endfor -%}
+                  </ul>
+            </div> 
+        {%- endfor -%}
+        {%- comment -%} mega image {%- endcomment -%}
+        {% for block in section.blocks %}
+            {% if block.type == "mega_img" %}
+                {% assign blockTitle = block.settings.title_menu | downcase %}
+                {% if blockTitle == linkTitle %}
+                    {% unless block.settings.img_lv_one %}
+                        <div class="head-menu__row">
+                            <div class="head-menu__mega-img" style="position:relative">
+                                <img style="widht:100%" src="https://jthemes.net/themes/f-html/logancee/assets/img/common/mega_images_1.jpg" alt="">
+                                {% if block.settings.show_content %}
+                                    <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
+                                        <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
+                                        <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
+                                        {% render 'button-hover',
+                                            content: {{block.settings.img_button}},
+                                            cl: "#fff",
+                                            clh: "#000",
+                                            bg: "transparent",
+                                            bgh: "#fff",
+                                            bd: "#fff"
+                                        %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endunless %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
