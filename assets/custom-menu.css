@@ -63,8 +63,6 @@ nav .head-container {
     font-size: var(--font-size-head);
     font-weight: var( --font-weight-head);
     padding: 20px;
-    text-transform: uppercase;
-
 }
 .head-container li a:hover {
     color: var(--color-text-head-hover);
@@ -97,9 +95,9 @@ nav .head-container {
 .head-menu__mega-box {
     position: absolute;
     top: 80px;
-    width: 100%;
-    left: 0;
+    width: 80%;
     opacity: 0;
+    right: 0;
     visibility: hidden;
     transition: all 0.3s ease;
 
@@ -143,6 +141,29 @@ nav .head-container {
 }
 .head-menu__row .head-menu__mega-links li a:hover {
     color: var(--color-text-child-hover);
+}
+
+.head-menu__text-img {
+    color:#fff
+}
+.head__img-wrap-content{
+    background: rgba(0, 0, 0, 0.5);
+    position:absolute; 
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    flex-direction: column;
+    padding: 20px;
+}
+.head__img-wrap-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px auto 15px;
+}
+.head__img-wrap-content h4 {
+    font-size: 14px;
+    font-weight: 500;
 }
 .head-container input[type=checkbox],
 .head-container input[type=radio] {
@@ -260,7 +281,6 @@ nav .head-container {
         padding: 0;
         padding-left: 20px;
         border-bottom:1px solid gold;
-        text-transform: uppercase;
     }
     .head-menu .head-menu__mobile-item:hover{
        color: #fff;
