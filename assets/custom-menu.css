@@ -188,8 +188,12 @@ nav .head-container {
     font-size:24px;
     margin: 0 5px;
 }
+.head_item-icon a{
+    color:#000
+}
 .head_item-icon svg {
     margin-bottom: 5px;
+    
 }
 @media screen and (max-width:1200px) {
     .head-menu-container .fa-xmark {
