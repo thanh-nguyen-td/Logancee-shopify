@@ -213,32 +213,9 @@
               "title_menu": "Home",
               "select_img": "shopify:\/\/shop_images\/mega_images_1.jpg",
               "img_lv_one": false,
+              "show_content": true,
               "img_heading": "this is heading",
               "img_title": "this is title",
-              "img_button": "Click me",
-              "img_button_url": ""
-            }
-          },
-          "d8dc9925-2ae4-4734-91b8-9e513bbf2f51": {
-            "type": "mega_img",
-            "settings": {
-              "title_menu": "Shop",
-              "select_img": "shopify:\/\/shop_images\/mega_images_1.jpg",
-              "img_lv_one": false,
-              "img_heading": "this is heading",
-              "img_title": "this is title",
-              "img_button": "Click me",
-              "img_button_url": ""
-            }
-          },
-          "234e7491-7f59-4989-8a2c-ea92e51f67f9": {
-            "type": "mega_img",
-            "settings": {
-              "title_menu": "Shop",
-              "select_img": "shopify:\/\/shop_images\/mega_images_1.jpg",
-              "img_lv_one": false,
-              "img_heading": "this is heading 1",
-              "img_title": "this is title 1",
               "img_button": "Click me",
               "img_button_url": ""
             }
@@ -256,6 +233,7 @@
               "title_menu": "Shop",
               "select_img": "shopify:\/\/shop_images\/banner-1.jpg",
               "img_lv_one": true,
+              "show_content": true,
               "img_heading": "this is heading",
               "img_title": "this is title",
               "img_button": "",
@@ -274,8 +252,6 @@
           "98a2bf92-696e-4377-abf3-399064914fb1",
           "33219066-7bd3-4041-af55-9ccf9828f8c7",
           "8a3f2bf2-db51-4f70-8d0b-04d632d927db",
-          "d8dc9925-2ae4-4734-91b8-9e513bbf2f51",
-          "234e7491-7f59-4989-8a2c-ea92e51f67f9",
           "42269f99-9fac-4695-98f7-eb9e4f12ea69",
           "c8e75c4e-4edd-466b-a328-8a0bfbde1d9d",
           "bec0cddc-39f9-40a1-8f78-9170b2d7df88"
