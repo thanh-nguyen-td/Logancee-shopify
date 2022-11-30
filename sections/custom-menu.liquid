@@ -20,146 +20,94 @@
                     {% endfor %}
                     {% case type %}
                         {% when "dropdown" %}
-                            <li>
-                                <a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
-                                <input type="checkbox" id="showMenuDrop{{ forloop.index }}" class="showMenuDrop"/>
-                                <label for="showMenuDrop{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
-                                <ul class="head-menu__drop head-menu__shadown">
-                                    {%- for childlink in link.links -%}
-                                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
-                                    {%- endfor -%}
-                                  </ul>
+                            <li style="position: relative;">
+                                {% render 'head-menu-drop', link: link %}
                             </li>
                         {% when "mega_menu" %}
-                            <li>
+                            <li >
                                 <a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
                                 <input type="checkbox" id="showMenuMega{{ forloop.index }}" class="showMenuMega"/>
                                 <label for="showMenuMega{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
                                 <div class="head-menu__mega-box head-menu__shadown">
-                                     {%- comment -%} mage image lever 1 {%- endcomment -%}
-    {% for block in section.blocks %}
-        {% if block.type == "mega_img" %}
-            {% assign blockTitle = block.settings.title_menu | downcase %}
-            {% if blockTitle == linkTitle %}
-                {% if block.settings.img_lv_one %}
-                    <div style="background:red; width:100%; position:relative">
-                        <img style="width:100%" src="{{ block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
-                        {% if block.settings.show_content %}
-                            <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
-                                <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
-                                <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
-                                {% if block.settings.img_button != blank %}
-                                    {% render 'button-hover',
-                                        content: {{block.settings.img_button}},
-                                        cl: "#fff",
-                                        clh: "#000",
-                                        bg: "transparent",
-                                        bgh: "#fff",
-                                        bd: "#fff"
-                                    %}
-                                {% endif %}
-                               
-                            </div>
-                        {% endif %}
-                    </div>
-                {% endif %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-        <div class="head-menu__mega-content">
-            {%- comment -%} mega list {%- endcomment -%}
-            {%- for childlink in link.links -%}
-                <div class="head-menu__row">
-                    {% assign hiddenTitle = childlink.title | split: ">" | first %}
-                    {% if hiddenTitle != "hidden" %}
-                        <header>{{ childlink.title | escape }}</header>
-                    {% endif %}
-                    <ul class="head-menu__mega-links">
-                        {%- for grandchildlink in childlink.links -%}
-                            <li><a href="{{ grandchildlink.url }}">{{ grandchildlink.title | capitalize }}</a></li>
-                        {%- endfor -%}
-                        </ul>
-                </div> 
-            {%- endfor -%}
-            {%- comment -%} mega image {%- endcomment -%}
-            {% for block in section.blocks %}
-            {% if block.type == "mega_img" %}
-                {% assign blockTitle = block.settings.title_menu | downcase %}
-                {% if blockTitle == linkTitle %}
-                    {% unless block.settings.img_lv_one %}
-                        <div class="head-menu__row">
-                            <div class="head-menu__mega-img" style="position:relative">
-                                <img style="widht:100%" src="{{block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
-                                {% if block.settings.show_content %}
-                                    <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
-                                        <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
-                                        <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
-                                        {% render 'button-hover',
-                                            content: {{block.settings.img_button}},
-                                            cl: "#fff",
-                                            clh: "#000",
-                                            bg: "transparent",
-                                            bgh: "#fff",
-                                            bd: "#fff"
-                                        %}
-                                    </div>
-                                {% endif %}
-                            </div>
-                        </div>
-                    {% endunless %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
+                                    {%- comment -%} mage image lever 1 {%- endcomment -%}
+                                    {% for block in section.blocks %}
+                                        {% if block.type == "mega_img" %}
+                                            {% assign blockTitle = block.settings.title_menu | downcase %}
+                                            {% if blockTitle == linkTitle %}
+                                                {% if block.settings.img_lv_one %}
+                                                    <div style=" width:100%; position:relative">
+                                                        <img style="width:100%" src="{{ block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
+                                                        {% if block.settings.show_content %}
+                                                            <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
+                                                                <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
+                                                                <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
+                                                                {% if block.settings.img_button != blank %}
+                                                                    {% render 'button-hover',
+                                                                        content: {{block.settings.img_button}},
+                                                                        cl: "#fff",
+                                                                        clh: "#000",
+                                                                        bg: "transparent",
+                                                                        bgh: "#fff",
+                                                                        bd: "#fff"
+                                                                    %}
+                                                                {% endif %}
+                                                            
+                                                            </div>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    <div class="head-menu__mega-content">
+                                        {%- comment -%} mega list {%- endcomment -%}
+                                        {%- for childlink in link.links -%}
+                                            <div class="head-menu__row">
+                                                {% assign hiddenTitle = childlink.title | split: ">" | first %}
+                                                {% if hiddenTitle != "hidden" %}
+                                                    <header>{{ childlink.title | escape }}</header>
+                                                {% endif %}
+                                                <ul class="head-menu__mega-links">
+                                                    {%- for grandchildlink in childlink.links -%}
+                                                        <li><a href="{{ grandchildlink.url }}">{{ grandchildlink.title | capitalize }}</a></li>
+                                                    {%- endfor -%}
+                                                    </ul>
+                                            </div> 
+                                        {%- endfor -%}
+                                        {%- comment -%} mega image {%- endcomment -%}
+                                        {% for block in section.blocks %}
+                                            {% if block.type == "mega_img" %}
+                                                {% assign blockTitle = block.settings.title_menu | downcase %}
+                                                {% if blockTitle == linkTitle %}
+                                                    {% unless block.settings.img_lv_one %}
+                                                        <div class="head-menu__row">
+                                                            <div class="head-menu__mega-img" style="position:relative">
+                                                                <img style="widht:100%" src="{{block.settings.select_img | img_url: 'large'}}" alt="" width="auto" height="auto" loading="lazy">
+                                                                {% if block.settings.show_content %}
+                                                                    <div class="head__img-wrap-content custom_center" style="font-size: 13px;">
+                                                                        <h4 class="head-menu__mega-title-top head-menu__text-img">{{ block.settings.img_heading }}</h4>
+                                                                        <h3 class="head-menu__mega-title head-menu__text-img">{{ block.settings.img_title }}</h3>
+                                                                        {% render 'button-hover',
+                                                                            content: {{block.settings.img_button}},
+                                                                            cl: "#fff",
+                                                                            clh: "#000",
+                                                                            bg: "transparent",
+                                                                            bgh: "#fff",
+                                                                            bd: "#fff"
+                                                                        %}
+                                                                    </div>
+                                                                {% endif %}
+                                                            </div>
+                                                        </div>
+                                                    {% endunless %}
+                                                {% endif %}
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </li>
                         {% endcase %}
                 {% endfor %}
-                  {%- comment -%} {% if link.links[0].title != blank %}
-                                    <span class="head-menu__desktop-item-down"><i class="fa-solid fa-chevron-down"></i></span>
-                                {% endif %} {%- endcomment -%}
-                {%- comment -%} <li>
-                    <a href="#" class="head-menu__desktop-item">Dropdown Menu</a>
-                    <input type="checkbox" id="showMenuDrop" class="showMenuDrop"/>
-                    <label for="showMenuDrop" class="head-menu__mobile-item">Dropdown Menu</label>
-                    <ul class="head-menu__drop head-menu__shadown">
-                        <li><a href="#">Drop menu 1</a></li>
-                        <li><a href="#">Drop menu 2</a></li>
-                        <li><a href="#">Drop menu 3</a></li>
-                        <li><a href="#">Drop menu 4</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="head-menu__desktop-item">Mega Menu</a>
-                    <input type="checkbox" id="showMenuMega" class="showMenuMega"/>
-                    <label for="showMenuMega" class="head-menu__mobile-item">Mega Menu</label>
-                    <div class="head-menu__mega-box head-menu__shadown">
-                        <div class="head-menu__mega-content">
-                            
-                            <div class="head-menu__row">
-                                <header>Security services</header>
-                                <ul class="head-menu__mega-links">
-                                    <li><a href="#">Site Seal</a></li>
-                                    <li><a href="#">VPS Hosting</a></li>
-                                    <li><a href="#">Privacy Seal</a></li>
-                                    <li><a href="#">Website design</a></li>
-                                  </ul>
-                            </div>
-                            <div class="head-menu__row">
-                                <header>Security services 1</header>
-                                <ul class="head-menu__mega-links">
-                                    <li><a href="#">Site Seal 1</a></li>
-                                    <li><a href="#">VPS Hosting 1</a></li>
-                                    <li><a href="#">Privacy Seal 1</a></li>
-                                    <li><a href="#">Website design 1</a></li>
-                                  </ul>
-                            </div>
-                            <div class="head-menu__row">
-                                <img style="height:150px " src="https://jthemes.net/themes/f-html/logancee/assets/img/common/mega_images_1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </li> {%- endcomment -%}
             </ul>
             <div class="head-icon" style="display: flex;">
                 <div class="head_item-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95Q10.6 16 9.5 16q-2.725 0-4.612-1.887Q3 12.225 3 9.5q0-2.725 1.888-4.613Q6.775 3 9.5 3t4.613 1.887Q16 6.775 16 9.5q0 1.1-.35 2.075q-.35.975-.95 1.725l6.3 6.3ZM9.5 14q1.875 0 3.188-1.312Q14 11.375 14 9.5q0-1.875-1.312-3.188Q11.375 5 9.5 5Q7.625 5 6.312 6.312Q5 7.625 5 9.5q0 1.875 1.312 3.188Q7.625 14 9.5 14Z"></path></svg></div>

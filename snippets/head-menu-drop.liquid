@@ -1,12 +1,13 @@
 {% comment %}
-    {% render 'header-menu-drop', link: link %}
+    {% render 'head-menu-drop', link: link %}
 {% endcomment %}
-<a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
-{% if link.links[0].title != blank %}
-    <span class="head-menu__desktop-item-down"><i class="fa-solid fa-chevron-down"></i></span>
+{% if link.title == "FEATURES" %}
+    {% render 'ticker',content:'HOT!',color:'#CD0004' %}
 {% endif %}
-<input type="checkbox" id="showMenuDrop" class="showMenuDrop"/>
-<label for="showMenuDrop" class="head-menu__mobile-item">{{ link.title | upcase }}<i class="fa-solid fa-chevron-down"></i></label>
+
+<a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+<input type="checkbox" id="showMenuDrop{{ forloop.index }}" class="showMenuDrop"/>
+<label for="showMenuDrop{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
 <ul class="head-menu__drop head-menu__shadown">
     {%- for childlink in link.links -%}
         <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
