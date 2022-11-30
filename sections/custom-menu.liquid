@@ -74,10 +74,11 @@
                                                     </ul>
                                             </div> 
                                         {%- endfor -%}
-                                        {%- comment -%} mega image {%- endcomment -%}
+                                       
                                         {% for block in section.blocks %}
+                                            {% assign blockTitle = block.settings.title_menu | downcase %}
+                                             {%- comment -%} mega image {%- endcomment -%}
                                             {% if block.type == "mega_img" %}
-                                                {% assign blockTitle = block.settings.title_menu | downcase %}
                                                 {% if blockTitle == linkTitle %}
                                                     {% unless block.settings.img_lv_one %}
                                                         <div class="head-menu__row">
@@ -101,8 +102,27 @@
                                                         </div>
                                                     {% endunless %}
                                                 {% endif %}
+                                            {% else %}
+                                                {%- comment -%} mega colection {%- endcomment -%}
+                                                {% if blockTitle == linkTitle %}
+                                                    <div class="head-menu__row">
+                                                        <div>
+                                                             <img src="{{ block.settings.colection.image | img_url:'large'}}"/> 
+                                                        </div>
+                                                        <ul class="head-menu__mega-links">
+                                                            {% for item in block.settings.colection.products %}
+                                                                <li>
+                                                                    <a href="{{item.url}}">{{item.title}}</a>
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
+                                                   
+                                                {% endif %}
                                             {% endif %}
                                         {% endfor %}
+                                        
+                                         
                                     </div>
                                 </div>
                             </li>
