@@ -261,6 +261,13 @@
               "img_button": "",
               "img_button_url": ""
             }
+          },
+          "bec0cddc-39f9-40a1-8f78-9170b2d7df88": {
+            "type": "mega_collection",
+            "settings": {
+              "title_menu": "Shop",
+              "colection": "shirt-mens"
+            }
           }
         },
         "block_order": [
@@ -270,7 +277,8 @@
           "d8dc9925-2ae4-4734-91b8-9e513bbf2f51",
           "234e7491-7f59-4989-8a2c-ea92e51f67f9",
           "42269f99-9fac-4695-98f7-eb9e4f12ea69",
-          "c8e75c4e-4edd-466b-a328-8a0bfbde1d9d"
+          "c8e75c4e-4edd-466b-a328-8a0bfbde1d9d",
+          "bec0cddc-39f9-40a1-8f78-9170b2d7df88"
         ],
         "settings": {
           "menu": "main-menu",
