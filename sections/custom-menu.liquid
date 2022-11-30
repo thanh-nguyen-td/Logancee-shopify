@@ -109,8 +109,8 @@
                                                         <div>
                                                              <img src="{{ block.settings.colection.image | img_url:'large'}}"/> 
                                                         </div>
-                                                        <ul class="head-menu__mega-links">
-                                                            {% for item in block.settings.colection.products %}
+                                                        <ul class="head-menu__mega-links"  style="margin-top: 10px;">
+                                                            {% for item in block.settings.colection.products limit: 7 %}
                                                                 <li>
                                                                     <a href="{{item.url}}">{{item.title}}</a>
                                                                 </li>

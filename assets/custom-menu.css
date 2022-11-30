@@ -137,6 +137,7 @@ nav .head-container {
     padding:0;
     color: var(--color-text-child);
     display: block;
+    line-height: 30px;
     font-size: var(--font-size-child);
     font-weight: var(--font-weight-child);
 }
@@ -157,10 +158,12 @@ nav .head-container {
     font-size: 24px;
     font-weight: 600;
     margin: 10px auto 15px;
+    color:#fff
 }
 .head__img-wrap-content h4 {
     font-size: 14px;
     font-weight: 500;
+    color:#fff
 }
 .head-container input[type=checkbox],
 .head-container input[type=radio] {
