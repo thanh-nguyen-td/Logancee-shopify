@@ -21,11 +21,22 @@
                     {% case type %}
                         {% when "dropdown" %}
                             <li style="position: relative;">
-                                {% render 'head-menu-drop', link: link %}
+                                {% if link.title == "FEATURES" %}
+                                    {% render 'ticker', content: 'HOT!', color: '#CD0004' %}
+                                {% endif %}
+                                
+                                <a href="{{ link.url }}" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+                                <input type="checkbox" id="showMenuDrop{{ forloop.index }}" class="showMenuDrop"/>
+                                <label for="showMenuDrop{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
+                                <ul class="head-menu__drop head-menu__shadown">
+                                    {%- for childlink in link.links -%}
+                                        <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                                    {%- endfor -%}
+                                </ul>
                             </li>
                         {% when "mega_menu" %}
                             <li >
-                                <a href="#" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
+                                <a href="{{ link.url }}" class="head-menu__desktop-item">{{ link.title | upcase }}</a>
                                 <input type="checkbox" id="showMenuMega{{ forloop.index }}" class="showMenuMega"/>
                                 <label for="showMenuMega{{ forloop.index }}" class="head-menu__mobile-item">{{ link.title | upcase }}</label>
                                 <div class="head-menu__mega-box head-menu__shadown">
