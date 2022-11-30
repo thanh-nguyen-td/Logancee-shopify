@@ -246,6 +246,13 @@
               "title_menu": "Shop",
               "colection": "shirt-mens"
             }
+          },
+          "0e3cc499-f319-4309-960e-fa6008793e3e": {
+            "type": "mega_collection",
+            "settings": {
+              "title_menu": "Shop",
+              "colection": "shop-girl"
+            }
           }
         },
         "block_order": [
@@ -254,7 +261,8 @@
           "8a3f2bf2-db51-4f70-8d0b-04d632d927db",
           "42269f99-9fac-4695-98f7-eb9e4f12ea69",
           "c8e75c4e-4edd-466b-a328-8a0bfbde1d9d",
-          "bec0cddc-39f9-40a1-8f78-9170b2d7df88"
+          "bec0cddc-39f9-40a1-8f78-9170b2d7df88",
+          "0e3cc499-f319-4309-960e-fa6008793e3e"
         ],
         "settings": {
           "menu": "main-menu",
